@@ -1,0 +1,729 @@
+# item id	icon frame	atlas dir (seen loaded with the map open)	English name	vanilla locations   (tools/item_icons.py, from the item table's UI_icon_path)
+Ability_AntiPetrifact	Icon_Bg_Eye	/Game/Assets/Texture2D/ItemIcon/Frames	Eye of Gongor	0
+Ability_BigJump	Icon_Bg_Gigjump	/Game/Assets/Texture2D/ItemIcon/Frames	Crown of Windwalker	1
+Ability_Dash	Icon_Bg_Sprint	/Game/Assets/Texture2D/ItemIcon/Frames	Emblem of Windwalker	0
+Ability_DoubleJump	Icon_Bg_Twojump	/Game/Assets/Texture2D/ItemIcon/Frames	Left-wing Feather of Windwalker	1
+Ability_DownCrush	Icon_Bg_Undershoot	/Game/Assets/Texture2D/ItemIcon/Frames	Plate of Kingworm	1
+Ability_KickDown	Icon_Bg_Order	/Game/Assets/Texture2D/ItemIcon/Frames	Windwalker’s Anklet	0
+Ability_Sailing	Icon_Bg_Sailing	/Game/Assets/Texture2D/ItemIcon/Frames	Clammy Whistle	0
+Ability_Slide	Icon_Bg_Waterloo	/Game/Assets/Texture2D/ItemIcon/Frames	Wandering Warrior’s Necklace	0
+Ability_SoulInvade	Icon_Bg_Soul	/Game/Assets/Texture2D/ItemIcon/Frames	Owl's Peeking	0
+Ability_SuperKick	Icon_Bg_Orderup	/Game/Assets/Texture2D/ItemIcon/Frames	Flamewalker’s Boots	0
+Ability_Swimming	Icon_Bg_Diving	/Game/Assets/Texture2D/ItemIcon/Frames	Blessing of Samsare	0
+Ability_Teleport	Icon_Bg_Delivery	/Game/Assets/Texture2D/ItemIcon/Frames	Flower of Confluence	2
+Ability_Wallslide	Icon_Bg_Climb	/Game/Assets/Texture2D/ItemIcon/Frames	Agile Claw	1
+Accessories001	Icon_Accessories_022	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Accessories002	Icon_Accessories_022	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Accessories_001	Icon_Accessories_001	/Game/Assets/Texture2D/ItemIcon/Frames	Ritual Ring	1
+Accessories_002	Icon_Accessories_002	/Game/Assets/Texture2D/ItemIcon/Frames	Ritual Necklace	1
+Accessories_003	Icon_Accessories_003	/Game/Assets/Texture2D/ItemIcon/Frames	Flower Badge	1
+Accessories_004	Icon_Accessories_004	/Game/Assets/Texture2D/ItemIcon/Frames	Flower Bracelet	0
+Accessories_005	Icon_Accessories_005	/Game/Assets/Texture2D/ItemIcon/Frames	Odd Badge	0
+Accessories_006	Icon_Accessories_006	/Game/Assets/Texture2D/ItemIcon/Frames	Amethyst Ring	0
+Accessories_007	Icon_Accessories_007	/Game/Assets/Texture2D/ItemIcon/Frames	Lavastone Ring	0
+Accessories_008	Icon_Accessories_009	/Game/Assets/Texture2D/ItemIcon/Frames	Amethyst Necklace	0
+Accessories_009	Icon_Accessories_008	/Game/Assets/Texture2D/ItemIcon/Frames	Lavastone Necklace	1
+Accessories_010	Icon_Accessories_010	/Game/Assets/Texture2D/ItemIcon/Frames	Adventurer's Pendant	1
+Accessories_011	Icon_Accessories_011	/Game/Assets/Texture2D/ItemIcon/Frames	Adventurer's Bracelet	0
+Accessories_012	Icon_Accessories_012	/Game/Assets/Texture2D/ItemIcon/Frames	Soul-catcher Kettle of Jungong Spirit	1
+Accessories_013	Icon_Accessories_013	/Game/Assets/Texture2D/ItemIcon/Frames	Bracelet of Bravery	1
+Accessories_014	Icon_Accessories_014	/Game/Assets/Texture2D/ItemIcon/Frames	Necklace of Bravery	1
+Accessories_015	Icon_Accessories_030	/Game/Assets/Texture2D/ItemIcon/Frames	Arcane Necklace	0
+Accessories_016	Icon_Accessories_016	/Game/Assets/Texture2D/ItemIcon/Frames	Hollow Vessel	1
+Accessories_017	Icon_Accessories_017	/Game/Assets/Texture2D/ItemIcon/Frames	Grey Jade Ring	0
+Accessories_018	Icon_Accessories_018	/Game/Assets/Texture2D/ItemIcon/Frames	Mask of a Maniac Mage	0
+Accessories_019	Icon_Accessories_019	/Game/Assets/Texture2D/ItemIcon/Frames	Mask of Eseus	1
+Accessories_020	Icon_Accessories_020	/Game/Assets/Texture2D/ItemIcon/Frames	Life-saving Badge	1
+Accessories_021	Icon_Accessories_021	/Game/Assets/Texture2D/ItemIcon/Frames	Owl's Pendant	0
+Accessories_022	Icon_Accessories_022	/Game/Assets/Texture2D/ItemIcon/Frames	Owl's Charm	0
+Accessories_023	Icon_Accessories_023	/Game/Assets/Texture2D/ItemIcon/Frames	Emblem of Sword and Shield	1
+Accessories_024	Icon_Accessories_024	/Game/Assets/Texture2D/ItemIcon/Frames	Flowerspray Dagger	0
+Accessories_025	Icon_Accessories_025	/Game/Assets/Texture2D/ItemIcon/Frames	Plume Crown	1
+Accessories_026	Icon_Accessories_026	/Game/Assets/Texture2D/ItemIcon/Frames	Black and White Belt - Yang	0
+Accessories_027	Icon_Accessories_027	/Game/Assets/Texture2D/ItemIcon/Frames	Black and White Belt - Yin	1
+Accessories_028	Icon_Accessories_028	/Game/Assets/Texture2D/ItemIcon/Frames	Tranquil Jade Pendant	0
+Accessories_029	Icon_Accessories_029	/Game/Assets/Texture2D/ItemIcon/Frames	Furious Jade Pendant	1
+Accessories_030	Icon_Accessories_015	/Game/Assets/Texture2D/ItemIcon/Frames	Radiant Necklace	1
+Accessories_031	Icon_Accessories_031	/Game/Assets/Texture2D/ItemIcon/Frames	Aros' Pearl Rosary	0
+Accessories_032	Icon_Accessories_032	/Game/Assets/Texture2D/ItemIcon/Frames	Prism Stone Ring	0
+Accessories_033	Icon_Accessories_033	/Game/Assets/Texture2D/ItemIcon/Frames	White Tail Feather	0
+Accessories_034	Icon_Accessories_034	/Game/Assets/Texture2D/ItemIcon/Frames	Prism Stone Necklace	1
+Accessories_035	Icon_Accessories_035	/Game/Assets/Texture2D/ItemIcon/Frames	White Stone Heart	0
+Accessories_036	Icon_Accessories_036	/Game/Assets/Texture2D/ItemIcon/Frames	Black Rock Heart	0
+Accessories_037	Icon_Accessories_037	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Accessories_038	Icon_Accessories_038	/Game/Assets/Texture2D/ItemIcon/Frames	Twin's Right Ring	1
+Accessories_039	Icon_Accessories_039	/Game/Assets/Texture2D/ItemIcon/Frames	Warrior King's Wristband	1
+Accessories_040	Icon_Accessories_040	/Game/Assets/Texture2D/ItemIcon/Frames	Mage Master's Headband	1
+Accessories_041	Icon_Accessories_041	/Game/Assets/Texture2D/ItemIcon/Frames	Hermit's Cape	0
+Accessories_042	Icon_Accessories_042	/Game/Assets/Texture2D/ItemIcon/Frames	Sacred Seed	0
+Accessories_043	Icon_Accessories_043	/Game/Assets/Texture2D/ItemIcon/Frames	Calamity Ring	0
+Accessories_044	Icon_Accessories_044	/Game/Assets/Texture2D/ItemIcon/Frames	Heresy Hood	0
+Accessories_045	Icon_Accessories_045	/Game/Assets/Texture2D/ItemIcon/Frames	Withering Dagger	0
+Accessories_046	Icon_Accessories_046	/Game/Assets/Texture2D/ItemIcon/Frames	Crown of Goddess	1
+Accessories_047	Icon_Accessories_047	/Game/Assets/Texture2D/ItemIcon/Frames	Remains of a Broken Sword	0
+Accessories_048	Icon_Accessories_048	/Game/Assets/Texture2D/ItemIcon/Frames	Ghost Pipe	0
+Accessories_049	Icon_Accessories_049	/Game/Assets/Texture2D/ItemIcon/Frames	Ironskin Cape	0
+Accessories_050	Icon_Accessories_050	/Game/Assets/Texture2D/ItemIcon/Frames	Parasitic Seed	0
+Accessories_051	Icon_Accessories_051	/Game/Assets/Texture2D/ItemIcon/Frames	Greatsword Emblem	0
+Accessories_052	Icon_Accessories_052	/Game/Assets/Texture2D/ItemIcon/Frames	Fatal Ring	0
+Accessories_053	Icon_Accessories_053	/Game/Assets/Texture2D/ItemIcon/Frames	Mythical Gloves	0
+Accessories_054	Icon_Accessories_054	/Game/Assets/Texture2D/ItemIcon/Frames	Visitor’s Broken Pocketwatch	1
+Accessories_055	Icon_Accessories_055	/Game/Assets/Texture2D/ItemIcon/Frames	The Remembrance of Blood	1
+Accessories_056	Icon_Accessories_056	/Game/Assets/Texture2D/ItemIcon/Frames	Nosferatu's Fangs	1
+Accessories_057	Icon_Accessories_057	/Game/Assets/Texture2D/ItemIcon/Frames	Shade	0
+Accessories_058	Icon_Accessories_058	/Game/Assets/Texture2D/ItemIcon/Frames	Perfume Pouch	0
+Accessories_059	Icon_Accessories_059	/Game/Assets/Texture2D/ItemIcon/Frames	Floppy Mage's Hat	1
+Accessories_060	Icon_Accessories_060	/Game/Assets/Texture2D/ItemIcon/Frames	Floppy Mage's Hat	0
+Accessories_061	Icon_Accessories_061	/Game/Assets/Texture2D/ItemIcon/Frames	Mask of Uncle White	0
+Accessories_062	Icon_Accessories_037	/Game/Assets/Texture2D/ItemIcon/Frames	Twin's Left Ring	1
+Accessories_063	Icon_Accessories_063	/Game/Assets/Texture2D/ItemIcon/Frames	Shiny Quartz	0
+Accessories_065	Icon_Accessories_064	/Game/Assets/Texture2D/ItemIcon/Frames	Sacred Seed	0
+Accessories_066	Icon_Accessories_065	/Game/Assets/Texture2D/ItemIcon/Frames	Mysterious Doll	1
+Afterimage_001	Icon_Bg_Talent_Envoy	/Game/Assets/Texture2D/ItemIcon/Frames	Rainfall Messenger	1
+Afterimage_002	Icon_Bg_Talent_Sliding	/Game/Assets/Texture2D/ItemIcon/Frames	Slide Master	1
+Afterimage_003	Icon_Bg_Trueeye	/Game/Assets/Texture2D/ItemIcon/Frames	Eye of Truth	0
+Afterimage_004	Icon_Bg_Anemoscope	/Game/Assets/Texture2D/ItemIcon/Frames	Treasurescope of Se	0
+Afterimage_005	Icon_Bg_Talent_Sea	/Game/Assets/Texture2D/ItemIcon/Frames	Bless of Guardian	1
+Afterimage_006	Icon_Bg_Talent_Body	/Game/Assets/Texture2D/ItemIcon/Frames	Unbreakable Shield	1
+Afterimage_007	Icon_Bg_Talent_Glean	/Game/Assets/Texture2D/ItemIcon/Frames	Scavenger	1
+Afterimage_008	Icon_Bg_Talent_Windrunner	/Game/Assets/Texture2D/ItemIcon/Frames	Hastewalker	1
+Afterimage_009	Icon_Bg_Talent_Devout	/Game/Assets/Texture2D/ItemIcon/Frames	Pious Blessing	0
+Afterimage_010	Icon_Bg_Talent_Heresy	/Game/Assets/Texture2D/ItemIcon/Frames	Faithful Blessing	1
+Afterimage_011	Icon_Bg_Talent_Space	/Game/Assets/Texture2D/ItemIcon/Frames	Space Block	0
+Afterimage_012	Icon_Bg_Talent_Worm	/Game/Assets/Texture2D/ItemIcon/Frames	Surviving Slip	0
+Afterimage_013	Icon_Bg_Talent_Syngenetic	/Game/Assets/Texture2D/ItemIcon/Frames	Life Lock	0
+Afterimage_014	Icon_Bg_Talent_Golden	/Game/Assets/Texture2D/ItemIcon/Frames	Reminiscence of the Sun	1
+Afterimage_015	Icon_Bg_Talent_Spirit	/Game/Assets/Texture2D/ItemIcon/Frames	Magic Burst	1
+Afterimage_016	Icon_Bg_Talent_Cloak	/Game/Assets/Texture2D/ItemIcon/Frames	Pyro Cape	0
+Afterimage_017	Icon_Bg_Talent_Carapace	/Game/Assets/Texture2D/ItemIcon/Frames	Geo Carapace	1
+Afterimage_018	Icon_Bg_Talent_Wing	/Game/Assets/Texture2D/ItemIcon/Frames	Anemo Wings	0
+Afterimage_019	Icon_Bg_Talent_Mushroom	/Game/Assets/Texture2D/ItemIcon/Frames	Venom Spore	0
+Afterimage_020	Icon_Bg_Talent_Gold	/Game/Assets/Texture2D/ItemIcon/Frames	Mystic Coin	0
+Afterimage_101	Icon_Bg_Bigicon_Eye	/Game/Assets/Texture2D/ItemIcon/Frames	Nuo Mask	0
+Afterimage_102	Icon_Bg_Bigicon_Sword	/Game/Assets/Texture2D/ItemIcon/Frames	The Sword	0
+Afterimage_103	Icon_Bg_Bigicon_Light	/Game/Assets/Texture2D/ItemIcon/Frames	The Halo	0
+Armor_Boot_001	Icon_Armor_Boot_001	/Game/Assets/Texture2D/ItemIcon/Frames	Moonlight Boots	0
+Armor_Boot_101	Icon_Armor_Boot_101	/Game/Assets/Texture2D/ItemIcon/Frames	Floral Boots	1
+Armor_Boot_201	Icon_Armor_Boot_201	/Game/Assets/Texture2D/ItemIcon/Frames	Exotic Geta	1
+Armor_Boot_202	Icon_Armor_Boot_202	/Game/Assets/Texture2D/ItemIcon/Frames	Ore Legguard	0
+Armor_Boot_301	Icon_Armor_Boot_301	/Game/Assets/Texture2D/ItemIcon/Frames	Guardian Legguard	0
+Armor_Boot_302	Icon_Armor_Boot_302	/Game/Assets/Texture2D/ItemIcon/Frames	Gorgeous Boots	0
+Armor_Boot_401	Icon_Armor_Boot_401	/Game/Assets/Texture2D/ItemIcon/Frames	Adventurer Boots	1
+Armor_Boot_402	Icon_Armor_Boot_402	/Game/Assets/Texture2D/ItemIcon/Frames	Boots of Secret	1
+Armor_Boot_403	Icon_Armor_Boot_403	/Game/Assets/Texture2D/ItemIcon/Frames	Owl’s Slippers	0
+Armor_Boot_404	Icon_Armor_Boot_404	/Game/Assets/Texture2D/ItemIcon/Frames	Silent Leggings	1
+Armor_Boot_501	Icon_Armor_Boot_501	/Game/Assets/Texture2D/ItemIcon/Frames	Wandering of the White Owl	0
+Armor_Boot_502	Armor_Boot_502	/Game/Assets/Texture2D/ItemIcon/Frames	Moonshadow Boots	0
+Armor_Boot_601	Icon_Armor_Boot_601	/Game/Assets/Texture2D/ItemIcon/Frames	Mythical Boots	1
+Armor_Boot_602	Icon_Armor_Boot_602	/Game/Assets/Texture2D/ItemIcon/Frames	Mithril Legguard	0
+Armor_Boot_603	Icon_Armor_Boot_603	/Game/Assets/Texture2D/ItemIcon/Frames	Remex Boots	1
+Armor_Boot_604	Icon_Armor_Boot_604	/Game/Assets/Texture2D/ItemIcon/Frames	Hornbeast Claw	1
+Armor_Boot_605	Icon_Armor_Boot_605	/Game/Assets/Texture2D/ItemIcon/Frames	Twinborn Boots	1
+Armor_Cuirasst_001	Icon_Armor_Cuirasst_001	/Game/Assets/Texture2D/ItemIcon/Frames	Moonlight Robe	0
+Armor_Cuirasst_101	Icon_Armor_Cuirasst_101	/Game/Assets/Texture2D/ItemIcon/Frames	Floral Dress	1
+Armor_Cuirasst_201	Icon_Armor_Cuirasst_201	/Game/Assets/Texture2D/ItemIcon/Frames	Exotic Clothes	1
+Armor_Cuirasst_202	Icon_Armor_Cuirasst_202	/Game/Assets/Texture2D/ItemIcon/Frames	Ore Armor	0
+Armor_Cuirasst_301	Icon_Armor_Cuirasst_301	/Game/Assets/Texture2D/ItemIcon/Frames	Guardian Armor	0
+Armor_Cuirasst_302	Icon_Armor_Cuirasst_302	/Game/Assets/Texture2D/ItemIcon/Frames	Gorgeous Dress	0
+Armor_Cuirasst_401	Icon_Armor_Cuirasst_401	/Game/Assets/Texture2D/ItemIcon/Frames	Adventurer Leather Armor	0
+Armor_Cuirasst_402	Icon_Armor_Cuirasst_402	/Game/Assets/Texture2D/ItemIcon/Frames	Cloak of Secret	0
+Armor_Cuirasst_403	Icon_Armor_Cuirasst_403	/Game/Assets/Texture2D/ItemIcon/Frames	Owl’s Robe	0
+Armor_Cuirasst_404	Icon_Armor_Cuirasst_404	/Game/Assets/Texture2D/ItemIcon/Frames	Silent Robe	1
+Armor_Cuirasst_501	Icon_Armor_Cuirasst_501	/Game/Assets/Texture2D/ItemIcon/Frames	Plumage of the White Owl	1
+Armor_Cuirasst_502	Armor_Cuirasst_502	/Game/Assets/Texture2D/ItemIcon/Frames	Moonshadow Robe	1
+Armor_Cuirasst_601	Icon_Armor_Cuirasst_601	/Game/Assets/Texture2D/ItemIcon/Frames	Mythical Robe	0
+Armor_Cuirasst_602	Icon_Armor_Cuirasst_602	/Game/Assets/Texture2D/ItemIcon/Frames	Mithril Armor	1
+Armor_Cuirasst_603	Icon_Armor_Cuirasst_603	/Game/Assets/Texture2D/ItemIcon/Frames	Remex Armor	1
+Armor_Cuirasst_604	Icon_Armor_Cuirasst_604	/Game/Assets/Texture2D/ItemIcon/Frames	Hornbeast Fang	0
+Armor_Cuirasst_605	Icon_Armor_Cuirasst_605	/Game/Assets/Texture2D/ItemIcon/Frames	Twinborn Armor	1
+Armor_Helmet_001	Icon_Armor_Hat01	/Game/Assets/Texture2D/ItemIcon/Frames	Moonlight Band	0
+Armor_Helmet_101	Icon_Armor_Helmet_101	/Game/Assets/Texture2D/ItemIcon/Frames	Floral Tiara	0
+Armor_Helmet_201	Icon_Armor_Helmet_201	/Game/Assets/Texture2D/ItemIcon/Frames	Exotic Mask	1
+Armor_Helmet_202	Icon_Armor_Helmet_202	/Game/Assets/Texture2D/ItemIcon/Frames	Ore Helmet	1
+Armor_Helmet_301	Icon_Armor_Helmet_301	/Game/Assets/Texture2D/ItemIcon/Frames	Guardian Helmet	0
+Armor_Helmet_302	Icon_Armor_Helmet_302	/Game/Assets/Texture2D/ItemIcon/Frames	Gorgeous Tiara	0
+Armor_Helmet_401	Icon_Armor_Helmet_401	/Game/Assets/Texture2D/ItemIcon/Frames	Adventurer Headband	1
+Armor_Helmet_402	Icon_Armor_Helmet_402	/Game/Assets/Texture2D/ItemIcon/Frames	Mask of Secret	1
+Armor_Helmet_403	Icon_Armor_Helmet_403	/Game/Assets/Texture2D/ItemIcon/Frames	Owl’s Hood	0
+Armor_Helmet_404	Icon_Armor_Helmet_404	/Game/Assets/Texture2D/ItemIcon/Frames	Silent Mask	0
+Armor_Helmet_501	Icon_Armor_Helmet_501	/Game/Assets/Texture2D/ItemIcon/Frames	Hood of the White Owl	0
+Armor_Helmet_502	Armor_Helmet_502	/Game/Assets/Texture2D/ItemIcon/Frames	Moonshadow Band	1
+Armor_Helmet_601	Icon_Armor_Helmet_601	/Game/Assets/Texture2D/ItemIcon/Frames	Mythical Hairpin	0
+Armor_Helmet_602	Icon_Armor_Helmet_602	/Game/Assets/Texture2D/ItemIcon/Frames	Mithril Helmet	1
+Armor_Helmet_603	Icon_Armor_Helmet_603	/Game/Assets/Texture2D/ItemIcon/Frames	Remex Helmet	1
+Armor_Helmet_604	Icon_Armor_Helmet_604	/Game/Assets/Texture2D/ItemIcon/Frames	Hornbeast Headband	1
+Armor_Helmet_605	Icon_Armor_Helmet_605	/Game/Assets/Texture2D/ItemIcon/Frames	Twinborn Helmet	1
+Armor_Helmet_901	Icon_Armor_Helmet_901	/Game/Assets/Texture2D/ItemIcon/Frames	Testing Ring	1
+Armor_body001	Icon_Accessories_022	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Armor_body002	Icon_Accessories_022	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Armor_foot001	Icon_Accessories_022	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Armor_foot002	Icon_Accessories_022	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Armor_head001	Icon_Accessories_022	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Armor_head002	Icon_Accessories_022	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Armor_jewel_002_1	Icon_Accessories_022	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Armor_jewel_002_2	Icon_Accessories_022	/Game/Assets/Texture2D/ItemIcon/Frames		0
+BR_Accessories_019	Icon_Accessories_019	/Game/Assets/Texture2D/ItemIcon/Frames	Mask of Eseus	0
+BR_Armor_Boot_501	Icon_Armor_Boot_501	/Game/Assets/Texture2D/ItemIcon/Frames	Wandering of the White Owl	0
+BR_Armor_Boot_502	Armor_Boot_502	/Game/Assets/Texture2D/ItemIcon/Frames	Moonshadow Boots	0
+BR_Armor_Boot_601	Icon_Armor_Boot_601	/Game/Assets/Texture2D/ItemIcon/Frames	Mythical Boots	0
+BR_Armor_Boot_602	Icon_Armor_Boot_602	/Game/Assets/Texture2D/ItemIcon/Frames	Mithril Legguard	0
+BR_Armor_Boot_603	Icon_Armor_Boot_603	/Game/Assets/Texture2D/ItemIcon/Frames	Remex Boots	0
+BR_Armor_Boot_604	Icon_Armor_Boot_604	/Game/Assets/Texture2D/ItemIcon/Frames	Hornbeast Claw	0
+BR_Armor_Boot_605	Icon_Armor_Boot_605	/Game/Assets/Texture2D/ItemIcon/Frames	Twinborn Boots	0
+BR_Armor_Cuirasst_501	Icon_Armor_Cuirasst_501	/Game/Assets/Texture2D/ItemIcon/Frames	Plumage of the White Owl	0
+BR_Armor_Cuirasst_502	Armor_Cuirasst_502	/Game/Assets/Texture2D/ItemIcon/Frames	Moonshadow Robe	0
+BR_Armor_Cuirasst_601	Icon_Armor_Cuirasst_601	/Game/Assets/Texture2D/ItemIcon/Frames	Mythical Robe	0
+BR_Armor_Cuirasst_602	Icon_Armor_Cuirasst_602	/Game/Assets/Texture2D/ItemIcon/Frames	Mithril Armor	0
+BR_Armor_Cuirasst_603	Icon_Armor_Cuirasst_603	/Game/Assets/Texture2D/ItemIcon/Frames	Remex Armor	0
+BR_Armor_Cuirasst_604	Icon_Armor_Cuirasst_604	/Game/Assets/Texture2D/ItemIcon/Frames	Hornbeast Fang	0
+BR_Armor_Cuirasst_605	Icon_Armor_Cuirasst_605	/Game/Assets/Texture2D/ItemIcon/Frames	Twinborn Armor	0
+BR_Armor_Helmet_501	Icon_Armor_Helmet_501	/Game/Assets/Texture2D/ItemIcon/Frames	Hood of the White Owl	0
+BR_Armor_Helmet_502	Armor_Helmet_502	/Game/Assets/Texture2D/ItemIcon/Frames	Moonshadow Band	0
+BR_Armor_Helmet_601	Icon_Armor_Helmet_601	/Game/Assets/Texture2D/ItemIcon/Frames	Mythical Hairpin	0
+BR_Armor_Helmet_602	Icon_Armor_Helmet_602	/Game/Assets/Texture2D/ItemIcon/Frames	Mithril Helmet	0
+BR_Armor_Helmet_603	Icon_Armor_Helmet_603	/Game/Assets/Texture2D/ItemIcon/Frames	Remex Helmet	0
+BR_Armor_Helmet_604	Icon_Armor_Helmet_604	/Game/Assets/Texture2D/ItemIcon/Frames	Hornbeast Headband	0
+BR_Armor_Helmet_605	Icon_Armor_Helmet_605	/Game/Assets/Texture2D/ItemIcon/Frames	Twinborn Helmet	0
+BR_Weapon_Book_001	Icon_Weapon_Book_001	/Game/Assets/Texture2D/ItemIcon/Frames	Book of Pyro	0
+BR_Weapon_Book_002	Icon_Weapon_Book_002	/Game/Assets/Texture2D/ItemIcon/Frames	Book of Hydro	0
+BR_Weapon_Book_003	Icon_Weapon_Book_003	/Game/Assets/Texture2D/ItemIcon/Frames	Book of Geo	0
+BR_Weapon_Book_004	Icon_Weapon_Book_004	/Game/Assets/Texture2D/ItemIcon/Frames	Book of Anemo	0
+BR_Weapon_Book_005	Icon_Weapon_Book_005	/Game/Assets/Texture2D/ItemIcon/Frames	Book of Curse	0
+BR_Weapon_Book_006	Icon_Weapon_Book_006	/Game/Assets/Texture2D/ItemIcon/Frames	Grimoire of the Occult Prime	0
+BR_Weapon_DSword_001	Icon_Weapon_DSword_001	/Game/Assets/Texture2D/ItemIcon/Frames	Wooden Dualsword	0
+BR_Weapon_DSword_102	Icon_Weapon_DSword_102	/Game/Assets/Texture2D/ItemIcon/Frames	Gale	0
+BR_Weapon_DSword_104	Icon_Weapon_DSword_104	/Game/Assets/Texture2D/ItemIcon/Frames	Instinct	0
+BR_Weapon_DSword_105	Icon_Weapon_DSword_105	/Game/Assets/Texture2D/ItemIcon/Frames	Ravager	0
+BR_Weapon_DSword_106	Icon_Weapon_DSword_106	/Game/Assets/Texture2D/ItemIcon/Frames	Icy Flames	0
+BR_Weapon_DSword_107	Icon_Weapon_DSword_107	/Game/Assets/Texture2D/ItemIcon/Frames	Prisma	0
+BR_Weapon_DSword_108	Icon_Weapon_DSword_108	/Game/Assets/Texture2D/ItemIcon/Frames	Thunderfall	0
+BR_Weapon_DSword_201	Icon_Weapon_DSword_201	/Game/Assets/Texture2D/ItemIcon/Frames	Celestial Remains	0
+BR_Weapon_GSword_001	Icon_Weapon_GSword_001	/Game/Assets/Texture2D/ItemIcon/Frames	Wooden Greatsword	0
+BR_Weapon_GSword_101	Icon_Weapon_GSword_101	/Game/Assets/Texture2D/ItemIcon/Frames	Unbreakable Rose	0
+BR_Weapon_GSword_105	Icon_Weapon_GSword_105	/Game/Assets/Texture2D/ItemIcon/Frames	Double Edge	0
+BR_Weapon_GSword_107	Icon_Weapon_GSword_107	/Game/Assets/Texture2D/ItemIcon/Frames	Scorching Judgement	0
+BR_Weapon_GSword_108	Icon_Weapon_GSword_108	/Game/Assets/Texture2D/ItemIcon/Frames	The Gift	0
+BR_Weapon_GSword_109	Icon_Weapon_GSword_109	/Game/Assets/Texture2D/ItemIcon/Frames	Berserker	0
+BR_Weapon_GSword_201	Icon_Weapon_GSword_201	/Game/Assets/Texture2D/ItemIcon/Frames	Starry Night	0
+BR_Weapon_GSword_202	Icon_Weapon_GSword_202	/Game/Assets/Texture2D/ItemIcon/Frames	Evil Jade	0
+BR_Weapon_Katana_001	Icon_Weapon_Katana_001	/Game/Assets/Texture2D/ItemIcon/Frames	Wooden Blade	0
+BR_Weapon_Katana_004	Icon_Weapon_Katana_004	/Game/Assets/Texture2D/ItemIcon/Frames	Blade of Lost	0
+BR_Weapon_Katana_101	Icon_Weapon_Katana_101	/Game/Assets/Texture2D/ItemIcon/Frames	Ceremonial Blade	0
+BR_Weapon_Katana_103	Icon_Weapon_Katana_103	/Game/Assets/Texture2D/ItemIcon/Frames	Heart of Sun	0
+BR_Weapon_Katana_106	Icon_Weapon_Katana_106	/Game/Assets/Texture2D/ItemIcon/Frames	Prism Gale	0
+BR_Weapon_Katana_107	Icon_Weapon_Katana_107	/Game/Assets/Texture2D/ItemIcon/Frames	Bloodbath	0
+BR_Weapon_Katana_108	Icon_Weapon_Katana_108	/Game/Assets/Texture2D/ItemIcon/Frames	Anemogrim	0
+BR_Weapon_Katana_110	Icon_Weapon_Katana_110	/Game/Assets/Texture2D/ItemIcon/Frames	Deathmatch	0
+BR_Weapon_LongStaff_001	Icon_Weapon_LongStaff_001	/Game/Assets/Texture2D/ItemIcon/Frames	Pyroblast Staff	0
+BR_Weapon_LongStaff_002	Icon_Weapon_LongStaff_002	/Game/Assets/Texture2D/ItemIcon/Frames	Frostbite Staff	0
+BR_Weapon_LongStaff_003	Icon_Weapon_LongStaff_003	/Game/Assets/Texture2D/ItemIcon/Frames	Earthshock Staff	0
+BR_Weapon_LongStaff_004	Icon_Weapon_LongStaff_004	/Game/Assets/Texture2D/ItemIcon/Frames	Stormfall Staff	0
+BR_Weapon_LongStaff_005	Icon_Weapon_LongStaff_005	/Game/Assets/Texture2D/ItemIcon/Frames	Staff of the Occult Prime	0
+BR_Weapon_LongStaff_006	Icon_Weapon_LongStaff_006	/Game/Assets/Texture2D/ItemIcon/Frames	Sceptre of the Sage	0
+BR_Weapon_Scroll_001	Icon_Weapon_Scroll_001	/Game/Assets/Texture2D/ItemIcon/Frames	Scroll of Otherworld	0
+BR_Weapon_Scroll_002	Icon_Weapon_Scroll_002	/Game/Assets/Texture2D/ItemIcon/Frames	Scroll of Life	0
+BR_Weapon_Scroll_004	Icon_Weapon_Scroll_004	/Game/Assets/Texture2D/ItemIcon/Frames	Scroll of Thirst	0
+BR_Weapon_Scythe_001	Icon_Weapon_Scythe_001	/Game/Assets/Texture2D/ItemIcon/Frames	Wooden Scythe	0
+BR_Weapon_Scythe_005	Icon_Weapon_Scythe_005	/Game/Assets/Texture2D/ItemIcon/Frames	Scythe of Contagion	0
+BR_Weapon_Scythe_102	Icon_Weapon_Scythe_102	/Game/Assets/Texture2D/ItemIcon/Frames	Spellbreaker	0
+BR_Weapon_Scythe_103	Icon_Weapon_Scythe_103	/Game/Assets/Texture2D/ItemIcon/Frames	Spore	0
+BR_Weapon_Scythe_104	Icon_Weapon_Scythe_104	/Game/Assets/Texture2D/ItemIcon/Frames	Ember	0
+BR_Weapon_Scythe_106	Icon_Weapon_Scythe_106	/Game/Assets/Texture2D/ItemIcon/Frames	Scarlet Reaper	0
+BR_Weapon_Scythe_109	Icon_Weapon_Scythe_109	/Game/Assets/Texture2D/ItemIcon/Frames	Frostdance	0
+BR_Weapon_Scythe_201	Icon_Weapon_Scythe_201	/Game/Assets/Texture2D/ItemIcon/Frames	Scythe of Abyss	0
+BR_Weapon_ShortStaff_001	Icon_Weapon_ShortStaff_001	/Game/Assets/Texture2D/ItemIcon/Frames	Crimson Wand	0
+BR_Weapon_ShortStaff_002	Icon_Weapon_ShortStaff_002	/Game/Assets/Texture2D/ItemIcon/Frames	Devil Wand	0
+BR_Weapon_ShortStaff_003	Icon_Weapon_ShortStaff_003	/Game/Assets/Texture2D/ItemIcon/Frames	Wand of Owl	0
+BR_Weapon_Sword_001	Icon_Weapon_Sword_001	/Game/Assets/Texture2D/ItemIcon/Frames	Wooden Sword	0
+BR_Weapon_Sword_005	Icon_Weapon_Sword_005	/Game/Assets/Texture2D/ItemIcon/Frames	Sword of Geo	0
+BR_Weapon_Sword_102	Icon_Weapon_Sword_102	/Game/Assets/Texture2D/ItemIcon/Frames	Windrunner	0
+BR_Weapon_Sword_106	Icon_Weapon_Sword_106	/Game/Assets/Texture2D/ItemIcon/Frames	Nameless	0
+BR_Weapon_Sword_107	Icon_Weapon_Sword_107	/Game/Assets/Texture2D/ItemIcon/Frames	Bleak Moon	0
+BR_Weapon_Sword_108	Icon_Weapon_Sword_108	/Game/Assets/Texture2D/ItemIcon/Frames	Sword of the Hermit	0
+BR_Weapon_Sword_110	Icon_Weapon_Sword_110	/Game/Assets/Texture2D/ItemIcon/Frames	Phantom	0
+BR_Weapon_Sword_201	Icon_Weapon_Sword_201	/Game/Assets/Texture2D/ItemIcon/Frames	For Cinra Only	0
+BR_Weapon_Whip_001	Icon_Weapon_Whip_001	/Game/Assets/Texture2D/ItemIcon/Frames	Whip	0
+BR_Weapon_Whip_006	Icon_Weapon_Whip_006	/Game/Assets/Texture2D/ItemIcon/Frames	Thorns	0
+BR_Weapon_Whip_102	Icon_Weapon_Whip_102	/Game/Assets/Texture2D/ItemIcon/Frames	Holy Whip	0
+BR_Weapon_Whip_103	Icon_Weapon_Whip_103	/Game/Assets/Texture2D/ItemIcon/Frames	Behemoth Killer	0
+BR_Weapon_Whip_104	Icon_Weapon_Whip_104	/Game/Assets/Texture2D/ItemIcon/Frames	Monster Hunter	0
+BR_Weapon_Whip_105	Icon_Weapon_Whip_105	/Game/Assets/Texture2D/ItemIcon/Frames	Rage of Geo	0
+BR_Weapon_Whip_106	Icon_Weapon_Whip_106	/Game/Assets/Texture2D/ItemIcon/Frames	Flaming Cycle	0
+BR_Weapon_Whip_107	Icon_Weapon_Whip_107	/Game/Assets/Texture2D/ItemIcon/Frames	Bloody Nobility	0
+Coins_131	/Game/Assets/UMG/TextureAtlases/HUD/Frames/ST_HUD1_Button_Gold.ST_HUD1_Button_Gold	/Game/Assets/UMG/TextureAtlases/HUD/Frames		12
+Coins_160	/Game/Assets/UMG/TextureAtlases/HUD/Frames/ST_HUD1_Button_Gold.ST_HUD1_Button_Gold	/Game/Assets/UMG/TextureAtlases/HUD/Frames		8
+Coins_193	/Game/Assets/UMG/TextureAtlases/HUD/Frames/ST_HUD1_Button_Gold.ST_HUD1_Button_Gold	/Game/Assets/UMG/TextureAtlases/HUD/Frames		14
+Coins_199	/Game/Assets/UMG/TextureAtlases/HUD/Frames/ST_HUD1_Button_Gold.ST_HUD1_Button_Gold	/Game/Assets/UMG/TextureAtlases/HUD/Frames		1
+Coins_222	/Game/Assets/UMG/TextureAtlases/HUD/Frames/ST_HUD1_Button_Gold.ST_HUD1_Button_Gold	/Game/Assets/UMG/TextureAtlases/HUD/Frames		15
+Coins_250	/Game/Assets/UMG/TextureAtlases/HUD/Frames/ST_HUD1_Button_Gold.ST_HUD1_Button_Gold	/Game/Assets/UMG/TextureAtlases/HUD/Frames		19
+Coins_270	/Game/Assets/UMG/TextureAtlases/HUD/Frames/ST_HUD1_Button_Gold.ST_HUD1_Button_Gold	/Game/Assets/UMG/TextureAtlases/HUD/Frames		15
+Coins_300	/Game/Assets/UMG/TextureAtlases/HUD/Frames/ST_HUD1_Button_Gold.ST_HUD1_Button_Gold	/Game/Assets/UMG/TextureAtlases/HUD/Frames		17
+Coins_320	/Game/Assets/UMG/TextureAtlases/HUD/Frames/ST_HUD1_Button_Gold.ST_HUD1_Button_Gold	/Game/Assets/UMG/TextureAtlases/HUD/Frames		17
+Coins_350	/Game/Assets/UMG/TextureAtlases/HUD/Frames/ST_HUD1_Button_Gold.ST_HUD1_Button_Gold	/Game/Assets/UMG/TextureAtlases/HUD/Frames		18
+Coins_380	/Game/Assets/UMG/TextureAtlases/HUD/Frames/ST_HUD1_Button_Gold.ST_HUD1_Button_Gold	/Game/Assets/UMG/TextureAtlases/HUD/Frames		18
+Coins_400	/Game/Assets/UMG/TextureAtlases/HUD/Frames/ST_HUD1_Button_Gold.ST_HUD1_Button_Gold	/Game/Assets/UMG/TextureAtlases/HUD/Frames		21
+Coins_420	/Game/Assets/UMG/TextureAtlases/HUD/Frames/ST_HUD1_Button_Gold.ST_HUD1_Button_Gold	/Game/Assets/UMG/TextureAtlases/HUD/Frames		9
+Coins_450	/Game/Assets/UMG/TextureAtlases/HUD/Frames/ST_HUD1_Button_Gold.ST_HUD1_Button_Gold	/Game/Assets/UMG/TextureAtlases/HUD/Frames		21
+Coins_462	/Game/Assets/UMG/TextureAtlases/HUD/Frames/ST_HUD1_Button_Gold.ST_HUD1_Button_Gold	/Game/Assets/UMG/TextureAtlases/HUD/Frames		13
+Coins_474	/Game/Assets/UMG/TextureAtlases/HUD/Frames/ST_HUD1_Button_Gold.ST_HUD1_Button_Gold	/Game/Assets/UMG/TextureAtlases/HUD/Frames		21
+Coins_486	/Game/Assets/UMG/TextureAtlases/HUD/Frames/ST_HUD1_Button_Gold.ST_HUD1_Button_Gold	/Game/Assets/UMG/TextureAtlases/HUD/Frames		16
+Coins_498	/Game/Assets/UMG/TextureAtlases/HUD/Frames/ST_HUD1_Button_Gold.ST_HUD1_Button_Gold	/Game/Assets/UMG/TextureAtlases/HUD/Frames		11
+Coins_501	/Game/Assets/UMG/TextureAtlases/HUD/Frames/ST_HUD1_Button_Gold.ST_HUD1_Button_Gold	/Game/Assets/UMG/TextureAtlases/HUD/Frames		38
+Coins_600	/Game/Assets/UMG/TextureAtlases/HUD/Frames/ST_HUD1_Button_Gold.ST_HUD1_Button_Gold	/Game/Assets/UMG/TextureAtlases/HUD/Frames		1
+Coins_756	/Game/Assets/UMG/TextureAtlases/HUD/Frames/ST_HUD1_Button_Gold.ST_HUD1_Button_Gold	/Game/Assets/UMG/TextureAtlases/HUD/Frames		2
+Cook_Bird	Icon_Cook_Bird	/Game/Assets/Texture2D/ItemIcon/Frames	Bird Meat	0
+Cook_Carrot	Icon_Cook_Carrot	/Game/Assets/Texture2D/ItemIcon/Frames	Tree Radish	0
+Cook_Chili	Icon_Cook_Chili	/Game/Assets/Texture2D/ItemIcon/Frames	Flame Plant	0
+Cook_Chocolate	Icon_Cook_Chocolate	/Game/Assets/Texture2D/ItemIcon/Frames	Soft Lavachunk	0
+Cook_Clover	Icon_Cook_Clover	/Game/Assets/Texture2D/ItemIcon/Frames	Clover	4
+Cook_Conch	Icon_Cook_Conch	/Game/Assets/Texture2D/ItemIcon/Frames	Sky Snail	0
+Cook_Corn	Icon_Cook_Corn	/Game/Assets/Texture2D/ItemIcon/Frames	Golden Grain	0
+Cook_DespairGrain	Icon_Cook_DespairGrain	/Game/Assets/Texture2D/ItemIcon/Frames	Crystals of despair	0
+Cook_Dew	Icon_Cook_Dew	/Game/Assets/Texture2D/ItemIcon/Frames	Water of the Well	0
+Cook_Ear	Icon_Cook_Ear	/Game/Assets/Texture2D/ItemIcon/Frames	Fluffy Ears	0
+Cook_EarthDust	Icon_Cook_EarthDust	/Game/Assets/Texture2D/ItemIcon/Frames	Geo Dust	0
+Cook_FireDust	Icon_Cook_FireDust	/Game/Assets/Texture2D/ItemIcon/Frames	Pyro Dust	0
+Cook_FireElite	Icon_Cook_FireElite	/Game/Assets/Texture2D/ItemIcon/Frames	Fotia	0
+Cook_Fish	Icon_Cook_Fish	/Game/Assets/Texture2D/ItemIcon/Frames	Golden Fish	0
+Cook_Gigot	Icon_Cook_Gigot	/Game/Assets/Texture2D/ItemIcon/Frames	Oreep Meat	0
+Cook_Grape	Icon_Cook_Inkfish01_C01	/Game/Assets/Texture2D/ItemIcon/Frames	Grapeling Pearl	0
+Cook_HolyHeart	Icon_Cook_HolyHeart	/Game/Assets/Texture2D/ItemIcon/Frames	Palerock Remains	0
+Cook_HopeGrain	Icon_Cook_HopeGrain	/Game/Assets/Texture2D/ItemIcon/Frames	Sands of Hope	0
+Cook_Jelly	Icon_Cook_Jelly	/Game/Assets/Texture2D/ItemIcon/Frames	Blue Gel	0
+Cook_JuicyFlesh	Icon_Cook_JuicyFlesh	/Game/Assets/Texture2D/ItemIcon/Frames	Juicy Meat	0
+Cook_Lobster	Icon_Cook_Lobster	/Game/Assets/Texture2D/ItemIcon/Frames	Emperor's Bug	0
+Cook_Meat	Icon_Cook_Meat	/Game/Assets/Texture2D/ItemIcon/Frames	Ancient Spiritual Meat	0
+Cook_Mushroom	Icon_Cook_Mushroom	/Game/Assets/Texture2D/ItemIcon/Frames	Medium Rare Mushroom	0
+Cook_OliveOil	Icon_Cook_OliveOil	/Game/Assets/Texture2D/ItemIcon/Frames	Energy Oil	0
+Cook_Onion	Icon_Cook_Onion	/Game/Assets/Texture2D/ItemIcon/Frames	Emerald Stem	0
+Cook_Pupa	Icon_Cook_Pupa	/Game/Assets/Texture2D/ItemIcon/Frames	Desert Pupa	0
+Cook_PurpleFlower	Icon_Cook_PurpleFlower	/Game/Assets/Texture2D/ItemIcon/Frames	Mulberry Flower	0
+Cook_RainbowEgg	Icon_Cook_RainbowEgg	/Game/Assets/Texture2D/ItemIcon/Frames	Rainbow Egg	5
+Cook_Salt	Icon_Cook_Salt	/Game/Assets/Texture2D/ItemIcon/Frames	Rainbow Grit	0
+Cook_Sauce	Icon_Cook_Sauce	/Game/Assets/Texture2D/ItemIcon/Frames	Meem Jam	0
+Cook_Shell	Icon_Cook_Shell	/Game/Assets/Texture2D/ItemIcon/Frames	Clam	0
+Cook_SoulDust	Icon_Cook_SoulDust	/Game/Assets/Texture2D/ItemIcon/Frames	Spirit Dust	0
+Cook_SoulElite	Icon_Cook_SoulElite	/Game/Assets/Texture2D/ItemIcon/Frames	Spirit Essence	0
+Cook_SoulFragment	Icon_Cook_SoulFragment	/Game/Assets/Texture2D/ItemIcon/Frames	Spirit Shard	0
+Cook_Soy	Icon_Cook_Soy	/Game/Assets/Texture2D/ItemIcon/Frames	Black Sauce	0
+Cook_Spore	Icon_Item_Silk01	/Game/Assets/Texture2D/ItemIcon/Frames	Mushroom Spore	0
+Cook_Sugar	Icon_Cook_Sugar	/Game/Assets/Texture2D/ItemIcon/Frames	Sweet Grit	0
+Cook_Tail	Icon_Cook_Tail	/Game/Assets/Texture2D/ItemIcon/Frames	Flametail Meat	0
+Cook_TenderFlesh	Icon_Cook_TenderFlesh	/Game/Assets/Texture2D/ItemIcon/Frames	Soft Meat	0
+Cook_Tentacle	Icon_Cook_Squid01_C01	/Game/Assets/Texture2D/ItemIcon/Frames	Sucker Tentacle	0
+Cook_ToughMeat	Icon_Cook_ToughMeat	/Game/Assets/Texture2D/ItemIcon/Frames	Tough Meat	0
+Cook_Treasure	Icon_Cook_Treasure	/Game/Assets/Texture2D/ItemIcon/Frames	Scorched Orb	0
+Cook_Vanilla	Icon_Cook_Vanilla	/Game/Assets/Texture2D/ItemIcon/Frames	Fragrant Root	0
+Cook_Vinegar	Icon_Cook_Vinegar	/Game/Assets/Texture2D/ItemIcon/Frames	White Sauce	0
+Cook_Warter	Icon_Cook_Warter	/Game/Assets/Texture2D/ItemIcon/Frames	Pure Water	0
+Cook_WaterDust	Icon_Cook_WaterDust	/Game/Assets/Texture2D/ItemIcon/Frames	Hydro Dust	0
+Cook_WhiteFlower	Icon_Cook_WhiteFlower	/Game/Assets/Texture2D/ItemIcon/Frames	Marble Flower	0
+Cook_WindDust	Icon_Cook_WindDust	/Game/Assets/Texture2D/ItemIcon/Frames	Anemo Dust	0
+Cook_Worm	Icon_Cook_Worm	/Game/Assets/Texture2D/ItemIcon/Frames	Ocean Slug	0
+Cook_Wrapper	Icon_Cook_Wrapper	/Game/Assets/Texture2D/ItemIcon/Frames	Clear Flake	0
+Food_BoiledCabbage	Icon_Cook_BoiledCabbage	/Game/Assets/Texture2D/ItemIcon/Frames	Boiled Marble Flowers	0
+Food_BraisedPork	Icon_Cook_BraisedPork	/Game/Assets/Texture2D/ItemIcon/Frames	Braised Pork	0
+Food_BubbleWater	Icon_Cook_Kabob	/Game/Assets/Texture2D/ItemIcon/Frames	Azure Sparkling Water	0
+Food_BuddhaSkippingWall	Icon_Cook_BuddhaSkippingWall	/Game/Assets/Texture2D/ItemIcon/Frames	Golden Mushroom Soup	0
+Food_CarrotStew	Icon_Cook_CarrotStew	/Game/Assets/Texture2D/ItemIcon/Frames	Lava Braised Meat	0
+Food_CarrotsRoastMeat	Icon_Cook_CarrotsRoastMeat	/Game/Assets/Texture2D/ItemIcon/Frames	Tree Radish Meat Stew	2
+Food_Champagne	Icon_Cook_Champagne	/Game/Assets/Texture2D/ItemIcon/Frames	Eternal Vintage	0
+Food_Cucumbers	Icon_Cook_Cucumbers	/Game/Assets/Texture2D/ItemIcon/Frames	Ocean Slug Salad	0
+Food_Dumpling	Icon_Cook_Dumpling	/Game/Assets/Texture2D/ItemIcon/Frames	Crystal Dumpling	0
+Food_FishSashimi	Icon_Cook_FishSashimi	/Game/Assets/Texture2D/ItemIcon/Frames	Golden Sashimi	0
+Food_FriedCornGrapes	Icon_Cook_FriedCornGrapes	/Game/Assets/Texture2D/ItemIcon/Frames	Life on the Plains	0
+Food_FriedEggs	Icon_Cook_FriedEggs	/Game/Assets/Texture2D/ItemIcon/Frames	Hermit's Lucky Omelette	0
+Food_FriedSteak	Icon_Cook_FriedSteak	/Game/Assets/Texture2D/ItemIcon/Frames	Pan-fried Steak	0
+Food_FriedWorms	Icon_Cook_FriedWorms	/Game/Assets/Texture2D/ItemIcon/Frames	Fried Sandworm	0
+Food_GreatSeafood	Icon_Cook_GreatSeafood	/Game/Assets/Texture2D/ItemIcon/Frames	Call of the Sea	0
+Food_Icecream	Icon_Cook_Icecream	/Game/Assets/Texture2D/ItemIcon/Frames	Volcanic Eruption	0
+Food_IronShellMeat	Icon_Cook_IronShellMeat	/Game/Assets/Texture2D/ItemIcon/Frames	Sea Shore Feast	0
+Food_Kabob	Icon_Food_Kabob	/Game/Assets/Texture2D/ItemIcon/Frames	Monster Skewer	0
+Food_MushroomSoup	Icon_Cook_MushroomSoup	/Game/Assets/Texture2D/ItemIcon/Frames	Mushroom Family	0
+Food_OctopusKebabs	Icon_Cook_OctopusKebabs	/Game/Assets/Texture2D/ItemIcon/Frames	Tentacle Skewer	0
+Food_PotatoSoup	Icon_Cook_PotatoSoup	/Game/Assets/Texture2D/ItemIcon/Frames	Spiritual Blast	0
+Food_RackLamb	Icon_Cook_RackLamb	/Game/Assets/Texture2D/ItemIcon/Frames	Oreep Steak	0
+Food_RedWine	Icon_Cook_RedWine	/Game/Assets/Texture2D/ItemIcon/Frames	Crimson Kiss	0
+Food_RoastDuck	Icon_Cook_RoastDuck	/Game/Assets/Texture2D/ItemIcon/Frames	Palerock Roast Bird	0
+Food_RoastLambLeg	Icon_Cook_RoastLambLeg	/Game/Assets/Texture2D/ItemIcon/Frames	Heroic Grill	0
+Food_ScallionPancake	Icon_Cook_ScallionPancake	/Game/Assets/Texture2D/ItemIcon/Frames	Emerald Crisp	0
+Food_Soup	Icon_Cook_Soup	/Game/Assets/Texture2D/ItemIcon/Frames	Spiritual Broth	0
+Food_SourPork	Icon_Cook_SourPork	/Game/Assets/Texture2D/ItemIcon/Frames	Sweet Juicy Meat	0
+Food_SpicySauce	Icon_Cook_SpicySauce	/Game/Assets/Texture2D/ItemIcon/Frames	Spicy Meat Sauce	0
+Food_StewedSoup	Icon_Cook_StewedSoup	/Game/Assets/Texture2D/ItemIcon/Frames	Mulberry Meat Pottage	0
+Item_Collecton_001	Icon_Quest_Sarira02_C02	/Game/Assets/Texture2D/ItemIcon/Frames	Scattered Prism Bone	1
+Item_Collecton_002	Icon_Quest_Sarira02_C02	/Game/Assets/Texture2D/ItemIcon/Frames	Scattered Prism Bone	1
+Item_Collecton_003	Icon_Quest_Sarira02_C02	/Game/Assets/Texture2D/ItemIcon/Frames	Scattered Prism Bone	1
+Item_Collecton_004	Icon_Quest_Sarira02_C02	/Game/Assets/Texture2D/ItemIcon/Frames	Scattered Prism Bone	1
+Item_Collecton_005	Icon_Quest_Sarira02_C02	/Game/Assets/Texture2D/ItemIcon/Frames	Scattered Prism Bone	1
+Item_Collecton_006	Icon_Quest_Sarira02_C02	/Game/Assets/Texture2D/ItemIcon/Frames	Scattered Prism Bone	1
+Item_Collecton_007	Icon_Quest_Sarira02_C02	/Game/Assets/Texture2D/ItemIcon/Frames	Scattered Prism Bone	1
+Item_Collecton_008	Icon_Quest_Sarira02_C02	/Game/Assets/Texture2D/ItemIcon/Frames	Scattered Prism Bone	1
+Item_Collecton_009	Icon_Quest_Sarira02_C02	/Game/Assets/Texture2D/ItemIcon/Frames	Scattered Prism Bone	1
+Item_Collecton_010	Icon_Quest_Sarira02_C02	/Game/Assets/Texture2D/ItemIcon/Frames	Scattered Prism Bone	1
+Item_Collecton_011	Icon_Quest_Sarira02_C02	/Game/Assets/Texture2D/ItemIcon/Frames	Scattered Prism Bone	1
+Item_Collecton_012	Icon_Quest_Sarira02_C02	/Game/Assets/Texture2D/ItemIcon/Frames	Scattered Prism Bone	1
+Item_Collecton_013	Icon_Quest_Sarira02_C02	/Game/Assets/Texture2D/ItemIcon/Frames	Scattered Prism Bone	1
+Item_Collecton_014	Icon_Quest_Sarira02_C02	/Game/Assets/Texture2D/ItemIcon/Frames	Scattered Prism Bone	1
+Item_Collecton_015	Icon_Quest_Sarira02_C02	/Game/Assets/Texture2D/ItemIcon/Frames	Scattered Prism Bone	1
+Item_Collecton_016	Icon_Quest_Sarira02_C02	/Game/Assets/Texture2D/ItemIcon/Frames	Scattered Prism Bone	1
+Item_Collecton_017	Icon_Quest_Sarira02_C02	/Game/Assets/Texture2D/ItemIcon/Frames	Scattered Prism Bone	1
+Item_Collecton_018	Icon_Quest_Sarira02_C02	/Game/Assets/Texture2D/ItemIcon/Frames	Scattered Prism Bone	1
+Item_Collecton_019	Icon_Quest_Sarira02_C02	/Game/Assets/Texture2D/ItemIcon/Frames	Scattered Prism Bone	1
+Item_Collecton_020	Icon_Quest_Sarira02_C02	/Game/Assets/Texture2D/ItemIcon/Frames	Scattered Prism Bone	1
+Item_Collecton_021	Icon_Quest_Sarira02_C02	/Game/Assets/Texture2D/ItemIcon/Frames	Scattered Prism Bone	1
+Item_Collecton_022	Icon_Quest_Sarira02_C02	/Game/Assets/Texture2D/ItemIcon/Frames	Scattered Prism Bone	1
+Item_Collecton_023	Icon_Quest_Sarira02_C02	/Game/Assets/Texture2D/ItemIcon/Frames	Scattered Prism Bone	1
+Item_Collecton_024	Icon_Quest_Sarira02_C02	/Game/Assets/Texture2D/ItemIcon/Frames	Scattered Prism Bone	1
+Item_Collecton_025	Icon_Quest_Sarira02_C02	/Game/Assets/Texture2D/ItemIcon/Frames	Scattered Prism Bone	1
+Item_Collecton_026	Icon_Quest_Sarira02_C02	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Item_Collecton_027	Icon_Quest_Sarira02_C02	/Game/Assets/Texture2D/ItemIcon/Frames	Scattered Prism Bone	1
+Item_Collecton_028	Icon_Quest_Sarira02_C02	/Game/Assets/Texture2D/ItemIcon/Frames	Scattered Prism Bone	1
+Item_Collecton_029	Icon_Quest_Sarira02_C02	/Game/Assets/Texture2D/ItemIcon/Frames	Scattered Prism Bone	1
+Item_Collecton_030	Icon_Quest_Sarira02_C02	/Game/Assets/Texture2D/ItemIcon/Frames	Scattered Prism Bone	1
+Item_Collecton_031	Icon_Quest_Sarira02_C02	/Game/Assets/Texture2D/ItemIcon/Frames	Scattered Prism Bone	1
+Key_Lv02_01	Key_Lv02_01	/Game/Assets/Texture2D/ItemIcon/Frames	Antiquated Key	1
+Makeup_001	Icon_Makeup_01	/Game/Assets/Texture2D/ItemIcon/Frames	Outfit - 0000	0
+Makeup_002	Icon_Makeup_02	/Game/Assets/Texture2D/ItemIcon/Frames	Outfit - 0001	0
+Makeup_003	Icon_Makeup_03	/Game/Assets/Texture2D/ItemIcon/Frames	Outfit - 0010	1
+Makeup_004	Icon_Makeup_04	/Game/Assets/Texture2D/ItemIcon/Frames	Outfit - 0011	0
+Makeup_005	Icon_Makeup_05	/Game/Assets/Texture2D/ItemIcon/Frames	Outfit - 0100	1
+Makeup_006	Icon_Makeup_06	/Game/Assets/Texture2D/ItemIcon/Frames	Outfit - 0101	1
+Makeup_007	Icon_Makeup_07	/Game/Assets/Texture2D/ItemIcon/Frames	Outfit - 0110	1
+Makeup_008	Icon_Makeup_08	/Game/Assets/Texture2D/ItemIcon/Frames	Outfit - 0111	0
+Makeup_009	Icon_Makeup_09	/Game/Assets/Texture2D/ItemIcon/Frames	Outfit - 1000	1
+Makeup_010	Icon_Makeup_10	/Game/Assets/Texture2D/ItemIcon/Frames	Outfit - 1001	0
+Makeup_011	Icon_Makeup_11	/Game/Assets/Texture2D/ItemIcon/Frames	Outfit - 1010	1
+Makeup_012	Icon_Makeup_12	/Game/Assets/Texture2D/ItemIcon/Frames	Outfit - 1011	1
+Makeup_013	Icon_Makeup_13	/Game/Assets/Texture2D/ItemIcon/Frames	Outfit - 1100	1
+Makeup_014	Icon_Makeup_16			0
+Makeup_015	Icon_Makeup_15			0
+Makeup_016	Icon_Makeup_17			0
+Money_SeCoin	Icon_Accessories_022	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Num_HpReward	Icon_leaf	/Game/Assets/Texture2D/ItemIcon/Frames	Shard of Divine Leaf	0
+Num_MpReward	Icon_Flower	/Game/Assets/Texture2D/ItemIcon/Frames	Shard of Divine Flower	0
+Potion_EquipLevelUp_01	Icon_Potion_bottle03		Dim Balm	37
+Potion_EquipLevelUp_02	Icon_Potion_bottle02		Mysterious Balm	33
+Potion_EquipLevelUp_03	Icon_Potion_bottle		Exotic Balm	9
+Potion_HPPotionBig	Icon_Potion_HPPotionBig	/Game/Assets/Texture2D/ItemIcon/Frames	Higher Health Potion	20
+Potion_HPPotionMid	Icon_Item_HP01	/Game/Assets/Texture2D/ItemIcon/Frames	Refined Health Potion	20
+Potion_HPPotionSmall	Icon_Potion_HPPotionMid	/Game/Assets/Texture2D/ItemIcon/Frames	Health Potion	25
+Potion_MPPotionBig	Potion_MPPotionBig	/Game/Assets/Texture2D/ItemIcon/Frames	Higher Mana Potion	7
+Potion_MPPotionMid	Icon_Item_MP01	/Game/Assets/Texture2D/ItemIcon/Frames	Refined Mana Potion	12
+Potion_MPPotionSmall	Icon_Potion_MPPotionMid	/Game/Assets/Texture2D/ItemIcon/Frames	Mana Potion	12
+Potion_TalentPointReward	Icon_Item_Talent01	/Game/Assets/Texture2D/ItemIcon/Frames	Talent Point	21
+Potion_TalentPointReward02	Icon_Item_Talent01_C01		Talent Essence II	8
+Potion_TalentPointReward03	Icon_Item_Talent01_C02			0
+Potion_TalentPointReward_Alice_1	Icon_Item_Talent01_C01		Talent Essence II	0
+Potion_TalentPointReward_Alice_2	Icon_Item_Talent01_C02		Talent Essence III	0
+Potion_TalentPointReward_Se_1	Icon_Item_Talent01	/Game/Assets/Texture2D/ItemIcon/Frames	Talent Point	0
+Potion_TalentPointReward_Se_2	Icon_Item_Talent01_C01		Talent Essence II	0
+Potion_TalentPointReward_Stanley_1	Icon_Item_Talent01	/Game/Assets/Texture2D/ItemIcon/Frames	Talent Point	0
+Potion_TalentPointReward_Stanley_2	Icon_Item_Talent01_C01		Talent Essence II	0
+Potion_TalentPointReward_Stanley_3	Icon_Item_Talent01_C02		Talent Essence III	0
+Potion_TalentPointReward_Stanley_4	Icon_Item_Talent01_C02		Talent Essence III	0
+Potion_TalentPointReward_Stanley_5	Icon_Item_Talent01_C02		Talent Essence III	0
+Potion_TalentReset	Icon_Item_Forgetfulness	/Game/Assets/Texture2D/ItemIcon/Frames	Potion of Oblivion	6
+Prop_AccessoriesSlot	Icon_Bracelet	/Game/Assets/Texture2D/ItemIcon/Frames	Divine Ring	0
+Prop_AfterImageReward	Icon_Seed	/Game/Assets/Texture2D/ItemIcon/Frames	Divine Seed	5
+Prop_HpReward	Icon_leaf	/Game/Assets/Texture2D/ItemIcon/Frames	Shard of Divine Leaf	23
+Prop_HpReward_Stenly	Icon_leaf	/Game/Assets/Texture2D/ItemIcon/Frames	Shard of Divine Leaf	0
+Prop_MpReward	Icon_Flower	/Game/Assets/Texture2D/ItemIcon/Frames	Shard of Divine Flower	19
+Prop_MpReward_Stenly	Icon_Flower	/Game/Assets/Texture2D/ItemIcon/Frames	Shard of Divine Flower	0
+Quest_ArosNote	Icon_Quest_NoteBook01	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Quest_ArosPot	Icon_Quest_Stonet02	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Quest_ArosSarira	Icon_Quest_Sarira01	/Game/Assets/Texture2D/ItemIcon/Frames	Prism Bone of Aros	0
+Quest_AurogonRune01	Icon_Quest_Aurogon01	/Game/Assets/Texture2D/ItemIcon/Frames	Qian	1
+Quest_AurogonRune02	Icon_Quest_Aurogon01_C01	/Game/Assets/Texture2D/ItemIcon/Frames	Kun	1
+Quest_AurogonRune03	Icon_Quest_Aurogon01_C02	/Game/Assets/Texture2D/ItemIcon/Frames	Zhen	1
+Quest_AurogonRune04	Icon_Quest_Aurogon01_C03	/Game/Assets/Texture2D/ItemIcon/Frames	Xun	1
+Quest_AurogonRune05	Icon_Quest_Aurogon01_C04	/Game/Assets/Texture2D/ItemIcon/Frames	Kan	1
+Quest_AurogonRune06	Icon_Quest_Aurogon01_C05	/Game/Assets/Texture2D/ItemIcon/Frames	Li	1
+Quest_AurogonRune07	Icon_Quest_Aurogon01_C06	/Game/Assets/Texture2D/ItemIcon/Frames	Gen	1
+Quest_AurogonRune08	Icon_Quest_Aurogon01_C07	/Game/Assets/Texture2D/ItemIcon/Frames	Dui	1
+Quest_AurogonStory	Icon_Quest_Book01	/Game/Assets/Texture2D/ItemIcon/Frames	Words of Shenlong	0
+Quest_AusSarira	Icon_Quest_AusSarira	/Game/Assets/Texture2D/ItemIcon/Frames	Prism Bone of Auss	1
+Quest_BNote	Icon_Quest_NoteBook02_01	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Quest_Bottle4	Icon_Quest_Reagent01	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Quest_BoundSilk	Icon_Quest_Silk01	/Game/Assets/Texture2D/ItemIcon/Frames	Binding String	0
+Quest_BrokenNote	Icon_Quest_BrokenNote	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Quest_BrokenPaper	Icon_Quest_BrokenPaper	/Game/Assets/Texture2D/ItemIcon/Frames	A Torn Page	1
+Quest_CandleFlower	Icon_Quest_Flower01	/Game/Assets/Texture2D/ItemIcon/Frames	Resting Candles and Ritual Flowers	0
+Quest_CatLetter	Icon_Quest_Letter01	/Game/Assets/Texture2D/ItemIcon/Frames	Letter of the Elder	0
+Quest_DemonPaper	Icon_Quest_Paper03	/Game/Assets/Texture2D/ItemIcon/Frames	Piece of The Heavenly Voices' Manuscript	1
+Quest_DemonPaper_01	Icon_Quest_Paper03	/Game/Assets/Texture2D/ItemIcon/Frames	Fragment of The Heavenly Voices	0
+Quest_FireFeather	Icon_Quest_FireFeather	/Game/Assets/Texture2D/ItemIcon/Frames	Burning Plume	0
+Quest_GodHallKey	Icon_Quest_Key02	/Game/Assets/Texture2D/ItemIcon/Frames	Key to God’s Hall	1
+Quest_GoldCard	Icon_Quest_Card01	/Game/Assets/Texture2D/ItemIcon/Frames	Golden Card	0
+Quest_GoldFeather	Icon_Quest_Feather02	/Game/Assets/Texture2D/ItemIcon/Frames	Golden Feather	0
+Quest_GoldSkyBall	Icon_Quest_Ball01_C02	/Game/Assets/Texture2D/ItemIcon/Frames	Owl’s Peeking	0
+Quest_GraySkyBall	Icon_Quest_Ball01_C01	/Game/Assets/Texture2D/ItemIcon/Frames	Grey Orb	0
+Quest_ImmortalCrystal	Icon_Quest_Fire01	/Game/Assets/Texture2D/ItemIcon/Frames	Ever-burning Crystal	0
+Quest_LakeKey	Icon_Quest_Key01	/Game/Assets/Texture2D/ItemIcon/Frames	Key to the Teardrop Base	0
+Quest_LevineLetter	Icon_Quest_Paper02	/Game/Assets/Texture2D/ItemIcon/Frames	Magic Letter to The Owl	0
+Quest_LevinePaper	Icon_Quest_Paper04	/Game/Assets/Texture2D/ItemIcon/Frames	Note of the Owl	0
+Quest_Lv06Key	Icon_Quest_Key03_C04	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Quest_Mask01	Icon_Quest_Mask01	/Game/Assets/Texture2D/ItemIcon/Frames	Broken Mask	0
+Quest_Mask01_C01	Quest_Mask01_C01	/Game/Assets/Texture2D/ItemIcon/Frames	Broken Mask	0
+Quest_Mask02	Icon_Quest_Mask02	/Game/Assets/Texture2D/ItemIcon/Frames	Shattered Mask	0
+Quest_Mask02_C01	Quest_Mask02_C01	/Game/Assets/Texture2D/ItemIcon/Frames	Shattered Mask	0
+Quest_Mask03	Icon_Quest_Mask03	/Game/Assets/Texture2D/ItemIcon/Frames	Damaged Mask	1
+Quest_Mask03_C01	Quest_Mask03_C01	/Game/Assets/Texture2D/ItemIcon/Frames	Damaged Mask	0
+Quest_Mask04	Icon_Quest_Mask04	/Game/Assets/Texture2D/ItemIcon/Frames	Nucleus of Talos	0
+Quest_Mask04_C01	Quest_Mask04_C01	/Game/Assets/Texture2D/ItemIcon/Frames	Nucleus of Talos	0
+Quest_Mask05	Icon_Quest_Mask05	/Game/Assets/Texture2D/ItemIcon/Frames	Mask of the Occult Prime	0
+Quest_Mask05_C01	Quest_Mask05_C01	/Game/Assets/Texture2D/ItemIcon/Frames	Mask of the Hidden Mage	0
+Quest_MasterBadge	Icon_Quest_Badge01	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Quest_MemoryCrystal	Icon_Quest_Crystal01	/Game/Assets/Texture2D/ItemIcon/Frames	Memory Shard	2
+Quest_MonsterBook	Icon_Quest_Book02	/Game/Assets/Texture2D/ItemIcon/Frames	Magic Journal	1
+Quest_NicoBook	Icon_Quest_NicoBook	/Game/Assets/Texture2D/ItemIcon/Frames	Blood-Stained Magic Book	0
+Quest_PanpeiLetter	Icon_Quest_Paper01	/Game/Assets/Texture2D/ItemIcon/Frames	Pompeii’s Magic Letter	1
+Quest_PassKey	Icon_Quest_Key03_C01	/Game/Assets/Texture2D/ItemIcon/Frames	Key to the Pass	1
+Quest_PattWeapon	Icon_Weapon_ShortStaff_004	/Game/Assets/Texture2D/ItemIcon/Frames	Slient Rod	0
+Quest_PureSkyBall	Icon_Quest_Ball01	/Game/Assets/Texture2D/ItemIcon/Frames	Hypnotic Orb	0
+Quest_PureWater	Icon_Quest_Water01	/Game/Assets/Texture2D/ItemIcon/Frames	Water of Equilibrium	1
+Quest_RainbowDust	Icon_Quest_Dust01	/Game/Assets/Texture2D/ItemIcon/Frames	Prism Powder	0
+Quest_RainbowStone	Icon_Quest_Stone01	/Game/Assets/Texture2D/ItemIcon/Frames	Prism Ore	0
+Quest_ReneeMask	Icon_Quest_ReneeMask	/Game/Assets/Texture2D/ItemIcon/Frames	Mysterious Mask	0
+Quest_ReneeMask_C01	Icon_Quest_ReneeMask_C01	/Game/Assets/Texture2D/ItemIcon/Frames	Mysterious Mask	0
+Quest_ResearchNote	Icon_Quest_NoteBook02	/Game/Assets/Texture2D/ItemIcon/Frames	Research Data	0
+Quest_ResearchNote_01	Icon_Quest_BrokenPaper	/Game/Assets/Texture2D/ItemIcon/Frames	Research Record: Reagent #IV	1
+Quest_ResearchNote_02	Icon_Quest_BrokenPaper	/Game/Assets/Texture2D/ItemIcon/Frames	Test Record No. 58-1	1
+Quest_ResearchNote_03	Icon_Quest_BrokenPaper	/Game/Assets/Texture2D/ItemIcon/Frames	Test Record No. 58-2	1
+Quest_RestPotion	Icon_Quest_Poison01	/Game/Assets/UMG/TextureAtlases/ItemIcon/Frames	Resting Potion	29
+Quest_Ring	Icon_Quest_Ring01	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Quest_RiteRoomKey	Icon_Quest_Key05	/Game/Assets/Texture2D/ItemIcon/Frames	Key to the Room of Ritual	0
+Quest_Rune01	Icon_Quest_Rune01	/Game/Assets/Texture2D/ItemIcon/Frames	Rebirth, the Spiral Return	0
+Quest_Rune02	Icon_Quest_Rune01_C01	/Game/Assets/Texture2D/ItemIcon/Frames	Felicity, the Divine Left-Eye	1
+Quest_Rune03	Icon_Quest_Rune01_C02	/Game/Assets/Texture2D/ItemIcon/Frames	Sorrow, the Divine Teardrop	1
+Quest_Rune04	Icon_Quest_Rune01_C03	/Game/Assets/Texture2D/ItemIcon/Frames	Covenant, the Trimming of Strings	0
+Quest_Rune05	Icon_Quest_Rune01_C04	/Game/Assets/Texture2D/ItemIcon/Frames	Memories, the Beginning	0
+Quest_Rune06	Icon_Quest_Rune01_C05	/Game/Assets/Texture2D/ItemIcon/Frames	Sacrifice, the Mysterious Bounding	1
+Quest_Rune07	Icon_Quest_Rune01_C06	/Game/Assets/Texture2D/ItemIcon/Frames	Belief, the Order of Universal Cycle	1
+Quest_Rune08	Icon_Quest_Rune01_C07	/Game/Assets/Texture2D/ItemIcon/Frames	Pyro, the Creation of Sun and Moon	1
+Quest_Rune09	Icon_Quest_Rune01_C08	/Game/Assets/Texture2D/ItemIcon/Frames	Anemo, the Harmony of World Tree	0
+Quest_Rune10	Icon_Quest_Rune01_C09	/Game/Assets/Texture2D/ItemIcon/Frames	Hydro, the Primeval Life	1
+Quest_Rune11	Icon_Quest_Rune01_C10	/Game/Assets/Texture2D/ItemIcon/Frames	Geo, the Legacy of Ancestors	1
+Quest_Rune12	Icon_Quest_Rune01_C11	/Game/Assets/Texture2D/ItemIcon/Frames	Light, the Shift of Time	1
+Quest_Rune13	Icon_Quest_Rune01_C12	/Game/Assets/Texture2D/ItemIcon/Frames	Being, the Possibility	1
+Quest_SeCoin	Icon_Quest_Coin01	/Game/Assets/Texture2D/ItemIcon/Frames	Se’s Coin	41
+Quest_SeKey	Icon_Quest_Key03	/Game/Assets/Texture2D/ItemIcon/Frames	Key of Se	0
+Quest_SkyFeather	Icon_Quest_Feather01	/Game/Assets/Texture2D/ItemIcon/Frames	Firmamental Feather	0
+Quest_Spore	Icon_Quest_Spore	/Game/Assets/Texture2D/ItemIcon/Frames	Shining Spore	0
+Quest_StanleyPaper	Icon_Quest_Paper05	/Game/Assets/Texture2D/ItemIcon/Frames	Note of the Antique Dealer	0
+Quest_Ticket	Icon_Quest_Paper04_C01	/Game/Assets/Texture2D/ItemIcon/Frames	Ferry Ticket	0
+Quest_UnkownNote	Icon_Quest_UnkownNote	/Game/Assets/Texture2D/ItemIcon/Frames	Note of a Nameless Adventurer	1
+Quest_UnkownSarira	Icon_Quest_Sarira02	/Game/Assets/Texture2D/ItemIcon/Frames	Nameless Prism Bone	0
+Quest_VariationSarira	Icon_Quest_Sarira02_C02	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Quest_WaterHeart	Icon_Quest_WaterHeart	/Game/Assets/Texture2D/ItemIcon/Frames	Stream Crystal	3
+Quest_WindKey	Icon_Quest_Key04	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Quest_WindKey_2	Icon_Quest_Key04	/Game/Assets/Texture2D/ItemIcon/Frames	Key with Anemo Imprint	0
+Skill_Book_001	Icon_Quest_Scroll01	/Game/Assets/Texture2D/ItemIcon/Frames	Secret Art: Bleak Moon	1
+Skill_Book_002	Icon_Quest_Scroll01	/Game/Assets/Texture2D/ItemIcon/Frames	Secret Art: Full Moon	0
+Skill_Book_003	Icon_Quest_Scroll01	/Game/Assets/Texture2D/ItemIcon/Frames	Secret Art: Slicing Whirlwind	1
+Skill_Book_004	Icon_Quest_Scroll01	/Game/Assets/Texture2D/ItemIcon/Frames	Secret Art: Hunting Edge	1
+Skill_Book_005	Icon_Quest_Scroll01	/Game/Assets/Texture2D/ItemIcon/Frames	Secret Art: Spinning Wyvern	1
+Skill_Book_006	Icon_Quest_Scroll01	/Game/Assets/Texture2D/ItemIcon/Frames	Secret Art: Raging Wyvern	1
+Skill_Book_007	Icon_Quest_Scroll01	/Game/Assets/Texture2D/ItemIcon/Frames	Secret Art: Symphony	1
+Skill_Book_008	Icon_Quest_Scroll01	/Game/Assets/Texture2D/ItemIcon/Frames	Secret Art: Aria	1
+Skill_Book_009	Icon_Quest_Scroll01	/Game/Assets/Texture2D/ItemIcon/Frames	Secret Art: Fluttering Blossom	1
+Skill_Book_010	Icon_Quest_Scroll01	/Game/Assets/Texture2D/ItemIcon/Frames	Secret Art: Whip Mastery	0
+Skill_Book_011	Icon_Quest_Scroll01	/Game/Assets/Texture2D/ItemIcon/Frames	Secret Art: Thousand Crosses	1
+Skill_Book_012	Icon_Quest_Scroll01	/Game/Assets/Texture2D/ItemIcon/Frames	Secret Art: Judgement Cut	1
+Trade_AncientGem	Icon_Trade_AncientGem	/Game/Assets/Texture2D/ItemIcon/Frames	Rune Gem	0
+Trade_Bandage	Icon_Trade_Bandage	/Game/Assets/Texture2D/ItemIcon/Frames	Bandage	0
+Trade_BatGem	Icon_Trade_BatGem	/Game/Assets/Texture2D/ItemIcon/Frames	Bat Orb	0
+Trade_BatWing	Icon_Trade_BatWing	/Game/Assets/Texture2D/ItemIcon/Frames	Bat Wing	0
+Trade_Bell	Icon_Trade_Bell	/Game/Assets/Texture2D/ItemIcon/Frames	Psalmodic Bell	0
+Trade_BlueMineral	Icon_Trade_BlueMineral	/Game/Assets/Texture2D/ItemIcon/Frames	Cyanite Ore	0
+Trade_BlueOrb	Icon_Trade_BlueOrb	/Game/Assets/Texture2D/ItemIcon/Frames	Cerulean Orb	0
+Trade_BrokenBlade	Icon_Trade_BrokenBlade	/Game/Assets/Texture2D/ItemIcon/Frames	Broken Blade	0
+Trade_BrokenDemonMask	Icon_Trade_BrokenDemonMask	/Game/Assets/Texture2D/ItemIcon/Frames	Incomplete Mask	0
+Trade_BrokenGear	Icon_Trdae_BrokenGear	/Game/Assets/Texture2D/ItemIcon/Frames	Broken Part	0
+Trade_BrokenMushroomGem	Icon_Trade_BrokenMushroomGem	/Game/Assets/Texture2D/ItemIcon/Frames	Broken Gem	0
+Trade_BrokenRuneStone	Icon_Trade_BrokenRuneStone	/Game/Assets/Texture2D/ItemIcon/Frames	Broken Rock	0
+Trade_BrokenStoneStaff	Icon_Trade_BrokenStoneStaff	/Game/Assets/Texture2D/ItemIcon/Frames	Cracked Staff	0
+Trade_BrokenStoneTablet	Icon_Trade_BrokenStoneTablet	/Game/Assets/Texture2D/ItemIcon/Frames	Piece of Tombstone	0
+Trade_BronzeLump	Icon_Trade_BronzeLump	/Game/Assets/Texture2D/ItemIcon/Frames	Piece of Bronze	0
+Trade_BurningHair	Icon_Trade_BurningHair	/Game/Assets/Texture2D/ItemIcon/Frames	Blazing Plume	0
+Trade_BurntDemonHorn	Icon_Trade_BurntDemonHorn	/Game/Assets/Texture2D/ItemIcon/Frames	Fractured Raging Horn	0
+Trade_BurntDemonTail	Icon_Trade_BurntDemonTail	/Game/Assets/Texture2D/ItemIcon/Frames	Fractured Raging Tail	0
+Trade_ButterflyWing	Icon_Trade_ButterflyWing	/Game/Assets/Texture2D/ItemIcon/Frames	Broken Wing of Spikefly	0
+Trade_CarrotRoot	Icon_Trade_CarrotRoot	/Game/Assets/Texture2D/ItemIcon/Frames	Tree Radish Root	0
+Trade_DancerDress	Icon_Trade_DancerDress	/Game/Assets/Texture2D/ItemIcon/Frames	Dancer’s Dress	0
+Trade_FireGem	Icon_Trade_FireGem	/Game/Assets/Texture2D/ItemIcon/Frames	Gem of Flame	0
+Trade_GloryMedal	Icon_Trade_GloryMedal	/Game/Assets/Texture2D/ItemIcon/Frames	Medal of Honor	0
+Trade_HolyCore	Icon_Trade_HolyCore	/Game/Assets/Texture2D/ItemIcon/Frames	Pale Core	0
+Trade_HolyFeather	Icon_Trade_HolyFeather	/Game/Assets/Texture2D/ItemIcon/Frames	Pure Feather	0
+Trade_ImmemorialLeaf	Icon_Trade_ImmemorialLeaf	/Game/Assets/Texture2D/ItemIcon/Frames	Timeless Leaf	0
+Trade_MagicStatue	Icon_Trade_MagicStatue	/Game/Assets/Texture2D/ItemIcon/Frames	Stone Statue	0
+Trade_Mane	Icon_Trade_Mane	/Game/Assets/Texture2D/ItemIcon/Frames	Thick Mane	0
+Trade_MushroomGem	Icon_Trade_MushroomGem	/Game/Assets/Texture2D/ItemIcon/Frames	Spore Gem	0
+Trade_OathContract	Icon_Trade_OathContract	/Game/Assets/Texture2D/ItemIcon/Frames	Oath of Knight	0
+Trade_PaleRuneStone	Icon_Trade_PaleRuneStone	/Game/Assets/Texture2D/ItemIcon/Frames	Rune Stone	0
+Trade_Rag	Icon_Trade_Rag	/Game/Assets/Texture2D/ItemIcon/Frames	Broken Rag	1
+Trade_RainbowMineral	Icon_Trade_RainbowMineral	/Game/Assets/Texture2D/ItemIcon/Frames	Prism Ore	0
+Trade_RunePaper	Icon_Trade_RunePaper	/Game/Assets/Texture2D/ItemIcon/Frames	Fragment of Rune	0
+Trade_RuneStone	Icon_Trade_RuneStone	/Game/Assets/Texture2D/ItemIcon/Frames	Intact Rock	0
+Trade_RustGear	Icon_Trdae_RustGear	/Game/Assets/Texture2D/ItemIcon/Frames	Rusty Gear	0
+Trade_Sandglass	Icon_Trade_Sandglass	/Game/Assets/Texture2D/ItemIcon/Frames	Sandglass of Earth	0
+Trade_SeaPearl	Icon_Trade_SeaPearl	/Game/Assets/Texture2D/ItemIcon/Frames	Ocean Pearl	0
+Trade_ShadowCore	Icon_Trade_ShadowCore	/Game/Assets/Texture2D/ItemIcon/Frames	Obsidian Core	0
+Trade_ShadowStone	Icon_Trade_ShadowStone	/Game/Assets/Texture2D/ItemIcon/Frames	Shadow Stone	0
+Trade_SpoilHeart	Icon_Trade_SpoilHeart	/Game/Assets/Texture2D/ItemIcon/Frames	Corrupted Heart	0
+Trade_SprideCore	Icon_Trade_SpriderCore	/Game/Assets/Texture2D/ItemIcon/Frames	Xenal Core	0
+Trade_SprideLeg	Icon_Trade_SpiderLeg	/Game/Assets/Texture2D/ItemIcon/Frames	Xenal Spider Leg	0
+Trade_StainedGloryMedal	Icon_Trade_StainedGloryMedal	/Game/Assets/Texture2D/ItemIcon/Frames	Broken Medal	0
+Trade_StainedOathContract	Icon_Trade_StainedOathContract	/Game/Assets/Texture2D/ItemIcon/Frames	Revoked Oath	0
+Trade_SteelChain	Icon_Trade_SteelChain	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Trade_TurtleShell	Icon_Trade_TurtleShell	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Trade_Volcano	Icon_Trade_Volcano	/Game/Assets/Texture2D/ItemIcon/Frames	Volcanic Stone	0
+Trade_WakanGem	Icon_Trade_WakanGem	/Game/Assets/Texture2D/ItemIcon/Frames	Xenal Gem	0
+Trade_WaterCup	Icon_Trade_WaterCup	/Game/Assets/Texture2D/ItemIcon/Frames	Cup of Flows	0
+Trade_WindVane	Icon_Trade_WindVane	/Game/Assets/Texture2D/ItemIcon/Frames	Indicator of Gale	0
+Trade_WineBottle	Icon_Trade_WineBottle	/Game/Assets/Texture2D/ItemIcon/Frames	Broken Wine Bottle	0
+Trade_WitheredFlower	Icon_Trade_WitheredFlower	/Game/Assets/Texture2D/ItemIcon/Frames	Withered Flower	0
+Weapon_Book_001	Icon_Weapon_Book_001	/Game/Assets/Texture2D/ItemIcon/Frames	Book of Pyro	0
+Weapon_Book_002	Icon_Weapon_Book_002	/Game/Assets/Texture2D/ItemIcon/Frames	Book of Hydro	1
+Weapon_Book_003	Icon_Weapon_Book_003	/Game/Assets/Texture2D/ItemIcon/Frames	Book of Geo	0
+Weapon_Book_004	Icon_Weapon_Book_004	/Game/Assets/Texture2D/ItemIcon/Frames	Book of Anemo	1
+Weapon_Book_005	Icon_Weapon_Book_005	/Game/Assets/Texture2D/ItemIcon/Frames	Book of Curse	1
+Weapon_Book_006	Icon_Weapon_Book_006	/Game/Assets/Texture2D/ItemIcon/Frames	Grimoire of the Occult Prime	0
+Weapon_Crystal_001	Icon_Weapon_Book_001	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Weapon_DSword_001	Icon_Weapon_DSword_001	/Game/Assets/Texture2D/ItemIcon/Frames	Wooden Dualsword	1
+Weapon_DSword_002	Icon_Weapon_DSword_002	/Game/Assets/Texture2D/ItemIcon/Frames	Blackwood Dualsword	1
+Weapon_DSword_003	Icon_Weapon_DSword_003	/Game/Assets/Texture2D/ItemIcon/Frames	Sting	1
+Weapon_DSword_004	Icon_Weapon_DSword_004	/Game/Assets/Texture2D/ItemIcon/Frames	Guardian’s Swords	0
+Weapon_DSword_005	Icon_Weapon_DSword_005	/Game/Assets/Texture2D/ItemIcon/Frames	Dualsword of Geo	1
+Weapon_DSword_006	Icon_Weapon_DSword_006	/Game/Assets/Texture2D/ItemIcon/Frames	Broken Kurasames	0
+Weapon_DSword_007	Icon_Weapon_DSword_003_C01		Bronze Dualblades	0
+Weapon_DSword_101	Icon_Weapon_DSword_101	/Game/Assets/Texture2D/ItemIcon/Frames	The Gambler	1
+Weapon_DSword_102	Icon_Weapon_DSword_102	/Game/Assets/Texture2D/ItemIcon/Frames	Gale	0
+Weapon_DSword_103	Icon_Weapon_DSword_103	/Game/Assets/Texture2D/ItemIcon/Frames	Ancient Fangs	0
+Weapon_DSword_104	Icon_Weapon_DSword_104	/Game/Assets/Texture2D/ItemIcon/Frames	Instinct	0
+Weapon_DSword_105	Icon_Weapon_DSword_105	/Game/Assets/Texture2D/ItemIcon/Frames	Ravager	0
+Weapon_DSword_106	Icon_Weapon_DSword_106	/Game/Assets/Texture2D/ItemIcon/Frames	Icy Flames	1
+Weapon_DSword_107	Icon_Weapon_DSword_107	/Game/Assets/Texture2D/ItemIcon/Frames	Prisma	0
+Weapon_DSword_108	Icon_Weapon_DSword_108	/Game/Assets/Texture2D/ItemIcon/Frames	Thunderfall	1
+Weapon_DSword_109	Icon_Weapon_DSword_109	/Game/Assets/Texture2D/ItemIcon/Frames	Fiery Claw	0
+Weapon_DSword_201	Icon_Weapon_DSword_201	/Game/Assets/Texture2D/ItemIcon/Frames	Celestial Remains	1
+Weapon_DSword_202	Icon_Weapon_DSword_202	/Game/Assets/Texture2D/ItemIcon/Frames	Purple Jade	0
+Weapon_GSword_001	Icon_Weapon_GSword_001	/Game/Assets/Texture2D/ItemIcon/Frames	Wooden Greatsword	1
+Weapon_GSword_002	Icon_Weapon_GSword_002	/Game/Assets/Texture2D/ItemIcon/Frames	Blackwood Greatsword	0
+Weapon_GSword_003	Icon_Weapon_GSword_003	/Game/Assets/Texture2D/ItemIcon/Frames	Waterflow	0
+Weapon_GSword_004	Icon_Weapon_GSword_004	/Game/Assets/Texture2D/ItemIcon/Frames	Iron Greatsword	1
+Weapon_GSword_005	Icon_Weapon_GSword_005	/Game/Assets/Texture2D/ItemIcon/Frames	Remnant Blade	0
+Weapon_GSword_006	Icon_Weapon_GSword_006	/Game/Assets/Texture2D/ItemIcon/Frames	Judicator Greatsword	0
+Weapon_GSword_007	Icon_Weapon_GSword_004_C01		Bronze Greatsword	1
+Weapon_GSword_101	Icon_Weapon_GSword_101	/Game/Assets/Texture2D/ItemIcon/Frames	Unbreakable Rose	0
+Weapon_GSword_102	Icon_Weapon_GSword_102	/Game/Assets/Texture2D/ItemIcon/Frames	Stainless	0
+Weapon_GSword_103	Icon_Weapon_GSword_103	/Game/Assets/Texture2D/ItemIcon/Frames	Soulhunt	0
+Weapon_GSword_104	Icon_Weapon_GSword_104	/Game/Assets/Texture2D/ItemIcon/Frames	Dauntless	1
+Weapon_GSword_105	Icon_Weapon_GSword_105	/Game/Assets/Texture2D/ItemIcon/Frames	Double Edge	1
+Weapon_GSword_106	Icon_Weapon_GSword_106	/Game/Assets/Texture2D/ItemIcon/Frames	Sword of the Woods	1
+Weapon_GSword_107	Icon_Weapon_GSword_107	/Game/Assets/Texture2D/ItemIcon/Frames	Scorching Judgement	0
+Weapon_GSword_108	Icon_Weapon_GSword_108	/Game/Assets/Texture2D/ItemIcon/Frames	The Gift	0
+Weapon_GSword_109	Icon_Weapon_GSword_109	/Game/Assets/Texture2D/ItemIcon/Frames	Berserker	1
+Weapon_GSword_110	Icon_Weapon_GSword_110	/Game/Assets/Texture2D/ItemIcon/Frames	Behemoth	1
+Weapon_GSword_111	Icon_Weapon_GSword_111	/Game/Assets/Texture2D/ItemIcon/Frames	Pyro Calamity	1
+Weapon_GSword_201	Icon_Weapon_GSword_201	/Game/Assets/Texture2D/ItemIcon/Frames	Starry Night	1
+Weapon_GSword_202	Icon_Weapon_GSword_202	/Game/Assets/Texture2D/ItemIcon/Frames	Evil Jade	0
+Weapon_Kasa_Blue	Icon_Weapon_Sword_001	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Weapon_Kasa_Red	Icon_Weapon_Sword_001	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Weapon_Katana_001	Icon_Weapon_Katana_001	/Game/Assets/Texture2D/ItemIcon/Frames	Wooden Blade	1
+Weapon_Katana_002	Icon_Weapon_Katana_002	/Game/Assets/Texture2D/ItemIcon/Frames	Blackwood Blade	1
+Weapon_Katana_003	Icon_Weapon_Katana_003	/Game/Assets/Texture2D/ItemIcon/Frames	Flowcutter	0
+Weapon_Katana_004	Icon_Weapon_Katana_004	/Game/Assets/Texture2D/ItemIcon/Frames	Blade of Lost	1
+Weapon_Katana_005	Icon_Weapon_Katana_005	/Game/Assets/Texture2D/ItemIcon/Frames	Blade of Geo	0
+Weapon_Katana_006	Icon_Weapon_Katana_006	/Game/Assets/Texture2D/ItemIcon/Frames	Jade Blade	1
+Weapon_Katana_007	Icon_Weapon_Katana_110_C01		Bronze Blade	1
+Weapon_Katana_101	Icon_Weapon_Katana_101	/Game/Assets/Texture2D/ItemIcon/Frames	Ceremonial Blade	1
+Weapon_Katana_102	Icon_Weapon_Katana_102	/Game/Assets/Texture2D/ItemIcon/Frames	Sen no Sen	1
+Weapon_Katana_103	Icon_Weapon_Katana_103	/Game/Assets/Texture2D/ItemIcon/Frames	Heart of Sun	0
+Weapon_Katana_104	Icon_Weapon_Katana_104	/Game/Assets/Texture2D/ItemIcon/Frames	Kamui	1
+Weapon_Katana_105	Icon_Weapon_Katana_105	/Game/Assets/Texture2D/ItemIcon/Frames	Kurasame	1
+Weapon_Katana_106	Icon_Weapon_Katana_106	/Game/Assets/Texture2D/ItemIcon/Frames	Prism Gale	1
+Weapon_Katana_107	Icon_Weapon_Katana_107	/Game/Assets/Texture2D/ItemIcon/Frames	Bloodbath	1
+Weapon_Katana_108	Icon_Weapon_Katana_108	/Game/Assets/Texture2D/ItemIcon/Frames	Anemogrim	0
+Weapon_Katana_109	Icon_Weapon_Katana_109	/Game/Assets/Texture2D/ItemIcon/Frames	Muramasa	1
+Weapon_Katana_110	Icon_Weapon_Katana_110	/Game/Assets/Texture2D/ItemIcon/Frames	Deathmatch	1
+Weapon_LongStaff_001	Icon_Weapon_LongStaff_001	/Game/Assets/Texture2D/ItemIcon/Frames	Pyroblast Staff	1
+Weapon_LongStaff_002	Icon_Weapon_LongStaff_002	/Game/Assets/Texture2D/ItemIcon/Frames	Frostbite Staff	1
+Weapon_LongStaff_003	Icon_Weapon_LongStaff_003	/Game/Assets/Texture2D/ItemIcon/Frames	Earthshock Staff	1
+Weapon_LongStaff_004	Icon_Weapon_LongStaff_004	/Game/Assets/Texture2D/ItemIcon/Frames	Stormfall Staff	1
+Weapon_LongStaff_005	Icon_Weapon_LongStaff_005	/Game/Assets/Texture2D/ItemIcon/Frames	Staff of the Occult Prime	0
+Weapon_LongStaff_006	Icon_Weapon_LongStaff_006	/Game/Assets/Texture2D/ItemIcon/Frames	Sceptre of the Sage	1
+Weapon_Scroll_001	Icon_Weapon_Scroll_001	/Game/Assets/Texture2D/ItemIcon/Frames	Scroll of Otherworld	1
+Weapon_Scroll_002	Icon_Weapon_Scroll_002	/Game/Assets/Texture2D/ItemIcon/Frames	Scroll of Life	1
+Weapon_Scroll_003	Icon_Weapon_Scroll_003	/Game/Assets/Texture2D/ItemIcon/Frames	Scroll of Pilliage	0
+Weapon_Scroll_004	Icon_Weapon_Scroll_004	/Game/Assets/Texture2D/ItemIcon/Frames	Scroll of Thirst	1
+Weapon_Scythe_001	Icon_Weapon_Scythe_001	/Game/Assets/Texture2D/ItemIcon/Frames	Wooden Scythe	1
+Weapon_Scythe_002	Icon_Weapon_Scythe_002	/Game/Assets/Texture2D/ItemIcon/Frames	Blackwood Scythe	1
+Weapon_Scythe_003	Icon_Weapon_Scythe_003	/Game/Assets/Texture2D/ItemIcon/Frames	Swift Scythe	1
+Weapon_Scythe_004	Icon_Weapon_Scythe_004	/Game/Assets/Texture2D/ItemIcon/Frames	Iron Scythe	1
+Weapon_Scythe_005	Icon_Weapon_Scythe_005	/Game/Assets/Texture2D/ItemIcon/Frames	Scythe of Contagion	1
+Weapon_Scythe_006	Icon_Weapon_Scythe_006	/Game/Assets/Texture2D/ItemIcon/Frames	Scythe of Torture	1
+Weapon_Scythe_007	Icon_Weapon_Scythe_004_C01		Bronze Scythe	1
+Weapon_Scythe_101	Icon_Weapon_Scythe_101	/Game/Assets/Texture2D/ItemIcon/Frames	Sprinting Sparks	0
+Weapon_Scythe_102	Icon_Weapon_Scythe_102	/Game/Assets/Texture2D/ItemIcon/Frames	Spellbreaker	1
+Weapon_Scythe_103	Icon_Weapon_Scythe_103	/Game/Assets/Texture2D/ItemIcon/Frames	Spore	0
+Weapon_Scythe_104	Icon_Weapon_Scythe_104	/Game/Assets/Texture2D/ItemIcon/Frames	Ember	0
+Weapon_Scythe_105	Icon_Weapon_Scythe_105	/Game/Assets/Texture2D/ItemIcon/Frames	Miner’s Treasure	0
+Weapon_Scythe_106	Icon_Weapon_Scythe_106	/Game/Assets/Texture2D/ItemIcon/Frames	Scarlet Reaper	1
+Weapon_Scythe_107	Icon_Weapon_Scythe_107	/Game/Assets/Texture2D/ItemIcon/Frames	Soulcutter	1
+Weapon_Scythe_108	Icon_Weapon_Scythe_108	/Game/Assets/Texture2D/ItemIcon/Frames	The Survived	1
+Weapon_Scythe_109	Icon_Weapon_Scythe_109	/Game/Assets/Texture2D/ItemIcon/Frames	Frostdance	1
+Weapon_Scythe_201	Icon_Weapon_Scythe_201	/Game/Assets/Texture2D/ItemIcon/Frames	Scythe of Abyss	0
+Weapon_ShortStaff_001	Icon_Weapon_ShortStaff_001	/Game/Assets/Texture2D/ItemIcon/Frames	Crimson Wand	1
+Weapon_ShortStaff_002	Icon_Weapon_ShortStaff_002	/Game/Assets/Texture2D/ItemIcon/Frames	Devil Wand	1
+Weapon_ShortStaff_003	Icon_Weapon_ShortStaff_003	/Game/Assets/Texture2D/ItemIcon/Frames	Wand of Owl	0
+Weapon_ShortStaff_004	Icon_Weapon_ShortStaff_004	/Game/Assets/Texture2D/ItemIcon/Frames	Mysterious Rod	0
+Weapon_Sword_001	Icon_Weapon_Sword_001	/Game/Assets/Texture2D/ItemIcon/Frames	Wooden Sword	0
+Weapon_Sword_002	Icon_Weapon_Sword_002	/Game/Assets/Texture2D/ItemIcon/Frames	Blackwood Sword	1
+Weapon_Sword_003	Icon_Weapon_Sword_003	/Game/Assets/Texture2D/ItemIcon/Frames	Iron Sword	0
+Weapon_Sword_004	Icon_Weapon_Sword_004	/Game/Assets/Texture2D/ItemIcon/Frames	Guardian Sword	1
+Weapon_Sword_005	Icon_Weapon_Sword_005	/Game/Assets/Texture2D/ItemIcon/Frames	Sword of Geo	1
+Weapon_Sword_006	Icon_Weapon_Sword_006	/Game/Assets/Texture2D/ItemIcon/Frames	Veteran Sword	1
+Weapon_Sword_007	Icon_Weapon_Sword_004_C01		Bronze Sword	1
+Weapon_Sword_101	Icon_Weapon_Sword_101	/Game/Assets/Texture2D/ItemIcon/Frames	Moonlight	1
+Weapon_Sword_102	Icon_Weapon_Sword_102	/Game/Assets/Texture2D/ItemIcon/Frames	Windrunner	1
+Weapon_Sword_103	Icon_Weapon_Sword_103	/Game/Assets/Texture2D/ItemIcon/Frames	Golden Sword	0
+Weapon_Sword_104	Icon_Weapon_Sword_104	/Game/Assets/Texture2D/ItemIcon/Frames	Slient Rod	0
+Weapon_Sword_105	Icon_Weapon_Sword_105	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Weapon_Sword_106	Icon_Weapon_Sword_106	/Game/Assets/Texture2D/ItemIcon/Frames	Nameless	0
+Weapon_Sword_107	Icon_Weapon_Sword_107	/Game/Assets/Texture2D/ItemIcon/Frames	Bleak Moon	0
+Weapon_Sword_108	Icon_Weapon_Sword_108	/Game/Assets/Texture2D/ItemIcon/Frames	Sword of the Hermit	1
+Weapon_Sword_109	Icon_Weapon_Sword_109	/Game/Assets/Texture2D/ItemIcon/Frames	Aurogon	0
+Weapon_Sword_110	Icon_Weapon_Sword_110	/Game/Assets/Texture2D/ItemIcon/Frames	Phantom	0
+Weapon_Sword_111	Icon_Weapon_Sword_111	/Game/Assets/Texture2D/ItemIcon/Frames	Stars	0
+Weapon_Sword_201	Icon_Weapon_Sword_201	/Game/Assets/Texture2D/ItemIcon/Frames	For Cinra Only	1
+Weapon_Sword_202	Icon_Weapon_Sword_202	/Game/Assets/Texture2D/ItemIcon/Frames	Aloofness	0
+Weapon_Whip_001	Icon_Weapon_Whip_001	/Game/Assets/Texture2D/ItemIcon/Frames	Whip	1
+Weapon_Whip_002	Icon_Weapon_Whip_002	/Game/Assets/Texture2D/ItemIcon/Frames	Black Whip	1
+Weapon_Whip_003	Icon_Weapon_Whip_003	/Game/Assets/Texture2D/ItemIcon/Frames	Torment Whip	1
+Weapon_Whip_004	Icon_Weapon_Whip_004	/Game/Assets/Texture2D/ItemIcon/Frames	Pale Dance	0
+Weapon_Whip_005	Icon_Weapon_Whip_005	/Game/Assets/Texture2D/ItemIcon/Frames	Scourge of Blossom	1
+Weapon_Whip_006	Icon_Weapon_Whip_006	/Game/Assets/Texture2D/ItemIcon/Frames	Thorns	1
+Weapon_Whip_007	Icon_Weapon_Whip_003_C01		Bronze-handle Whip	1
+Weapon_Whip_101	Icon_Weapon_Whip_101	/Game/Assets/Texture2D/ItemIcon/Frames	Poison Touch	0
+Weapon_Whip_102	Icon_Weapon_Whip_102	/Game/Assets/Texture2D/ItemIcon/Frames	Holy Whip	1
+Weapon_Whip_103	Icon_Weapon_Whip_103	/Game/Assets/Texture2D/ItemIcon/Frames	Behemoth Killer	0
+Weapon_Whip_104	Icon_Weapon_Whip_104	/Game/Assets/Texture2D/ItemIcon/Frames	Monster Hunter	1
+Weapon_Whip_105	Icon_Weapon_Whip_105	/Game/Assets/Texture2D/ItemIcon/Frames	Rage of Geo	1
+Weapon_Whip_106	Icon_Weapon_Whip_106	/Game/Assets/Texture2D/ItemIcon/Frames	Flaming Cycle	1
+Weapon_Whip_107	Icon_Weapon_Whip_107	/Game/Assets/Texture2D/ItemIcon/Frames	Bloody Nobility	0
+Weapon_Whip_108	Icon_Weapon_Whip_108	/Game/Assets/Texture2D/ItemIcon/Frames	Pyro Calamity	0
+Weapon_Whip_109	Icon_Weapon_Whip_109	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Weapon_Whip_201	Icon_Weapon_Whip_201	/Game/Assets/Texture2D/ItemIcon/Frames	Venomad	1
+Weapon_dagger001	Icon_Accessories_022	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Weapon_gsword001	Icon_Accessories_022	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Weapon_katana001	Icon_Accessories_022	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Weapon_magicbook001	Icon_Accessories_022	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Weapon_magicbook002	Icon_Accessories_022	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Weapon_magicbook003	Icon_Accessories_022	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Weapon_sickle001	Icon_Accessories_022	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Weapon_sickle002	Icon_Accessories_022	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Weapon_sword001	Icon_Accessories_022	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Weapon_sword002	Icon_Accessories_022	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Weapon_sword003	Icon_Accessories_022	/Game/Assets/Texture2D/ItemIcon/Frames		0
+Weapon_whip001	Icon_Accessories_022	/Game/Assets/Texture2D/ItemIcon/Frames		0

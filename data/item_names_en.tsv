@@ -1,0 +1,665 @@
+# id	English name	category   (from the game: tools/names_export.py, docs/game-internals.md "English names")
+Ability_AntiPetrifact	Eye of Gongor	Ability
+Ability_BigJump	Crown of Windwalker	Ability
+Ability_Dash	Emblem of Windwalker	Ability
+Ability_DoubleJump	Left-wing Feather of Windwalker	Ability
+Ability_DownCrush	Plate of Kingworm	Ability
+Ability_KickDown	Windwalker’s Anklet	Ability
+Ability_Sailing	Clammy Whistle	Ability
+Ability_Slide	Wandering Warrior’s Necklace	Ability
+Ability_SoulInvade	Owl's Peeking	Ability
+Ability_SuperKick	Flamewalker’s Boots	Ability
+Ability_Swimming	Blessing of Samsare	Ability
+Ability_Teleport	Flower of Confluence	Ability
+Ability_Wallslide	Agile Claw	Ability
+Accessories_001	Ritual Ring	Accessory
+Accessories_002	Ritual Necklace	Accessory
+Accessories_003	Flower Badge	Accessory
+Accessories_004	Flower Bracelet	Accessory
+Accessories_005	Odd Badge	Accessory
+Accessories_006	Amethyst Ring	Accessory
+Accessories_007	Lavastone Ring	Accessory
+Accessories_008	Amethyst Necklace	Accessory
+Accessories_009	Lavastone Necklace	Accessory
+Accessories_010	Adventurer's Pendant	Accessory
+Accessories_011	Adventurer's Bracelet	Accessory
+Accessories_012	Soul-catcher Kettle of Jungong Spirit	Accessory
+Accessories_013	Bracelet of Bravery	Accessory
+Accessories_014	Necklace of Bravery	Accessory
+Accessories_015	Arcane Necklace	Accessory
+Accessories_016	Hollow Vessel	Accessory
+Accessories_017	Grey Jade Ring	Accessory
+Accessories_018	Mask of a Maniac Mage	Accessory
+Accessories_019	Mask of Eseus	Accessory
+Accessories_020	Life-saving Badge	Accessory
+Accessories_021	Owl's Pendant	Accessory
+Accessories_022	Owl's Charm	Accessory
+Accessories_023	Emblem of Sword and Shield	Accessory
+Accessories_024	Flowerspray Dagger	Accessory
+Accessories_025	Plume Crown	Accessory
+Accessories_026	Black and White Belt - Yang	Accessory
+Accessories_027	Black and White Belt - Yin	Accessory
+Accessories_028	Tranquil Jade Pendant	Accessory
+Accessories_029	Furious Jade Pendant	Accessory
+Accessories_030	Radiant Necklace	Accessory
+Accessories_031	Aros' Pearl Rosary	Accessory
+Accessories_032	Prism Stone Ring	Accessory
+Accessories_033	White Tail Feather	Accessory
+Accessories_034	Prism Stone Necklace	Accessory
+Accessories_035	White Stone Heart	Accessory
+Accessories_036	Black Rock Heart	Accessory
+Accessories_038	Twin's Right Ring	Accessory
+Accessories_039	Warrior King's Wristband	Accessory
+Accessories_040	Mage Master's Headband	Accessory
+Accessories_041	Hermit's Cape	Accessory
+Accessories_042	Sacred Seed	Accessory
+Accessories_043	Calamity Ring	Accessory
+Accessories_044	Heresy Hood	Accessory
+Accessories_045	Withering Dagger	Accessory
+Accessories_046	Crown of Goddess	Accessory
+Accessories_047	Remains of a Broken Sword	Accessory
+Accessories_048	Ghost Pipe	Accessory
+Accessories_049	Ironskin Cape	Accessory
+Accessories_050	Parasitic Seed	Accessory
+Accessories_051	Greatsword Emblem	Accessory
+Accessories_052	Fatal Ring	Accessory
+Accessories_053	Mythical Gloves	Accessory
+Accessories_054	Visitor’s Broken Pocketwatch	Accessory
+Accessories_055	The Remembrance of Blood	Accessory
+Accessories_056	Nosferatu's Fangs	Accessory
+Accessories_057	Shade	Accessory
+Accessories_058	Perfume Pouch	Accessory
+Accessories_059	Floppy Mage's Hat	Accessory
+Accessories_060	Floppy Mage's Hat	Accessory
+Accessories_061	Mask of Uncle White	Accessory
+Accessories_062	Twin's Left Ring	Accessory
+Accessories_063	Shiny Quartz	Accessory
+Accessories_065	Sacred Seed	Accessory
+Accessories_066	Mysterious Doll	Accessory
+Afterimage_001	Rainfall Messenger	Afterimage
+Afterimage_002	Slide Master	Afterimage
+Afterimage_003	Eye of Truth	Afterimage
+Afterimage_004	Treasurescope of Se	Afterimage
+Afterimage_005	Bless of Guardian	Afterimage
+Afterimage_006	Unbreakable Shield	Afterimage
+Afterimage_007	Scavenger	Afterimage
+Afterimage_008	Hastewalker	Afterimage
+Afterimage_009	Pious Blessing	Afterimage
+Afterimage_010	Faithful Blessing	Afterimage
+Afterimage_011	Space Block	Afterimage
+Afterimage_012	Surviving Slip	Afterimage
+Afterimage_013	Life Lock	Afterimage
+Afterimage_014	Reminiscence of the Sun	Afterimage
+Afterimage_015	Magic Burst	Afterimage
+Afterimage_016	Pyro Cape	Afterimage
+Afterimage_017	Geo Carapace	Afterimage
+Afterimage_018	Anemo Wings	Afterimage
+Afterimage_019	Venom Spore	Afterimage
+Afterimage_020	Mystic Coin	Afterimage
+Afterimage_101	Nuo Mask	Afterimage
+Afterimage_102	The Sword	Afterimage
+Afterimage_103	The Halo	Afterimage
+Armor_Boot_001	Moonlight Boots	Armor
+Armor_Boot_101	Floral Boots	Armor
+Armor_Boot_201	Exotic Geta	Armor
+Armor_Boot_202	Ore Legguard	Armor
+Armor_Boot_301	Guardian Legguard	Armor
+Armor_Boot_302	Gorgeous Boots	Armor
+Armor_Boot_401	Adventurer Boots	Armor
+Armor_Boot_402	Boots of Secret	Armor
+Armor_Boot_403	Owl’s Slippers	Armor
+Armor_Boot_404	Silent Leggings	Armor
+Armor_Boot_501	Wandering of the White Owl	Armor
+Armor_Boot_502	Moonshadow Boots	Armor
+Armor_Boot_601	Mythical Boots	Armor
+Armor_Boot_602	Mithril Legguard	Armor
+Armor_Boot_603	Remex Boots	Armor
+Armor_Boot_604	Hornbeast Claw	Armor
+Armor_Boot_605	Twinborn Boots	Armor
+Armor_Cuirasst_001	Moonlight Robe	Armor
+Armor_Cuirasst_101	Floral Dress	Armor
+Armor_Cuirasst_201	Exotic Clothes	Armor
+Armor_Cuirasst_202	Ore Armor	Armor
+Armor_Cuirasst_301	Guardian Armor	Armor
+Armor_Cuirasst_302	Gorgeous Dress	Armor
+Armor_Cuirasst_401	Adventurer Leather Armor	Armor
+Armor_Cuirasst_402	Cloak of Secret	Armor
+Armor_Cuirasst_403	Owl’s Robe	Armor
+Armor_Cuirasst_404	Silent Robe	Armor
+Armor_Cuirasst_501	Plumage of the White Owl	Armor
+Armor_Cuirasst_502	Moonshadow Robe	Armor
+Armor_Cuirasst_601	Mythical Robe	Armor
+Armor_Cuirasst_602	Mithril Armor	Armor
+Armor_Cuirasst_603	Remex Armor	Armor
+Armor_Cuirasst_604	Hornbeast Fang	Armor
+Armor_Cuirasst_605	Twinborn Armor	Armor
+Armor_Helmet_001	Moonlight Band	Armor
+Armor_Helmet_101	Floral Tiara	Armor
+Armor_Helmet_201	Exotic Mask	Armor
+Armor_Helmet_202	Ore Helmet	Armor
+Armor_Helmet_301	Guardian Helmet	Armor
+Armor_Helmet_302	Gorgeous Tiara	Armor
+Armor_Helmet_401	Adventurer Headband	Armor
+Armor_Helmet_402	Mask of Secret	Armor
+Armor_Helmet_403	Owl’s Hood	Armor
+Armor_Helmet_404	Silent Mask	Armor
+Armor_Helmet_501	Hood of the White Owl	Armor
+Armor_Helmet_502	Moonshadow Band	Armor
+Armor_Helmet_601	Mythical Hairpin	Armor
+Armor_Helmet_602	Mithril Helmet	Armor
+Armor_Helmet_603	Remex Helmet	Armor
+Armor_Helmet_604	Hornbeast Headband	Armor
+Armor_Helmet_605	Twinborn Helmet	Armor
+Armor_Helmet_901	Testing Ring	Armor
+BR_Accessories_019	Mask of Eseus	Blueprint
+BR_Armor_Boot_501	Wandering of the White Owl	Blueprint
+BR_Armor_Boot_502	Moonshadow Boots	Blueprint
+BR_Armor_Boot_601	Mythical Boots	Blueprint
+BR_Armor_Boot_602	Mithril Legguard	Blueprint
+BR_Armor_Boot_603	Remex Boots	Blueprint
+BR_Armor_Boot_604	Hornbeast Claw	Blueprint
+BR_Armor_Boot_605	Twinborn Boots	Blueprint
+BR_Armor_Cuirasst_501	Plumage of the White Owl	Blueprint
+BR_Armor_Cuirasst_502	Moonshadow Robe	Blueprint
+BR_Armor_Cuirasst_601	Mythical Robe	Blueprint
+BR_Armor_Cuirasst_602	Mithril Armor	Blueprint
+BR_Armor_Cuirasst_603	Remex Armor	Blueprint
+BR_Armor_Cuirasst_604	Hornbeast Fang	Blueprint
+BR_Armor_Cuirasst_605	Twinborn Armor	Blueprint
+BR_Armor_Helmet_501	Hood of the White Owl	Blueprint
+BR_Armor_Helmet_502	Moonshadow Band	Blueprint
+BR_Armor_Helmet_601	Mythical Hairpin	Blueprint
+BR_Armor_Helmet_602	Mithril Helmet	Blueprint
+BR_Armor_Helmet_603	Remex Helmet	Blueprint
+BR_Armor_Helmet_604	Hornbeast Headband	Blueprint
+BR_Armor_Helmet_605	Twinborn Helmet	Blueprint
+BR_Weapon_Book_001	Book of Pyro	Blueprint
+BR_Weapon_Book_002	Book of Hydro	Blueprint
+BR_Weapon_Book_003	Book of Geo	Blueprint
+BR_Weapon_Book_004	Book of Anemo	Blueprint
+BR_Weapon_Book_005	Book of Curse	Blueprint
+BR_Weapon_Book_006	Grimoire of the Occult Prime	Blueprint
+BR_Weapon_DSword_001	Wooden Dualsword	Blueprint
+BR_Weapon_DSword_102	Gale	Blueprint
+BR_Weapon_DSword_104	Instinct	Blueprint
+BR_Weapon_DSword_105	Ravager	Blueprint
+BR_Weapon_DSword_106	Icy Flames	Blueprint
+BR_Weapon_DSword_107	Prisma	Blueprint
+BR_Weapon_DSword_108	Thunderfall	Blueprint
+BR_Weapon_DSword_201	Celestial Remains	Blueprint
+BR_Weapon_GSword_001	Wooden Greatsword	Blueprint
+BR_Weapon_GSword_101	Unbreakable Rose	Blueprint
+BR_Weapon_GSword_105	Double Edge	Blueprint
+BR_Weapon_GSword_107	Scorching Judgement	Blueprint
+BR_Weapon_GSword_108	The Gift	Blueprint
+BR_Weapon_GSword_109	Berserker	Blueprint
+BR_Weapon_GSword_201	Starry Night	Blueprint
+BR_Weapon_GSword_202	Evil Jade	Blueprint
+BR_Weapon_Katana_001	Wooden Blade	Blueprint
+BR_Weapon_Katana_004	Blade of Lost	Blueprint
+BR_Weapon_Katana_101	Ceremonial Blade	Blueprint
+BR_Weapon_Katana_103	Heart of Sun	Blueprint
+BR_Weapon_Katana_106	Prism Gale	Blueprint
+BR_Weapon_Katana_107	Bloodbath	Blueprint
+BR_Weapon_Katana_108	Anemogrim	Blueprint
+BR_Weapon_Katana_110	Deathmatch	Blueprint
+BR_Weapon_LongStaff_001	Pyroblast Staff	Blueprint
+BR_Weapon_LongStaff_002	Frostbite Staff	Blueprint
+BR_Weapon_LongStaff_003	Earthshock Staff	Blueprint
+BR_Weapon_LongStaff_004	Stormfall Staff	Blueprint
+BR_Weapon_LongStaff_005	Staff of the Occult Prime	Blueprint
+BR_Weapon_LongStaff_006	Sceptre of the Sage	Blueprint
+BR_Weapon_Scroll_001	Scroll of Otherworld	Blueprint
+BR_Weapon_Scroll_002	Scroll of Life	Blueprint
+BR_Weapon_Scroll_004	Scroll of Thirst	Blueprint
+BR_Weapon_Scythe_001	Wooden Scythe	Blueprint
+BR_Weapon_Scythe_005	Scythe of Contagion	Blueprint
+BR_Weapon_Scythe_102	Spellbreaker	Blueprint
+BR_Weapon_Scythe_103	Spore	Blueprint
+BR_Weapon_Scythe_104	Ember	Blueprint
+BR_Weapon_Scythe_106	Scarlet Reaper	Blueprint
+BR_Weapon_Scythe_109	Frostdance	Blueprint
+BR_Weapon_Scythe_201	Scythe of Abyss	Blueprint
+BR_Weapon_ShortStaff_001	Crimson Wand	Blueprint
+BR_Weapon_ShortStaff_002	Devil Wand	Blueprint
+BR_Weapon_ShortStaff_003	Wand of Owl	Blueprint
+BR_Weapon_Sword_001	Wooden Sword	Blueprint
+BR_Weapon_Sword_005	Sword of Geo	Blueprint
+BR_Weapon_Sword_102	Windrunner	Blueprint
+BR_Weapon_Sword_106	Nameless	Blueprint
+BR_Weapon_Sword_107	Bleak Moon	Blueprint
+BR_Weapon_Sword_108	Sword of the Hermit	Blueprint
+BR_Weapon_Sword_110	Phantom	Blueprint
+BR_Weapon_Sword_201	For Cinra Only	Blueprint
+BR_Weapon_Whip_001	Whip	Blueprint
+BR_Weapon_Whip_006	Thorns	Blueprint
+BR_Weapon_Whip_102	Holy Whip	Blueprint
+BR_Weapon_Whip_103	Behemoth Killer	Blueprint
+BR_Weapon_Whip_104	Monster Hunter	Blueprint
+BR_Weapon_Whip_105	Rage of Geo	Blueprint
+BR_Weapon_Whip_106	Flaming Cycle	Blueprint
+BR_Weapon_Whip_107	Bloody Nobility	Blueprint
+Cook_Bird	Bird Meat	Ingredient
+Cook_Carrot	Tree Radish	Ingredient
+Cook_Chili	Flame Plant	Ingredient
+Cook_Chocolate	Soft Lavachunk	Ingredient
+Cook_Clover	Clover	Ingredient
+Cook_Conch	Sky Snail	Ingredient
+Cook_Corn	Golden Grain	Ingredient
+Cook_DespairGrain	Crystals of despair	Ingredient
+Cook_Dew	Water of the Well	Ingredient
+Cook_Ear	Fluffy Ears	Ingredient
+Cook_EarthDust	Geo Dust	Ingredient
+Cook_FireDust	Pyro Dust	Ingredient
+Cook_FireElite	Fotia	Ingredient
+Cook_Fish	Golden Fish	Ingredient
+Cook_Gigot	Oreep Meat	Ingredient
+Cook_Grape	Grapeling Pearl	Ingredient
+Cook_HolyHeart	Palerock Remains	Ingredient
+Cook_HopeGrain	Sands of Hope	Ingredient
+Cook_Jelly	Blue Gel	Ingredient
+Cook_JuicyFlesh	Juicy Meat	Ingredient
+Cook_Lobster	Emperor's Bug	Ingredient
+Cook_Meat	Ancient Spiritual Meat	Ingredient
+Cook_Mushroom	Medium Rare Mushroom	Ingredient
+Cook_OliveOil	Energy Oil	Ingredient
+Cook_Onion	Emerald Stem	Ingredient
+Cook_Pupa	Desert Pupa	Ingredient
+Cook_PurpleFlower	Mulberry Flower	Ingredient
+Cook_RainbowEgg	Rainbow Egg	Ingredient
+Cook_Salt	Rainbow Grit	Ingredient
+Cook_Sauce	Meem Jam	Ingredient
+Cook_Shell	Clam	Ingredient
+Cook_SoulDust	Spirit Dust	Ingredient
+Cook_SoulElite	Spirit Essence	Ingredient
+Cook_SoulFragment	Spirit Shard	Ingredient
+Cook_Soy	Black Sauce	Ingredient
+Cook_Spore	Mushroom Spore	Ingredient
+Cook_Sugar	Sweet Grit	Ingredient
+Cook_Tail	Flametail Meat	Ingredient
+Cook_TenderFlesh	Soft Meat	Ingredient
+Cook_Tentacle	Sucker Tentacle	Ingredient
+Cook_ToughMeat	Tough Meat	Ingredient
+Cook_Treasure	Scorched Orb	Ingredient
+Cook_Vanilla	Fragrant Root	Ingredient
+Cook_Vinegar	White Sauce	Ingredient
+Cook_Warter	Pure Water	Ingredient
+Cook_WaterDust	Hydro Dust	Ingredient
+Cook_WhiteFlower	Marble Flower	Ingredient
+Cook_WindDust	Anemo Dust	Ingredient
+Cook_Worm	Ocean Slug	Ingredient
+Cook_Wrapper	Clear Flake	Ingredient
+Food_BoiledCabbage	Boiled Marble Flowers	Food
+Food_BraisedPork	Braised Pork	Food
+Food_BubbleWater	Azure Sparkling Water	Food
+Food_BuddhaSkippingWall	Golden Mushroom Soup	Food
+Food_CarrotStew	Lava Braised Meat	Food
+Food_CarrotsRoastMeat	Tree Radish Meat Stew	Food
+Food_Champagne	Eternal Vintage	Food
+Food_Cucumbers	Ocean Slug Salad	Food
+Food_Dumpling	Crystal Dumpling	Food
+Food_FishSashimi	Golden Sashimi	Food
+Food_FriedCornGrapes	Life on the Plains	Food
+Food_FriedEggs	Hermit's Lucky Omelette	Food
+Food_FriedSteak	Pan-fried Steak	Food
+Food_FriedWorms	Fried Sandworm	Food
+Food_GreatSeafood	Call of the Sea	Food
+Food_Icecream	Volcanic Eruption	Food
+Food_IronShellMeat	Sea Shore Feast	Food
+Food_Kabob	Monster Skewer	Food
+Food_MushroomSoup	Mushroom Family	Food
+Food_OctopusKebabs	Tentacle Skewer	Food
+Food_PotatoSoup	Spiritual Blast	Food
+Food_RackLamb	Oreep Steak	Food
+Food_RedWine	Crimson Kiss	Food
+Food_RoastDuck	Palerock Roast Bird	Food
+Food_RoastLambLeg	Heroic Grill	Food
+Food_ScallionPancake	Emerald Crisp	Food
+Food_Soup	Spiritual Broth	Food
+Food_SourPork	Sweet Juicy Meat	Food
+Food_SpicySauce	Spicy Meat Sauce	Food
+Food_StewedSoup	Mulberry Meat Pottage	Food
+Item_Collecton_001	Scattered Prism Bone	Collectible
+Item_Collecton_002	Scattered Prism Bone	Collectible
+Item_Collecton_003	Scattered Prism Bone	Collectible
+Item_Collecton_004	Scattered Prism Bone	Collectible
+Item_Collecton_005	Scattered Prism Bone	Collectible
+Item_Collecton_006	Scattered Prism Bone	Collectible
+Item_Collecton_007	Scattered Prism Bone	Collectible
+Item_Collecton_008	Scattered Prism Bone	Collectible
+Item_Collecton_009	Scattered Prism Bone	Collectible
+Item_Collecton_010	Scattered Prism Bone	Collectible
+Item_Collecton_011	Scattered Prism Bone	Collectible
+Item_Collecton_012	Scattered Prism Bone	Collectible
+Item_Collecton_013	Scattered Prism Bone	Collectible
+Item_Collecton_014	Scattered Prism Bone	Collectible
+Item_Collecton_015	Scattered Prism Bone	Collectible
+Item_Collecton_016	Scattered Prism Bone	Collectible
+Item_Collecton_017	Scattered Prism Bone	Collectible
+Item_Collecton_018	Scattered Prism Bone	Collectible
+Item_Collecton_019	Scattered Prism Bone	Collectible
+Item_Collecton_020	Scattered Prism Bone	Collectible
+Item_Collecton_021	Scattered Prism Bone	Collectible
+Item_Collecton_022	Scattered Prism Bone	Collectible
+Item_Collecton_023	Scattered Prism Bone	Collectible
+Item_Collecton_024	Scattered Prism Bone	Collectible
+Item_Collecton_025	Scattered Prism Bone	Collectible
+Item_Collecton_027	Scattered Prism Bone	Collectible
+Item_Collecton_028	Scattered Prism Bone	Collectible
+Item_Collecton_029	Scattered Prism Bone	Collectible
+Item_Collecton_030	Scattered Prism Bone	Collectible
+Item_Collecton_031	Scattered Prism Bone	Collectible
+Key_Lv02_01	Antiquated Key	Key item
+Makeup_001	Outfit - 0000	Makeup
+Makeup_002	Outfit - 0001	Makeup
+Makeup_003	Outfit - 0010	Makeup
+Makeup_004	Outfit - 0011	Makeup
+Makeup_005	Outfit - 0100	Makeup
+Makeup_006	Outfit - 0101	Makeup
+Makeup_007	Outfit - 0110	Makeup
+Makeup_008	Outfit - 0111	Makeup
+Makeup_009	Outfit - 1000	Makeup
+Makeup_010	Outfit - 1001	Makeup
+Makeup_011	Outfit - 1010	Makeup
+Makeup_012	Outfit - 1011	Makeup
+Makeup_013	Outfit - 1100	Makeup
+Num_HpReward	Shard of Divine Leaf	Key item
+Num_MpReward	Shard of Divine Flower	Key item
+Potion_EquipLevelUp_01	Dim Balm	Consumable
+Potion_EquipLevelUp_02	Mysterious Balm	Consumable
+Potion_EquipLevelUp_03	Exotic Balm	Consumable
+Potion_HPPotionBig	Higher Health Potion	Consumable
+Potion_HPPotionMid	Refined Health Potion	Consumable
+Potion_HPPotionSmall	Health Potion	Consumable
+Potion_MPPotionBig	Higher Mana Potion	Consumable
+Potion_MPPotionMid	Refined Mana Potion	Consumable
+Potion_MPPotionSmall	Mana Potion	Consumable
+Potion_TalentPointReward	Talent Point	Consumable
+Potion_TalentPointReward02	Talent Essence II	Consumable
+Potion_TalentPointReward_Alice_1	Talent Essence II	Consumable
+Potion_TalentPointReward_Alice_2	Talent Essence III	Consumable
+Potion_TalentPointReward_Se_1	Talent Point	Consumable
+Potion_TalentPointReward_Se_2	Talent Essence II	Consumable
+Potion_TalentPointReward_Stanley_1	Talent Point	Consumable
+Potion_TalentPointReward_Stanley_2	Talent Essence II	Consumable
+Potion_TalentPointReward_Stanley_3	Talent Essence III	Consumable
+Potion_TalentPointReward_Stanley_4	Talent Essence III	Consumable
+Potion_TalentPointReward_Stanley_5	Talent Essence III	Consumable
+Potion_TalentReset	Potion of Oblivion	Consumable
+Prop_AccessoriesSlot	Divine Ring	Upgrade
+Prop_AfterImageReward	Divine Seed	Upgrade
+Prop_HpReward	Shard of Divine Leaf	Upgrade
+Prop_HpReward_Stenly	Shard of Divine Leaf	Upgrade
+Prop_MpReward	Shard of Divine Flower	Upgrade
+Prop_MpReward_Stenly	Shard of Divine Flower	Upgrade
+Quest_ArosSarira	Prism Bone of Aros	Key item
+Quest_AurogonRune01	Qian	Key item
+Quest_AurogonRune02	Kun	Key item
+Quest_AurogonRune03	Zhen	Key item
+Quest_AurogonRune04	Xun	Key item
+Quest_AurogonRune05	Kan	Key item
+Quest_AurogonRune06	Li	Key item
+Quest_AurogonRune07	Gen	Key item
+Quest_AurogonRune08	Dui	Key item
+Quest_AurogonStory	Words of Shenlong	Key item
+Quest_AusSarira	Prism Bone of Auss	Key item
+Quest_BoundSilk	Binding String	Key item
+Quest_BrokenPaper	A Torn Page	Key item
+Quest_CandleFlower	Resting Candles and Ritual Flowers	Key item
+Quest_CatLetter	Letter of the Elder	Key item
+Quest_DemonPaper	Piece of The Heavenly Voices' Manuscript	Key item
+Quest_DemonPaper_01	Fragment of The Heavenly Voices	Key item
+Quest_FireFeather	Burning Plume	Key item
+Quest_GodHallKey	Key to God’s Hall	Key item
+Quest_GoldCard	Golden Card	Key item
+Quest_GoldFeather	Golden Feather	Key item
+Quest_GoldSkyBall	Owl’s Peeking	Key item
+Quest_GraySkyBall	Grey Orb	Key item
+Quest_ImmortalCrystal	Ever-burning Crystal	Key item
+Quest_LakeKey	Key to the Teardrop Base	Key item
+Quest_LevineLetter	Magic Letter to The Owl	Key item
+Quest_LevinePaper	Note of the Owl	Key item
+Quest_Mask01	Broken Mask	Key item
+Quest_Mask01_C01	Broken Mask	Key item
+Quest_Mask02	Shattered Mask	Key item
+Quest_Mask02_C01	Shattered Mask	Key item
+Quest_Mask03	Damaged Mask	Key item
+Quest_Mask03_C01	Damaged Mask	Key item
+Quest_Mask04	Nucleus of Talos	Key item
+Quest_Mask04_C01	Nucleus of Talos	Key item
+Quest_Mask05	Mask of the Occult Prime	Key item
+Quest_Mask05_C01	Mask of the Hidden Mage	Key item
+Quest_MemoryCrystal	Memory Shard	Key item
+Quest_MonsterBook	Magic Journal	Key item
+Quest_NicoBook	Blood-Stained Magic Book	Key item
+Quest_PanpeiLetter	Pompeii’s Magic Letter	Key item
+Quest_PassKey	Key to the Pass	Key item
+Quest_PattWeapon	Slient Rod	Key item
+Quest_PureSkyBall	Hypnotic Orb	Key item
+Quest_PureWater	Water of Equilibrium	Key item
+Quest_RainbowDust	Prism Powder	Key item
+Quest_RainbowStone	Prism Ore	Key item
+Quest_ReneeMask	Mysterious Mask	Key item
+Quest_ReneeMask_C01	Mysterious Mask	Key item
+Quest_ResearchNote	Research Data	Key item
+Quest_ResearchNote_01	Research Record: Reagent #IV	Key item
+Quest_ResearchNote_02	Test Record No. 58-1	Key item
+Quest_ResearchNote_03	Test Record No. 58-2	Key item
+Quest_RestPotion	Resting Potion	Key item
+Quest_RiteRoomKey	Key to the Room of Ritual	Key item
+Quest_Rune01	Rebirth, the Spiral Return	Glyph
+Quest_Rune02	Felicity, the Divine Left-Eye	Glyph
+Quest_Rune03	Sorrow, the Divine Teardrop	Glyph
+Quest_Rune04	Covenant, the Trimming of Strings	Glyph
+Quest_Rune05	Memories, the Beginning	Glyph
+Quest_Rune06	Sacrifice, the Mysterious Bounding	Glyph
+Quest_Rune07	Belief, the Order of Universal Cycle	Glyph
+Quest_Rune08	Pyro, the Creation of Sun and Moon	Glyph
+Quest_Rune09	Anemo, the Harmony of World Tree	Glyph
+Quest_Rune10	Hydro, the Primeval Life	Glyph
+Quest_Rune11	Geo, the Legacy of Ancestors	Glyph
+Quest_Rune12	Light, the Shift of Time	Glyph
+Quest_Rune13	Being, the Possibility	Glyph
+Quest_SeCoin	Se’s Coin	Key item
+Quest_SeKey	Key of Se	Key item
+Quest_SkyFeather	Firmamental Feather	Key item
+Quest_Spore	Shining Spore	Key item
+Quest_StanleyPaper	Note of the Antique Dealer	Key item
+Quest_Ticket	Ferry Ticket	Key item
+Quest_UnkownNote	Note of a Nameless Adventurer	Key item
+Quest_UnkownSarira	Nameless Prism Bone	Key item
+Quest_WaterHeart	Stream Crystal	Key item
+Quest_WindKey_2	Key with Anemo Imprint	Key item
+Skill_Book_001	Secret Art: Bleak Moon	Skill book
+Skill_Book_002	Secret Art: Full Moon	Skill book
+Skill_Book_003	Secret Art: Slicing Whirlwind	Skill book
+Skill_Book_004	Secret Art: Hunting Edge	Skill book
+Skill_Book_005	Secret Art: Spinning Wyvern	Skill book
+Skill_Book_006	Secret Art: Raging Wyvern	Skill book
+Skill_Book_007	Secret Art: Symphony	Skill book
+Skill_Book_008	Secret Art: Aria	Skill book
+Skill_Book_009	Secret Art: Fluttering Blossom	Skill book
+Skill_Book_010	Secret Art: Whip Mastery	Skill book
+Skill_Book_011	Secret Art: Thousand Crosses	Skill book
+Skill_Book_012	Secret Art: Judgement Cut	Skill book
+Trade_AncientGem	Rune Gem	Trade good
+Trade_Bandage	Bandage	Trade good
+Trade_BatGem	Bat Orb	Trade good
+Trade_BatWing	Bat Wing	Trade good
+Trade_Bell	Psalmodic Bell	Trade good
+Trade_BlueMineral	Cyanite Ore	Trade good
+Trade_BlueOrb	Cerulean Orb	Trade good
+Trade_BrokenBlade	Broken Blade	Trade good
+Trade_BrokenDemonMask	Incomplete Mask	Trade good
+Trade_BrokenGear	Broken Part	Trade good
+Trade_BrokenMushroomGem	Broken Gem	Trade good
+Trade_BrokenRuneStone	Broken Rock	Trade good
+Trade_BrokenStoneStaff	Cracked Staff	Trade good
+Trade_BrokenStoneTablet	Piece of Tombstone	Trade good
+Trade_BronzeLump	Piece of Bronze	Trade good
+Trade_BurningHair	Blazing Plume	Trade good
+Trade_BurntDemonHorn	Fractured Raging Horn	Trade good
+Trade_BurntDemonTail	Fractured Raging Tail	Trade good
+Trade_ButterflyWing	Broken Wing of Spikefly	Trade good
+Trade_CarrotRoot	Tree Radish Root	Trade good
+Trade_DancerDress	Dancer’s Dress	Trade good
+Trade_FireGem	Gem of Flame	Trade good
+Trade_GloryMedal	Medal of Honor	Trade good
+Trade_HolyCore	Pale Core	Trade good
+Trade_HolyFeather	Pure Feather	Trade good
+Trade_ImmemorialLeaf	Timeless Leaf	Trade good
+Trade_MagicStatue	Stone Statue	Trade good
+Trade_Mane	Thick Mane	Trade good
+Trade_MushroomGem	Spore Gem	Trade good
+Trade_OathContract	Oath of Knight	Trade good
+Trade_PaleRuneStone	Rune Stone	Trade good
+Trade_Rag	Broken Rag	Trade good
+Trade_RainbowMineral	Prism Ore	Trade good
+Trade_RunePaper	Fragment of Rune	Trade good
+Trade_RuneStone	Intact Rock	Trade good
+Trade_RustGear	Rusty Gear	Trade good
+Trade_Sandglass	Sandglass of Earth	Trade good
+Trade_SeaPearl	Ocean Pearl	Trade good
+Trade_ShadowCore	Obsidian Core	Trade good
+Trade_ShadowStone	Shadow Stone	Trade good
+Trade_SpoilHeart	Corrupted Heart	Trade good
+Trade_SprideCore	Xenal Core	Trade good
+Trade_SprideLeg	Xenal Spider Leg	Trade good
+Trade_StainedGloryMedal	Broken Medal	Trade good
+Trade_StainedOathContract	Revoked Oath	Trade good
+Trade_Volcano	Volcanic Stone	Trade good
+Trade_WakanGem	Xenal Gem	Trade good
+Trade_WaterCup	Cup of Flows	Trade good
+Trade_WindVane	Indicator of Gale	Trade good
+Trade_WineBottle	Broken Wine Bottle	Trade good
+Trade_WitheredFlower	Withered Flower	Trade good
+Weapon_Book_001	Book of Pyro	Weapon
+Weapon_Book_002	Book of Hydro	Weapon
+Weapon_Book_003	Book of Geo	Weapon
+Weapon_Book_004	Book of Anemo	Weapon
+Weapon_Book_005	Book of Curse	Weapon
+Weapon_Book_006	Grimoire of the Occult Prime	Weapon
+Weapon_Crystal_001		Weapon
+Weapon_DSword_001	Wooden Dualsword	Weapon
+Weapon_DSword_002	Blackwood Dualsword	Weapon
+Weapon_DSword_003	Sting	Weapon
+Weapon_DSword_004	Guardian’s Swords	Weapon
+Weapon_DSword_005	Dualsword of Geo	Weapon
+Weapon_DSword_006	Broken Kurasames	Weapon
+Weapon_DSword_007	Bronze Dualblades	Weapon
+Weapon_DSword_101	The Gambler	Weapon
+Weapon_DSword_102	Gale	Weapon
+Weapon_DSword_103	Ancient Fangs	Weapon
+Weapon_DSword_104	Instinct	Weapon
+Weapon_DSword_105	Ravager	Weapon
+Weapon_DSword_106	Icy Flames	Weapon
+Weapon_DSword_107	Prisma	Weapon
+Weapon_DSword_108	Thunderfall	Weapon
+Weapon_DSword_109	Fiery Claw	Weapon
+Weapon_DSword_201	Celestial Remains	Weapon
+Weapon_DSword_202	Purple Jade	Weapon
+Weapon_GSword_001	Wooden Greatsword	Weapon
+Weapon_GSword_002	Blackwood Greatsword	Weapon
+Weapon_GSword_003	Waterflow	Weapon
+Weapon_GSword_004	Iron Greatsword	Weapon
+Weapon_GSword_005	Remnant Blade	Weapon
+Weapon_GSword_006	Judicator Greatsword	Weapon
+Weapon_GSword_007	Bronze Greatsword	Weapon
+Weapon_GSword_101	Unbreakable Rose	Weapon
+Weapon_GSword_102	Stainless	Weapon
+Weapon_GSword_103	Soulhunt	Weapon
+Weapon_GSword_104	Dauntless	Weapon
+Weapon_GSword_105	Double Edge	Weapon
+Weapon_GSword_106	Sword of the Woods	Weapon
+Weapon_GSword_107	Scorching Judgement	Weapon
+Weapon_GSword_108	The Gift	Weapon
+Weapon_GSword_109	Berserker	Weapon
+Weapon_GSword_110	Behemoth	Weapon
+Weapon_GSword_111	Pyro Calamity	Weapon
+Weapon_GSword_201	Starry Night	Weapon
+Weapon_GSword_202	Evil Jade	Weapon
+Weapon_Kasa_Blue		Weapon
+Weapon_Kasa_Red		Weapon
+Weapon_Katana_001	Wooden Blade	Weapon
+Weapon_Katana_002	Blackwood Blade	Weapon
+Weapon_Katana_003	Flowcutter	Weapon
+Weapon_Katana_004	Blade of Lost	Weapon
+Weapon_Katana_005	Blade of Geo	Weapon
+Weapon_Katana_006	Jade Blade	Weapon
+Weapon_Katana_007	Bronze Blade	Weapon
+Weapon_Katana_101	Ceremonial Blade	Weapon
+Weapon_Katana_102	Sen no Sen	Weapon
+Weapon_Katana_103	Heart of Sun	Weapon
+Weapon_Katana_104	Kamui	Weapon
+Weapon_Katana_105	Kurasame	Weapon
+Weapon_Katana_106	Prism Gale	Weapon
+Weapon_Katana_107	Bloodbath	Weapon
+Weapon_Katana_108	Anemogrim	Weapon
+Weapon_Katana_109	Muramasa	Weapon
+Weapon_Katana_110	Deathmatch	Weapon
+Weapon_LongStaff_001	Pyroblast Staff	Weapon
+Weapon_LongStaff_002	Frostbite Staff	Weapon
+Weapon_LongStaff_003	Earthshock Staff	Weapon
+Weapon_LongStaff_004	Stormfall Staff	Weapon
+Weapon_LongStaff_005	Staff of the Occult Prime	Weapon
+Weapon_LongStaff_006	Sceptre of the Sage	Weapon
+Weapon_Scroll_001	Scroll of Otherworld	Weapon
+Weapon_Scroll_002	Scroll of Life	Weapon
+Weapon_Scroll_003	Scroll of Pilliage	Weapon
+Weapon_Scroll_004	Scroll of Thirst	Weapon
+Weapon_Scythe_001	Wooden Scythe	Weapon
+Weapon_Scythe_002	Blackwood Scythe	Weapon
+Weapon_Scythe_003	Swift Scythe	Weapon
+Weapon_Scythe_004	Iron Scythe	Weapon
+Weapon_Scythe_005	Scythe of Contagion	Weapon
+Weapon_Scythe_006	Scythe of Torture	Weapon
+Weapon_Scythe_007	Bronze Scythe	Weapon
+Weapon_Scythe_101	Sprinting Sparks	Weapon
+Weapon_Scythe_102	Spellbreaker	Weapon
+Weapon_Scythe_103	Spore	Weapon
+Weapon_Scythe_104	Ember	Weapon
+Weapon_Scythe_105	Miner’s Treasure	Weapon
+Weapon_Scythe_106	Scarlet Reaper	Weapon
+Weapon_Scythe_107	Soulcutter	Weapon
+Weapon_Scythe_108	The Survived	Weapon
+Weapon_Scythe_109	Frostdance	Weapon
+Weapon_Scythe_201	Scythe of Abyss	Weapon
+Weapon_ShortStaff_001	Crimson Wand	Weapon
+Weapon_ShortStaff_002	Devil Wand	Weapon
+Weapon_ShortStaff_003	Wand of Owl	Weapon
+Weapon_ShortStaff_004	Mysterious Rod	Weapon
+Weapon_Sword_001	Wooden Sword	Weapon
+Weapon_Sword_002	Blackwood Sword	Weapon
+Weapon_Sword_003	Iron Sword	Weapon
+Weapon_Sword_004	Guardian Sword	Weapon
+Weapon_Sword_005	Sword of Geo	Weapon
+Weapon_Sword_006	Veteran Sword	Weapon
+Weapon_Sword_007	Bronze Sword	Weapon
+Weapon_Sword_101	Moonlight	Weapon
+Weapon_Sword_102	Windrunner	Weapon
+Weapon_Sword_103	Golden Sword	Weapon
+Weapon_Sword_104	Slient Rod	Weapon
+Weapon_Sword_106	Nameless	Weapon
+Weapon_Sword_107	Bleak Moon	Weapon
+Weapon_Sword_108	Sword of the Hermit	Weapon
+Weapon_Sword_109	Aurogon	Weapon
+Weapon_Sword_110	Phantom	Weapon
+Weapon_Sword_111	Stars	Weapon
+Weapon_Sword_201	For Cinra Only	Weapon
+Weapon_Sword_202	Aloofness	Weapon
+Weapon_Whip_001	Whip	Weapon
+Weapon_Whip_002	Black Whip	Weapon
+Weapon_Whip_003	Torment Whip	Weapon
+Weapon_Whip_004	Pale Dance	Weapon
+Weapon_Whip_005	Scourge of Blossom	Weapon
+Weapon_Whip_006	Thorns	Weapon
+Weapon_Whip_007	Bronze-handle Whip	Weapon
+Weapon_Whip_101	Poison Touch	Weapon
+Weapon_Whip_102	Holy Whip	Weapon
+Weapon_Whip_103	Behemoth Killer	Weapon
+Weapon_Whip_104	Monster Hunter	Weapon
+Weapon_Whip_105	Rage of Geo	Weapon
+Weapon_Whip_106	Flaming Cycle	Weapon
+Weapon_Whip_107	Bloody Nobility	Weapon
+Weapon_Whip_108	Pyro Calamity	Weapon
+Weapon_Whip_201	Venomad	Weapon
