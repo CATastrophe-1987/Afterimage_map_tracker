@@ -45,6 +45,15 @@
 -- icon (the vanilla item; in randomizer mode the scouted one if the list
 -- names it), the glyph only where no icon is loaded. A checked marker keeps
 -- its icon, dimmed and grey (CHECKED_ICON_COLOR), under the grey "x".
+-- In-logic outlines (default; flag word "nologic" turns them off): each
+-- unchecked marker gets a square outline, green when the items in the
+-- player's bag meet the check's rule, red when not; a checked one has none.
+-- The rules (data_logic.lua, written by tools/rules_table.py) are the
+-- default logic (movement_logic off, area_logic vanilla_order: the friends'
+-- settings) in both modes, so a randomizer seed with other logic options
+-- can differ. A boss event in a rule is met once its drop is checked, or
+-- when the list does not carry the drop (vanilla tracker). The bag is
+-- re-read with the list (every FILE_RECHECK_MS while the map is open).
 -- Locations without a known world position (boss drops) are not shown.
 --
 -- Transform (docs/game-internals.md, "Map overlay transform"): the map is a
@@ -158,7 +167,9 @@ local ICON_PX = 34             -- window px (45 screen px at 2560 x 1440)
 local ICON_Z = 1000
 local CHECKED_ICON_Z = 998     -- under the checked "x" (CHECKED_Z) and every unchecked marker
 local ICON_COLOR = { R = 1, G = 1, B = 1, A = 1 }
-local CHECKED_ICON_COLOR = { R = 0.55, G = 0.55, B = 0.55, A = 0.4 }
+-- 0.55 / 0.4 was hard to see under the "x" in game (2026-11-20 run).
+local CHECKED_ICON_COLOR = { R = 0.7, G = 0.7, B = 0.7, A = 0.6 }
+local CHECKED_X_ZOOM = 1.2     -- an "x" over an icon is drawn at this zoom's size at every zoom
 local tint_failed = false      -- an Image tint call failed: checked markers go back to the "x" only
 local ICON_LABEL_GAP = 3       -- window px between an icon's right edge and its label
 local ICON_DIRS = { "/Game/Assets/Texture2D/ItemIcon/Frames/", "/Game/Assets/UMG/TextureAtlases/ItemIcon/Frames/" }
@@ -166,6 +177,19 @@ local ICON_DIRS = { "/Game/Assets/Texture2D/ItemIcon/Frames/", "/Game/Assets/UMG
 -- uses: "dew", the currency (the HUD's dew counter icon, a blue drop; coin
 -- rocks and coin bundles), found with mode mapitemicons on 2026-11-20.
 local NAMED_FRAMES = { dew = "/Game/Assets/UMG/TextureAtlases/HUD/Frames/ST_HUD1_Button_Gold.ST_HUD1_Button_Gold" }
+-- Outlines: four thin Images (a plain white brush, tinted) around the
+-- marker, OUTLINE_PX window px square at every zoom (like the icons).
+local OUTLINE_PX = 32          -- window px, the outline's outer side
+local OUTLINE_W = 2            -- window px, its thickness
+local OUTLINE_Z = 1000
+local IN_LOGIC_COLOR = { R = 0.2, G = 1, B = 0.3, A = 0.95 }
+local OUT_LOGIC_COLOR = { R = 1, G = 0.22, B = 0.2, A = 0.95 }
+local OUTLINE_BARS = {         -- { dx, dy, w, h } in window px, centred on the marker
+    { 0, -(OUTLINE_PX - OUTLINE_W) / 2, OUTLINE_PX, OUTLINE_W },
+    { 0, (OUTLINE_PX - OUTLINE_W) / 2, OUTLINE_PX, OUTLINE_W },
+    { -(OUTLINE_PX - OUTLINE_W) / 2, 0, OUTLINE_W, OUTLINE_PX },
+    { (OUTLINE_PX - OUTLINE_W) / 2, 0, OUTLINE_W, OUTLINE_PX },
+}
 local ICON_LEGEND = { vanilla = "Icon  Vanilla item", tracker = "Icon  Vanilla item",
     randomizer = "Icon  Item, else vanilla" }
 local ICON_LEGEND_COLOR = { R = 1, G = 1, B = 1, A = 0.9 }
@@ -174,6 +198,7 @@ local TRACKER_FLAG = "AfterimageAP_tracker.flag"
 local flag_files = { TRACKER_FLAG }   -- read in order, the first that exists (M.start opts.flag_files)
 local LOG = "[AfterimageAP] "         -- printed before every log line (M.start opts.log_prefix)
 local PROP_OPEN = 11            -- prop_status_object_open
+local PROP_ITEM_BAG = 19        -- player: item id -> count (bridge.lua)
 local PROP_DROP_RECORD = 102    -- prop_item_drop_record (table: item id -> 1 while the drop waits)
 local PROP_DLG_SAVE_DATA = 29   -- player: dialog id -> { variable -> number } (bridge.lua)
 local COUNTER_TABLE = "AfterimageAP"
@@ -181,6 +206,11 @@ local COUNTER_TABLE = "AfterimageAP"
 local transition = require("transition")
 local positions = require("data_positions")
 local locations = require("data_locations")   -- key -> { id = save id, kind, level, room, item, icon }
+-- key -> { alternative, ... }, an alternative = { item, count, ... } (nil: no outlines)
+local logic = (function()
+    local ok, t = pcall(function() return require("data_logic") end)
+    return ok and type(t) == "table" and t or nil
+end)()
 local icon_names = (function()
     -- English item name -> icon frame (written this way so build_release.py sees the require)
     local ok, t = pcall(function() return require("data_icons") end)
@@ -199,7 +229,14 @@ local legend = {}              -- legend lines: { widget, slot, text, scale, sho
 local wanted = nil             -- key -> "todo" / "checked", the locations to show
 local scouted = {}             -- key -> item name, when the randomizer's list carries it
 local wanted_text = nil        -- what wanted was built from (list text + flag words)
-local options = { mode = "tracker", labels = true, legend = false, icons = true, checked_icons = true }
+local options = { mode = "tracker", labels = true, legend = false, icons = true, checked_icons = true, logic = true }
+local held = nil               -- item id -> count in the player's bag (the items data_logic.lua names), nil: not read
+local held_text = nil          -- held as text (changed -> outlines re-coloured)
+local logic_items = nil        -- the item ids data_logic.lua names
+local free_outlines = {}       -- pool of outlines not in use: { bars = { { widget, slot } x4 }, color, scale, shown }
+local outlined = {}            -- marker -> true, the markers showing an outline (m.outline)
+local outline_pool = 0         -- outlines made during this map opening
+local outlines_failed = false  -- an outline call failed: none for the rest of the game run
 local free_icons = {}          -- pool of icon Images not in use: { widget, slot, frame, scale, shown }
 local iconed = {}              -- marker -> true, the markers showing an icon (m.img)
 local icon_pool = 0            -- Images made during this map opening
@@ -369,6 +406,70 @@ end
 
 -- Whether the loaded save was played with this session: the bridge's mark,
 -- or (saves from before the mark) its delivered-item counter.
+-- The counts in the player's bag of every item a rule names, or nil (no
+-- player: title screen, loading).
+local function read_held()
+    if not logic then
+        return nil
+    end
+    if not logic_items then
+        local seen = {}
+        logic_items = {}
+        for _, alts in pairs(logic) do
+            for _, alt in ipairs(alts) do
+                for i = 1, #alt, 2 do
+                    local item = alt[i]
+                    if not seen[item] and item:sub(1, 1) ~= "@" then
+                        seen[item] = true
+                        logic_items[#logic_items + 1] = item
+                    end
+                end
+            end
+        end
+        table.sort(logic_items)
+    end
+    local sprop = player_sprop()
+    if not sprop then
+        return nil
+    end
+    local out = {}
+    for _, item in ipairs(logic_items) do
+        local n = safe(function() return sprop:GetSPropTableNumberValue(PROP_ITEM_BAG, { item }) end)
+        out[item] = type(n) == "number" and n or 0
+    end
+    return out
+end
+
+-- One alternative of a rule: every item held often enough, every boss
+-- event's drop checked (or not in the list: unknown, counted as met).
+local function alt_met(alt)
+    for i = 1, #alt, 2 do
+        local item, n = alt[i], alt[i + 1]
+        if item:sub(1, 1) == "@" then
+            if wanted and wanted[item:sub(2)] == "todo" then
+                return false
+            end
+        elseif (held[item] or 0) < n then
+            return false
+        end
+    end
+    return true
+end
+
+-- "in" / "out" of logic for a key, or nil (no rule, no bag, outlines off).
+local function logic_state(key)
+    local alts = options.logic and held and logic and logic[key]
+    if not alts then
+        return nil
+    end
+    for _, alt in ipairs(alts) do
+        if alt_met(alt) then
+            return "in"
+        end
+    end
+    return "out"
+end
+
 local function save_has_session(session)
     if accepted[session] then
         return true
@@ -427,9 +528,11 @@ local function read_wanted()
     options.legend = words.legend or false   -- opt-in ("nolegend", the old word, is the default)
     options.icons = not words.noicons
     options.checked_icons = not words.plaincollected
+    options.logic = not words.nologic
     options.noload = words.noload or false
     local signature = table.concat({ tostring(text), mode, tostring(hide_checked), tostring(options.labels),
-        tostring(options.legend), tostring(options.icons), tostring(options.checked_icons) }, "\n#")
+        tostring(options.legend), tostring(options.icons), tostring(options.checked_icons),
+        tostring(options.logic) }, "\n#")
     if signature == wanted_text then
         return
     end
@@ -609,13 +712,22 @@ local function clear_markers()
         if m.img then
             pcall(function() m.img.widget:RemoveFromParent() end)
         end
+        if m.outline then
+            free_outlines[#free_outlines + 1] = m.outline
+        end
     end
     for _, list in ipairs({ labels, legend, free_icons }) do
         for _, l in ipairs(list) do
             pcall(function() l.widget:RemoveFromParent() end)
         end
     end
+    for _, o in ipairs(free_outlines) do
+        for _, bar in ipairs(o.bars) do
+            pcall(function() bar.widget:RemoveFromParent() end)
+        end
+    end
     markers, labels, legend, free_icons, iconed = {}, {}, {}, {}, {}
+    free_outlines, outlined, outline_pool = {}, {}, 0
     icon_pool, frame_cache, load_tried = 0, {}, {}
     stats.placed, stats.checked, stats.labels, stats.icons = 0, 0, 0, 0
 end
@@ -684,31 +796,33 @@ local function legend_lines()
     if not options.legend then
         return lines
     end
-    local kinds, any_checked = {}, false
+    -- A glyph line only for a kind some unchecked marker still draws as a
+    -- glyph (its icon not loaded, or another game's item): with icons on,
+    -- lines for symbols not on the map confused (user, 2026-11-20).
+    local kinds, any_checked, any_todo, any_icon = {}, false, false, false
+    local icons_on = options.icons and not icons_failed
     for key, state in pairs(wanted or {}) do
         if positions[key] then
             if state == "checked" then
                 any_checked = true
             else
-                local d = locations[key]
-                kinds[d and d.kind or UNKNOWN_KIND] = true
+                any_todo = true
+                local m = markers[key]
+                if icons_on and m and m.frame and frame_object(m.frame) then
+                    any_icon = true
+                else
+                    local d = locations[key]
+                    kinds[d and d.kind or UNKNOWN_KIND] = true
+                end
             end
         end
     end
-    if not any_checked and next(kinds) == nil then
+    if not any_checked and not any_todo then
         return lines                             -- nothing on the map
     end
     lines[1] = { text = MODE_TITLE[options.mode] or options.mode, color = LEGEND_TITLE_COLOR }
-    if options.icons and not icons_failed and next(kinds) ~= nil then
-        -- Only if some unchecked marker has its icon loaded. The glyph lines
-        -- below stay: a location whose icon is not loaded (or another game's
-        -- item) keeps its glyph.
-        for _, m in pairs(markers) do
-            if m.state == "todo" and m.frame and frame_object(m.frame) then
-                lines[2] = { text = ICON_LEGEND[options.mode] or ICON_LEGEND.tracker, color = ICON_LEGEND_COLOR }
-                break
-            end
-        end
+    if any_icon then
+        lines[2] = { text = ICON_LEGEND[options.mode] or ICON_LEGEND.tracker, color = ICON_LEGEND_COLOR }
     end
     for _, kind in ipairs(KIND_ORDER) do
         if kinds[kind] then
@@ -717,6 +831,20 @@ local function legend_lines()
     end
     if any_checked then
         lines[#lines + 1] = { text = CHECKED_TEXT .. "  Checked", color = CHECKED_COLOR }
+    end
+    if not outlines_failed then
+        local seen = {}
+        for _, m in pairs(markers) do
+            if m.state == "todo" and m.logic then
+                seen[m.logic] = true
+            end
+        end
+        if seen["in"] then
+            lines[#lines + 1] = { text = "[ ]  In logic", color = IN_LOGIC_COLOR }
+        end
+        if seen.out then
+            lines[#lines + 1] = { text = "[ ]  Not in logic yet", color = OUT_LOGIC_COLOR }
+        end
     end
     return lines
 end
@@ -778,6 +906,7 @@ local function sync_markers()
         end
         m.label = label_text(key)   -- the mode or the scouted item may have changed
         m.frame = icon_frame(key)
+        m.logic = logic_state(key)
     end
     stats.placed, stats.checked = placed, checked
     pcall(sync_legend)
@@ -906,6 +1035,96 @@ local function place_icons(inview, zoom)
     end
 end
 
+-- An outline: four bar Images, hidden until placed.
+local function new_outline()
+    local class = StaticFindObject("/Script/UMG.Image")
+    local o = { bars = {} }
+    for i, b in ipairs(OUTLINE_BARS) do
+        local widget = StaticConstructObject(class, panel)
+        local slot = panel:AddChildToCanvas(widget)
+        slot:SetAutoSize(false)
+        slot:SetSize({ X = b[3], Y = b[4] })
+        slot:SetAlignment({ X = 0.5, Y = 0.5 })
+        slot:SetZOrder(OUTLINE_Z)
+        widget:SetVisibility(COLLAPSED)
+        o.bars[i] = { widget = widget, slot = slot }
+    end
+    outline_pool = outline_pool + 1
+    return o
+end
+
+local function release_outline(m)
+    local o = m.outline
+    if o then
+        m.outline = nil
+        outlined[m] = nil
+        free_outlines[#free_outlines + 1] = o
+        if o.shown then
+            o.shown = false
+            for _, bar in ipairs(o.bars) do
+                pcall(function() bar.widget:SetVisibility(COLLAPSED) end)
+            end
+        end
+    end
+end
+
+-- Outlines for the visible unchecked markers with a logic state; the others
+-- give theirs back to the pool. The bars keep their window px size at every
+-- zoom: offsets divided by the zoom, render scale 1 / zoom.
+local function place_outlines(inview, zoom)
+    local keep = {}
+    for _, m in ipairs(inview) do
+        if m.state == "todo" and m.logic then
+            keep[m] = true
+        end
+    end
+    for m in pairs(outlined) do
+        if not keep[m] then
+            release_outline(m)
+        end
+    end
+    outlined = keep
+    local scale = 1 / zoom
+    for m in pairs(keep) do
+        local o = m.outline
+        if not o then
+            o = table.remove(free_outlines) or new_outline()
+            m.outline = o
+        end
+        local color = m.logic == "in" and IN_LOGIC_COLOR or OUT_LOGIC_COLOR
+        for i, bar in ipairs(o.bars) do
+            local b = OUTLINE_BARS[i]
+            if o.color ~= color then
+                bar.widget:SetColorAndOpacity(color)
+            end
+            bar.slot:SetPosition({ X = m.x + b[1] * scale, Y = m.y + b[2] * scale })
+            if o.scale ~= scale then
+                bar.widget:SetRenderScale({ X = scale, Y = scale })
+            end
+            if not o.shown then
+                bar.widget:SetVisibility(VISIBLE)
+            end
+        end
+        o.color, o.scale, o.shown = color, scale, true
+    end
+end
+
+local function outlines_off(err)
+    outlines_failed = true
+    print(LOG .. "map overlay: logic outlines off: " .. tostring(err) .. "\n")
+    for m in pairs(outlined) do
+        release_outline(m)
+    end
+    outlined = {}
+    for _, o in ipairs(free_outlines) do
+        for _, bar in ipairs(o.bars) do
+            pcall(function() bar.widget:SetVisibility(COLLAPSED) end)
+        end
+        o.shown = false
+    end
+    pcall(sync_legend)
+end
+
 local function icons_off(err)
     icons_failed = true
     print(LOG .. "map overlay: item icons off, glyphs instead: " .. tostring(err) .. "\n")
@@ -982,13 +1201,31 @@ local function place_markers()
         end
         if glyph then
             m.slot:SetPosition({ X = m.x, Y = m.y })
+            -- Over an icon the "x" keeps its default-zoom size (zoomed in it
+            -- grew over the whole icon, 2026-11-20); elsewhere it grows with
+            -- the map as before.
+            local xscale = m.img and CHECKED_X_ZOOM / zoom or 1
+            if m.xscale ~= xscale and (m.xscale or xscale ~= 1) then
+                m.widget:SetRenderScale({ X = xscale, Y = xscale })
+            end
+            m.xscale = xscale
         end
         if glyph ~= (m.shown or false) then
             m.widget:SetVisibility(glyph and VISIBLE or COLLAPSED)
             m.shown = glyph
         end
     end
+    if options.legend and n_icons ~= stats.icons then
+        pcall(sync_legend)         -- an icon loaded on sight: its glyph line may go
+    end
     stats.visible, stats.icons = visible, n_icons
+    -- Logic outlines, their own pcall: a failing call turns only them off.
+    if not outlines_failed then
+        local ok, err = pcall(place_outlines, options.logic and inview or {}, zoom)
+        if not ok then
+            outlines_off(err)
+        end
+    end
     -- Labels and legend are extras: if a widget call fails in the game, the
     -- markers keep working (logged once, labels and legend off for the run).
     if not extras_failed then
@@ -1097,6 +1334,7 @@ local function tick()
         seen_generation = transition.generation()
         markers, labels, legend, map, panel = {}, {}, {}, nil, nil
         free_icons, iconed, icon_pool, frame_cache, load_tried = {}, {}, 0, {}, {}
+        free_outlines, outlined, outline_pool, held, held_text = {}, {}, 0, nil, nil
         stats.placed, stats.checked, stats.labels, stats.icons = 0, 0, 0, 0
     end
     if transition.quiet() then
@@ -1127,7 +1365,24 @@ local function tick()
         local before = wanted_text
         read_wanted()
         if wanted and (stats.placed == 0 or wanted_text ~= before) then
+            held = read_held()
+            held_text = nil
             sync_markers()
+        end
+        -- The bag: an item picked up (or sent) re-colours the outlines.
+        local now = read_held()
+        local parts = {}
+        for _, item in ipairs(now and logic_items or {}) do
+            parts[#parts + 1] = item .. "=" .. now[item]
+        end
+        local text = now and table.concat(parts, ",") or "-"
+        if text ~= held_text then
+            held, held_text = now, text
+            for key, m in pairs(markers) do
+                m.logic = logic_state(key)
+            end
+            pcall(sync_legend)
+            last_view = nil
         end
     end
     local t0 = os.clock()
@@ -1213,6 +1468,25 @@ function M.status()
         icons_failed and " (icons failed)" or (options.icons and "" or " (icons off)"), stats.cx, stats.cy, stats.source,
         stats.zoom, type(current) == "number" and string.format("%.4f", current) or "-", stats.list,
         options.mode, #M.legend_shown(), map and panel and panel_scales() or "-")
+        .. M.logic_status()
+end
+
+-- " logic=<in>/<out> outlines=<shown> opool=<n>" for the status line.
+function M.logic_status()
+    local n_in, n_out, shown = 0, 0, 0
+    for _, m in pairs(markers) do
+        if m.state == "todo" and m.logic == "in" then n_in = n_in + 1 end
+        if m.state == "todo" and m.logic == "out" then n_out = n_out + 1 end
+        if m.outline and m.outline.shown then shown = shown + 1 end
+    end
+    return string.format(" logic=%d/%d outlines=%d opool=%d%s", n_in, n_out, shown, outline_pool,
+        outlines_failed and " (outlines failed)" or (logic and (options.logic and "" or " (off)") or " (no data)"))
+end
+
+-- For tests and experiments: a key's logic state ("in" / "out" / nil).
+function M.logic_of(key)
+    local m = markers[key]
+    return m and m.logic or logic_state(key)
 end
 
 -- For experiment logs and tests: the labels shown now, "<key> = <text>",

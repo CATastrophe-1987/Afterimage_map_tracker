@@ -44,10 +44,21 @@ logs to the UE4SS console and `UE4SS.log` with the prefix
 | `o` cyan | item lying on the ground (no icon) |
 | `$` yellow | coin rock (no icon) |
 | `x` grey over a faint grey icon | checked (any kind) |
+| green square outline | unchecked, in logic: your items meet its rule |
+| red square outline | unchecked, not in logic yet |
 
 Coin rocks and dew bundles show the game's dew (currency) icon. Boss drops
 and quest rewards have no position on the map, so they are not drawn. The
 Sea of Souls chests are on the voyage map, not on the area map.
+
+**Logic outlines:** each unchecked check gets a square outline, green when
+the items in your bag meet its rule (you can get it now), red when they do
+not yet; a collected check has none. The rules are the randomizer's default
+logic (`area_logic: vanilla_order`, `movement_logic` off), in
+`data_logic.lua`, written by the randomizer's `tools/rules_table.py`. They
+are conservative: an area counts as reachable only with every ability of the
+areas before it in the game's order, so a check you can physically reach
+may still be red. Flag word `nologic` turns the outlines off.
 
 ## Configuration
 
@@ -64,6 +75,7 @@ you can change it without restarting the game.
 | `norocks` | hide the coin rocks (307 of the 868) |
 | `nocollected` | hide checked locations instead of drawing a grey `x` |
 | `plaincollected` | a checked location shows only the grey `x` (default: the `x` over its dimmed, greyed icon) |
+| `nologic` | no green / red logic outlines |
 | `vanilla` | always track the save and ignore a randomizer list (below) |
 | `noload` | never load an icon the map has not loaded itself (some balms and weapon recolours then keep the symbol) |
 | `off` | draw nothing (unless a randomizer list is in use) |

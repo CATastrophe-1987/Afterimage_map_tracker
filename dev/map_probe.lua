@@ -1,10 +1,3 @@
--- Copied from the Afterimage randomizer repo (client/AfterimageAP/Scripts/
--- map_probe.lua). Its modes are run in game by that repo's experiment.lua
--- (tools/run_experiment.ps1), which is not part of this mod; here the
--- offline tests (tests/map_overlay_test.py) run the tracker-related modes
--- (maptracker, maplabels, mapitemicons) against fake UE4SS objects. Not
--- loaded by the mod (it is outside AfterimageMapTracker/).
-
 -- Experiment: find the in-game map's widgets and try drawing on them.
 --
 -- 1. Snapshot which top-level UMG widgets are on screen.
@@ -1237,6 +1230,111 @@ function M.item_icons_test(log, done)
     log("PRESS: Right")   -- ends the rest at the save point; the map key does nothing until then
     ExecuteInGameThreadWithDelay(3000, function() log("PRESS: M") end)
     run_steps(log, "icons", steps, done, function() hide_candidates(); restore() end)
+end
+
+-- Experiment mode "mapoutlines" (2026-11-20): the in-logic outlines and the
+-- dimmed collected icons, on the loaded save. Screenshots:
+--   outlines_tracker     the standalone tracker, default zoom
+--   outlines_vanilla     vanilla mode with the legend (outline lines)
+--   outlines_zoom        4 x D (zoom ~2.2)
+--   outlines_pan         panned right while zoomed
+--   outlines_randomizer  a randomizer list: every location unchecked
+--   outlines_plain       "plaincollected" (back to the tracker)
+-- The tracker flag and the missing file are restored to what they were.
+function M.outlines_test(log, done)
+    local overlay = require("map_overlay")
+    local FLAG, LIST = "AfterimageAP_tracker.flag", "AfterimageAP_missing.txt"
+    local function read(path)
+        local f = io.open(path, "r")
+        if not f then return nil end
+        local text = f:read("a")
+        f:close()
+        return text
+    end
+    local function write(path, text)
+        local f = io.open(path, "w")
+        if f then f:write(text); f:close() end
+    end
+    local old_flag, old_list = read(FLAG), read(LIST)
+    local function restore()
+        if old_flag then write(FLAG, old_flag) else os.remove(FLAG) end
+        if old_list then write(LIST, old_list) else os.remove(LIST) end
+    end
+    local function shot(tag)
+        log("outlines " .. tag .. ": " .. overlay.status())
+        log("  legend " .. table.concat(overlay.legend_shown(), " | "))
+        log("SCREENSHOT: outlines_" .. tag)
+    end
+    local function flag(words) return { 200, function() write(FLAG, words .. "\n") end } end
+    local function press(key) return { 700, function() log("PRESS: " .. key) end } end
+    local function settle() return { 300, function() log("PRESS: Up") end } end
+    -- Centre the map on the view (map px, ~1150 x 650 at zoom 1.2) with the
+    -- most unchecked markers, the green ones counted twice so a view with
+    -- both colours wins, by setting PreviewLoc (logged: whether it stuck).
+    local function centre_busiest()
+        local positions = require("data_positions")
+        local pts = {}
+        for key, pos in pairs(positions) do
+            local state = overlay.marker_state(key)
+            if state == "todo" then
+                local w = overlay.logic_of(key) == "in" and 2 or 1
+                pts[#pts + 1] = { pos[1] * 0.04, -pos[2] * 0.04, w, overlay.logic_of(key) }
+            end
+        end
+        local best, bx, by = -1, nil, nil
+        for _, c in ipairs(pts) do
+            local score, n_in, n_out = 0, 0, 0
+            for _, q in ipairs(pts) do
+                if math.abs(q[1] - c[1]) < 500 and math.abs(q[2] - c[2]) < 260 then
+                    score = score + q[3]
+                    if q[4] == "in" then n_in = n_in + 1 else n_out = n_out + 1 end
+                end
+            end
+            if n_in > 0 and n_out > 0 then score = score + 10 end
+            if score > best then best, bx, by = score, c[1], c[2] end
+        end
+        local map = find_open_map()
+        if map and bx then
+            local ok, err = pcall(function() map.PlayerMinimapComp.PreviewLoc = { X = bx, Y = by } end)
+            local p = safe(function() return map.PlayerMinimapComp.PreviewLoc end)
+            log(string.format("  centre_busiest %.1f,%.1f score %d: %s, PreviewLoc now %s", bx, by, best,
+                ok and "set" or tostring(err), p and vec2(p) or "-"))
+        end
+    end
+    local function dense_list()
+        local keys = {}
+        for key in pairs(require("data_positions")) do
+            keys[#keys + 1] = key
+        end
+        table.sort(keys)
+        overlay.accept_session("outlinetest\t1")
+        write(LIST, "AP1\toutlinetest\t1\n" .. table.concat(keys, "\n") .. "\n")
+    end
+    local steps = {
+        { 200, function() os.remove(FLAG); os.remove(LIST) end },
+        { 8000, function() shot("start") end },
+        { 300, centre_busiest },
+        { 2500, function() shot("tracker") end },
+        flag("vanilla legend"),
+        { 3000, function() shot("vanilla") end },
+        flag("vanilla"),
+        { 2500, function() end },
+        press("D"), press("D"), press("D"), press("D"),
+        { 1500, function() shot("zoom") end },
+        { 300, function() log("HOLD: Right 600") end }, { 2000, function() end }, settle(),
+        { 1500, function() shot("pan") end },
+        press("A"), press("A"), press("A"),
+        { 200, function() os.remove(FLAG) end },
+        { 200, dense_list },
+        { 2500, centre_busiest },
+        { 3000, function() shot("randomizer") end },
+        { 200, function() os.remove(LIST) end },
+        flag("plaincollected"),
+        { 3000, function() shot("plain") end },
+    }
+    log("PRESS: Right")   -- ends the rest at the save point; the map key does nothing until then
+    ExecuteInGameThreadWithDelay(3000, function() log("PRESS: M") end)
+    run_steps(log, "outlines", steps, done, restore)
 end
 
 -- Experiment mode "mapicons": can the overlay draw the game's own textures

@@ -46,7 +46,7 @@ OLD_OVERLAY_REV = "b0cc31c"   # map_overlay.lua before checked markers (randomiz
 OLD_OVERLAY = ROOT / "tests" / "fixtures" / f"map_overlay_{OLD_OVERLAY_REV}.lua"
 
 FAKE_UE4SS = r"""
-fake = { calls = {}, open = {}, waiting = {}, pickups = {}, sprops = {}, next = nil, constructed = {} }
+fake = { calls = {}, open = {}, waiting = {}, pickups = {}, sprops = {}, next = nil, constructed = {}, bag = {} }
 local function count(name) fake.calls[name] = (fake.calls[name] or 0) + 1 end
 
 local panel = { children = {} }
@@ -83,6 +83,7 @@ function player_sprop:GetOuter() return player end
 function player_sprop:GetOwner() return player end
 function player_sprop:GetSPropTableNumberValue(id, path)
     if id == 29 and path[1] == "AfterimageAP" then return fake.save[path[2]] or 0 end
+    if id == 19 then return fake.bag[path[1]] or 0 end    -- prop_item_bag: item id -> count
     return 0
 end
 
@@ -124,6 +125,9 @@ function StaticConstructObject(class, outer)
     -- A TextBlock takes an FSlateColor, an Image an FLinearColor.
     function w:SetColorAndOpacity(c)
         if fake.fail_tint and self.class == "Image" then error("SetColorAndOpacity: access (test)") end
+        if fake.fail_outline and self.class == "Image" and self.slot and self.slot.w ~= self.slot.h then
+            error("SetColorAndOpacity: outline bar (test)")
+        end
         count("SetColor"); self.color = c.SpecifiedColor or c
     end
     function w:SetVisibility(v) count("SetVisibility"); self.vis = v end
@@ -189,7 +193,7 @@ end
 function fake.icon_at(wx, wy)
     local px, py = fake.panel_of(wx, wy)
     for w in pairs(panel.children) do
-        if w.vis == 3 and w.class == "Image" and math.abs(w.slot.x - px) < 0.01 and math.abs(w.slot.y - py) < 0.01 then
+        if w.vis == 3 and w.class == "Image" and w.slot.w == w.slot.h and math.abs(w.slot.x - px) < 0.01 and math.abs(w.slot.y - py) < 0.01 then
             return w
         end
     end
@@ -199,7 +203,7 @@ end
 function fake.images()
     local n, shown = 0, 0
     for w in pairs(panel.children) do
-        if w.class == "Image" then
+        if w.class == "Image" and w.slot.w == w.slot.h then
             n = n + 1
             if w.vis == 3 then shown = shown + 1 end
         end
@@ -236,6 +240,19 @@ function fake.centre_on(key, px, py)
     map.PlayerMinimapComp.PreviewLoc = { X = mx - (px - 736) / z, Y = my - (py - 414) / z }
 end
 function fake.set_open(id, v) fake.open[id] = v end
+-- The shown outline bars (non-square Images) within r window px of (wx, wy).
+function fake.bars_near(wx, wy, r)
+    local px, py = fake.panel_of(wx, wy)
+    local z = map.TargetZoom
+    local out = {}
+    for w in pairs(panel.children) do
+        if w.vis == 3 and w.class == "Image" and w.slot.w ~= w.slot.h
+            and math.abs(w.slot.x - px) * z <= r and math.abs(w.slot.y - py) * z <= r then
+            out[#out + 1] = w
+        end
+    end
+    return out
+end
 
 -- A loaded placed pickup with its drop record.
 function fake.add_pickup(key, item)
@@ -278,12 +295,16 @@ end
 
 
 class Overlay:
-    def __init__(self, workdir: Path, source: Path | str = OVERLAY, show_all: bool = False):
+    def __init__(self, workdir: Path, source: Path | str = OVERLAY, show_all: bool = False, logic: bool = False):
         self.dir = workdir
         self.lua = LuaRuntime(unpack_returned_tuples=True)
         self.lua.execute(f"package.path = [[{SCRIPTS.as_posix()}/?.lua;{DEV.as_posix()}/?.lua;]] .. package.path")
         self.lua.execute(FAKE_UE4SS)
         self.fake = self.lua.globals().fake
+        if not logic:
+            # Without data_logic.lua (no outlines): the tests written before
+            # them count widgets and calls.
+            self.lua.execute('package.loaded["data_logic"] = "none"')
         code = source.read_text(encoding="utf-8") if isinstance(source, Path) else source
         self.m = self.lua.execute(code)
         self.lua.globals().package.loaded["map_overlay"] = self.m   # require() gets this copy, as in the game
@@ -1033,13 +1054,22 @@ def icons_vanilla(o: Overlay) -> None:
     img = o.fake.icon_at(736, 414)
     check(img is not None and img.brush == o.locations[done].icon and glyph is not None and glyph.text == "x"
           and colour(glyph) == GREY, "checked: the grey x over its icon")
-    check(img is not None and img.color is not None and img.color.A < 0.5 and img.color.R < 1
+    check(img is not None and img.color is not None and img.color.A < 1 and img.color.R < 1
           and img.slot.z < glyph.slot.z < 1000, "checked icon: grey, faint, under its x and the unchecked markers")
     o.fake.centre_on(box, 736, 414)
     o.run(40)
     img = o.fake.icon_at(736, 414)
     check(img.color is not None and img.color.A == 1 and img.slot.z == 1000, "unchecked icon: full colour, on top")
+    o.fake.map.TargetZoom = 2.4
+    o.fake.centre_on(done, 736, 414)
+    o.run(40)
+    glyph = o.fake.shown_at(736, 414)
+    check(glyph is not None and abs(glyph.scale - 0.5) < 1e-9, "zoom 2.4: the x over an icon keeps its zoom-1.2 size")
+    o.fake.map.TargetZoom = 1.2
+    o.fake.centre_on(done, 736, 414)
+    o.run(40)
     check(legend(o)[:2] == ["Vanilla items", "Icon  Vanilla item"], f"legend: icon line {legend(o)}")
+    check(not [l for l in legend(o) if l[:1] in "#o$"], f"every icon loaded: no glyph lines in the legend {legend(o)}")
     st = o.status()
     n_icons = int(st.split("icons=")[1].split()[0])
     visible = int(st.split("visible=")[1].split()[0])
@@ -1270,7 +1300,7 @@ def icons_pool(o: Overlay) -> None:
     o.run(2100)
     glyph = o.fake.shown_at(736, 414)
     img = o.fake.icon_at(736, 414)
-    check(img is not None and img.color.A < 0.5 and glyph is not None and glyph.text == "x",
+    check(img is not None and img.color.A < 1 and glyph is not None and glyph.text == "x",
           "checked while open: same icon dimmed, grey x over it")
     o.fake.map_open = False
     o.run(300)
@@ -1297,6 +1327,129 @@ def icons_tint_fail(o: Overlay) -> None:
     img = o.fake.icon_at(736, 414)
     check(img is not None and img.brush == o.locations[box].icon, "tint failing: unchecked icons still drawn")
     check("(icons failed)" not in o.status(), f"icons not turned off: {o.status()}")
+
+
+def bars_near(o: Overlay, wx: float, wy: float, r: float) -> list:
+    """The outline bars of the marker at window px (wx, wy): 15 window px off
+    its centre on one axis (a neighbour's bars can be within r)."""
+    z = o.fake.map.TargetZoom
+    px, py = o.fake.panel_of(wx, wy)
+    out = []
+    for b in o.fake.bars_near(wx, wy, r).values():
+        dx, dy = round((b.slot.x - px) * z, 6), round((b.slot.y - py) * z, 6)
+        if (abs(dx) == 15 and dy == 0) or (dx == 0 and abs(dy) == 15):
+            out.append(b)
+    return out
+
+
+def outline_keys(o: Overlay) -> tuple[str, str, list[str]]:
+    """A Lv1 key needing nothing, a Lv1 box whose one alternative needs some
+    items (and those items)."""
+    logic = o.lua.eval('require("data_logic")')
+    free = needy = None
+    for key in o.keys(level="Lv1"):
+        alts = logic[key]
+        if alts is None:
+            continue
+        alts = list(alts.values())
+        if len(alts) == 1 and len(alts[0]) == 0 and free is None:
+            free = key
+        if len(alts) == 1 and len(alts[0]) >= 2 and needy is None and o.locations[key].kind == "box":
+            needy = key
+    alt = list(logic[needy][1].values())
+    return free, needy, alt[0::2]
+
+
+def logic_outlines(o: Overlay) -> None:
+    """Green outline when the bag meets the rule, red when not, none once
+    checked; re-coloured when an item arrives; same size at every zoom;
+    legend lines; nologic."""
+    o.fake.frames = True
+    free, needy, items = outline_keys(o)
+    check(free is not None and needy is not None, f"keys: {free} (nothing needed), {needy} needs {items}")
+    o.write("AfterimageAP_tracker.flag", "legend")
+    o.open_map()
+    o.fake.centre_on(free, 736, 414)
+    o.run(40)
+    bars = bars_near(o, 736, 414, 16)
+    check(len(bars) == 4 and all(b.color is not None and b.color.G == 1 and b.color.R < 0.5 for b in bars),
+          f"nothing needed: 4 green bars ({len(bars)})")
+    check(o.m.logic_of(free) == "in", "logic_of: in")
+    sides = sorted((b.slot.w, b.slot.h) for b in bars)
+    check(sides == [(2, 32), (2, 32), (32, 2), (32, 2)], f"bars 32 x 2 window px: {sides}")
+    o.fake.centre_on(needy, 736, 414)
+    o.run(40)
+    bars = bars_near(o, 736, 414, 16)
+    check(len(bars) == 4 and all(b.color.R == 1 and b.color.G < 0.5 for b in bars), f"empty bag: red ({needy})")
+    check("[ ]  In logic" in legend(o) and "[ ]  Not in logic yet" in legend(o), f"legend lines {legend(o)}")
+    # Items arrive: green after the next bag read.
+    for item in items:
+        o.fake.bag[item] = 2
+    o.run(2100)
+    bars = bars_near(o, 736, 414, 16)
+    check(len(bars) == 4 and all(b.color.G == 1 for b in bars), "items in the bag: turns green")
+    # Constant size when zoomed in.
+    o.fake.map.TargetZoom = 2.4
+    o.fake.centre_on(needy, 736, 414)
+    o.run(40)
+    bars = bars_near(o, 736, 414, 16)
+    check(len(bars) == 4 and all(abs(b.scale - 1 / 2.4) < 1e-9 for b in bars), "zoom 2.4: render scale 1 / 2.4")
+    top = min(bars, key=lambda b: b.slot.y)
+    want = 414 - 15                       # (32 - 2) / 2 window px above the marker
+    got = 414 + (top.slot.y - 414) * 2.4
+    check(abs(got - want) < 0.01, f"top bar 15 window px above the marker at zoom 2.4 ({got:.2f})")
+    o.fake.map.TargetZoom = 1.2
+    # Checked: the outline goes.
+    o.fake.set_open(o.save_id(needy), 1)
+    o.run(2100)
+    o.fake.centre_on(needy, 736, 414)
+    o.run(40)
+    check(bars_near(o, 736, 414, 16) == [], "checked: no outline")
+    check(" logic=" in o.status() and "opool=" in o.status(), o.status())
+    # nologic: none at all.
+    o.write("AfterimageAP_tracker.flag", "legend nologic")
+    o.run(2100)
+    o.fake.centre_on(free, 736, 414)
+    o.run(40)
+    check(bars_near(o, 736, 414, 16) == [] and "[ ]  In logic" not in legend(o), "nologic: no outlines, no legend line")
+
+
+def logic_events(o: Overlay) -> None:
+    """A boss event in a rule: met once the drop is checked in the
+    randomizer's list; not in the list (vanilla) counts as met."""
+    logic = o.lua.eval('require("data_logic")')
+    key = event = None
+    for k in o.keys():
+        alts = logic[k]
+        if alts is None:
+            continue
+        alt = list(alts[1].values())
+        ev = [i for i in alt[0::2] if i.startswith("@")]
+        if ev and len(alts) == 1:
+            key, event, items = k, ev[0][1:], [i for i in alt[0::2] if not i.startswith("@")]
+            break
+    check(key is not None, f"a check behind a boss event: {key} ({event})")
+    for item in items:
+        o.fake.bag[item] = 2
+    o.fake.save["session_seed_1"] = 1         # the bridge marked this save for the seed
+    o.write("AfterimageAP_missing.txt", f"AP1\tseed\t1\n{key}\n{event}\n")
+    o.open_map()
+    check(o.m.logic_of(key) == "out", f"drop {event} not checked: out ({o.m.logic_of(key)})")
+    o.write("AfterimageAP_missing.txt", f"AP1\tseed\t1\n{key}\nchecked\t{event}\n")
+    o.run(2100)
+    check(o.m.logic_of(key) == "in", f"drop checked: in ({o.m.logic_of(key)})")
+
+
+def logic_fail(o: Overlay) -> None:
+    """An outline call failing: outlines off (logged once), icons unchanged."""
+    o.fake.frames = True
+    o.fake.fail_outline = True
+    free, _, _ = outline_keys(o)
+    o.open_map()
+    o.fake.centre_on(free, 736, 414)
+    o.run(40)
+    check(bars_near(o, 736, 414, 40) == [] and "(outlines failed)" in o.status(), o.status())
+    check(o.fake.icon_at(736, 414) is not None, "the icon still drawn")
 
 
 def icons_toggle(o: Overlay) -> None:
@@ -1453,6 +1606,9 @@ for name, test in [("parse_list", parse), ("standalone tracker", standalone), ("
                    ("item icons, tint failing", icons_tint_fail),
                    ("item icons failing in the game", icons_fail), ("experiment mapitemicons", experiment_icons)]:
     run(name, test)
+run("logic outlines", logic_outlines, logic=True)
+run("logic outlines, boss events", logic_events, logic=True)
+run("logic outlines failing in the game", logic_fail, logic=True)
 run("show_all", show_all, show_all=True)
 run("experiment maptracker, no flag", lambda o: experiment(o, None))
 run("experiment maptracker, flag norocks", lambda o: experiment(o, "norocks\n"))
