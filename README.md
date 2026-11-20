@@ -4,7 +4,7 @@ An in-game map tracker for **Afterimage**: a UE4SS Lua mod that draws a
 marker on the game's own map for every check (treasure boxes, items lying on
 the ground, coin rocks; 868 places). Each unchecked one shows the inventory
 icon of the item it holds, a label names the item, and a check you have
-collected turns into a dim grey `x`. It tracks the loaded save: nothing to
+collected keeps its icon, dimmed and grey, under a grey `x`. It tracks the loaded save: nothing to
 connect, no other program to run.
 
 It was split out of the Afterimage Archipelago randomizer, whose mod
@@ -43,7 +43,7 @@ logs to the UE4SS console and `UE4SS.log` with the prefix
 | `#` magenta | treasure box (no icon) |
 | `o` cyan | item lying on the ground (no icon) |
 | `$` yellow | coin rock (no icon) |
-| `x` grey, dim | checked (any kind) |
+| `x` grey over a faint grey icon | checked (any kind) |
 
 Coin rocks and dew bundles show the game's dew (currency) icon. Boss drops
 and quest rewards have no position on the map, so they are not drawn. The
@@ -63,6 +63,7 @@ you can change it without restarting the game.
 | `nolabels` | no labels |
 | `norocks` | hide the coin rocks (307 of the 868) |
 | `nocollected` | hide checked locations instead of drawing a grey `x` |
+| `plaincollected` | a checked location shows only the grey `x` (default: the `x` over its dimmed, greyed icon) |
 | `vanilla` | always track the save and ignore a randomizer list (below) |
 | `noload` | never load an icon the map has not loaded itself (some balms and weapon recolours then keep the symbol) |
 | `off` | draw nothing (unless a randomizer list is in use) |
@@ -138,10 +139,8 @@ coexistence check. How it looks needs the game.
 
 ## Future work
 
-- **Collected checks keep their icon.** Today a collected check shows only a
-  grey `x`, so you cannot see what you picked up where. Better: keep the item
-  icon, dimmed or crossed out (an icon on every collected check crowded the
-  map in the first try, so it needs a lighter style, or an option).
+- (Done: collected checks keep their icon, dimmed under the grey `x`;
+  flag word `plaincollected` for the `x` only.)
 
 ## Credits
 

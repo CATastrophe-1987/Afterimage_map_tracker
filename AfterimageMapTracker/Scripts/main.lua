@@ -11,7 +11,8 @@
 -- Configuration: AfterimageMapTracker.flag next to the game exe
 -- (<game>/Afterimage/Binaries/Win64/), optional, whitespace-separated words
 -- (see README.md): vanilla, legend, noicons, nolabels, norocks, nocollected,
--- noload, off, and "both" (draw even when the randomizer's mod is enabled).
+-- plaincollected, noload, off, and "both" (draw even when the randomizer's
+-- mod is enabled).
 -- Without it, the randomizer launcher's AfterimageAP_tracker.flag is read.
 
 local MOD = "[AfterimageMapTracker] "

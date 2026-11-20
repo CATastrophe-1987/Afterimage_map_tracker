@@ -37,12 +37,14 @@
 --   "vanilla" the vanilla tracker mode (above), "nolabels" no labels,
 --   "legend" shows the legend (off by default; "nolegend" is accepted and
 --   changes nothing), "noicons" glyphs instead of item icons (ICON_PX
---   below). The launcher's Map tracker tab writes it. M.start's
+--   below), "plaincollected" a checked location shows only the grey "x"
+--   (no dimmed icon under it). The launcher's Map tracker tab writes it. M.start's
 --   opts.flag_files names other flag files (the first one that exists is
 --   read; the standalone AfterimageMapTracker mod reads its own first).
 -- Item icons (default): each unchecked marker shows its item's inventory
 -- icon (the vanilla item; in randomizer mode the scouted one if the list
--- names it), the glyph only where no icon is loaded.
+-- names it), the glyph only where no icon is loaded. A checked marker keeps
+-- its icon, dimmed and grey (CHECKED_ICON_COLOR), under the grey "x".
 -- Locations without a known world position (boss drops) are not shown.
 --
 -- Transform (docs/game-internals.md, "Map overlay transform"): the map is a
@@ -138,8 +140,10 @@ local MODE_TITLE = { vanilla = "Vanilla items", randomizer = "Archipelago", trac
 -- vanilla item (data_locations.lua `icon`, from the item table's
 -- UI_icon_path: data/item_icons.tsv), in randomizer mode the scouted item
 -- when the list names it (data_icons.lua: English name -> frame; another
--- game's item has none and keeps the glyph). Checked ones stay the grey "x"
--- (an icon on every done location crowded the map). The icons are UMG Images
+-- game's item has none and keeps the glyph). A checked one keeps its icon,
+-- tinted grey and mostly transparent (CHECKED_ICON_COLOR; full colour icons
+-- on every done location crowded the map), drawn under its grey "x" and
+-- under the unchecked markers; "plaincollected" drops it (the grey "x" only). The icons are UMG Images
 -- with an atlas frame brush (SetBrushResourceObject, tried in game with
 -- mapicons, 2026-11-19), a pool reused as the view moves: an Image is made
 -- only when more are on screen than ever before during this map opening.
@@ -152,6 +156,10 @@ local MODE_TITLE = { vanilla = "Vanilla items", randomizer = "Archipelago", trac
 -- transparent margin): readable but small; 34 draws it ~31.
 local ICON_PX = 34             -- window px (45 screen px at 2560 x 1440)
 local ICON_Z = 1000
+local CHECKED_ICON_Z = 998     -- under the checked "x" (CHECKED_Z) and every unchecked marker
+local ICON_COLOR = { R = 1, G = 1, B = 1, A = 1 }
+local CHECKED_ICON_COLOR = { R = 0.55, G = 0.55, B = 0.55, A = 0.4 }
+local tint_failed = false      -- an Image tint call failed: checked markers go back to the "x" only
 local ICON_LABEL_GAP = 3       -- window px between an icon's right edge and its label
 local ICON_DIRS = { "/Game/Assets/Texture2D/ItemIcon/Frames/", "/Game/Assets/UMG/TextureAtlases/ItemIcon/Frames/" }
 -- Frames outside the item icon atlases, by the short name data_locations.lua
@@ -191,7 +199,7 @@ local legend = {}              -- legend lines: { widget, slot, text, scale, sho
 local wanted = nil             -- key -> "todo" / "checked", the locations to show
 local scouted = {}             -- key -> item name, when the randomizer's list carries it
 local wanted_text = nil        -- what wanted was built from (list text + flag words)
-local options = { mode = "tracker", labels = true, legend = false, icons = true }
+local options = { mode = "tracker", labels = true, legend = false, icons = true, checked_icons = true }
 local free_icons = {}          -- pool of icon Images not in use: { widget, slot, frame, scale, shown }
 local iconed = {}              -- marker -> true, the markers showing an icon (m.img)
 local icon_pool = 0            -- Images made during this map opening
@@ -418,9 +426,10 @@ local function read_wanted()
     options.labels = not words.nolabels
     options.legend = words.legend or false   -- opt-in ("nolegend", the old word, is the default)
     options.icons = not words.noicons
+    options.checked_icons = not words.plaincollected
     options.noload = words.noload or false
     local signature = table.concat({ tostring(text), mode, tostring(hide_checked), tostring(options.labels),
-        tostring(options.legend), tostring(options.icons) }, "\n#")
+        tostring(options.legend), tostring(options.icons), tostring(options.checked_icons) }, "\n#")
     if signature == wanted_text then
         return
     end
@@ -824,7 +833,8 @@ local function new_image()
     return { widget = widget, slot = slot }
 end
 
--- Icons for the visible unchecked markers whose frame is loaded; the others
+-- Icons for the visible markers whose frame is loaded (unchecked ones, and
+-- checked ones dimmed unless "plaincollected"); the others
 -- (and those gone from view) give theirs back to the pool. Brushes are set
 -- only when an Image gets another frame; on a pan each icon costs one
 -- SetPosition, like a glyph.
@@ -832,7 +842,7 @@ local function place_icons(inview, zoom)
     local keep, objs = {}, {}
     local scale = 1 / zoom         -- undo the panel's zoom: ICON_PX window px at every zoom
     for _, m in ipairs(inview) do
-        local frame = m.state == "todo" and m.frame or nil
+        local frame = (m.state == "todo" or (options.checked_icons and not tint_failed)) and m.frame or nil
         local obj = frame and frame_object(frame)
         if obj and m.img and m.img.frame == frame then
             keep[m] = true          -- unchanged: its brush holds the frame (no lookup)
@@ -866,9 +876,33 @@ local function place_icons(inview, zoom)
             img.widget:SetBrushResourceObject(obj)
             img.frame = frame
         end
-        img.slot:SetPosition({ X = m.x, Y = m.y })
-        set_scale(img, scale)
-        set_shown(img, true)
+        if img.state ~= m.state and not (tint_failed and m.state == "todo") then
+            -- Checked: grey, faint and under the "x"; unchecked: as drawn.
+            -- Its own pcall: a failing tint drops only the checked icons
+            -- (logged once), never the unchecked ones.
+            img.state = nil         -- unknown if a call fails
+            local checked = m.state == "checked"
+            local ok, err = pcall(function()
+                img.widget:SetColorAndOpacity(checked and CHECKED_ICON_COLOR or ICON_COLOR)
+                img.slot:SetZOrder(checked and CHECKED_ICON_Z or ICON_Z)
+            end)
+            if ok then
+                img.state = m.state
+            else
+                if not tint_failed then
+                    tint_failed = true
+                    print(LOG .. "map overlay: dimmed icons for checked locations off: " .. tostring(err) .. "\n")
+                end
+                if checked then
+                    release_icon(m)     -- the grey "x" only, this tick already
+                end
+            end
+        end
+        if m.img then
+            img.slot:SetPosition({ X = m.x, Y = m.y })
+            set_scale(img, scale)
+            set_shown(img, true)
+        end
     end
 end
 
@@ -941,7 +975,8 @@ local function place_markers()
     end
     local n_icons = 0
     for _, m in pairs(markers) do
-        local glyph = m.inview and not m.img
+        -- A checked marker's grey "x" shows over its dimmed icon.
+        local glyph = m.inview and (not m.img or m.state == "checked")
         if m.img then
             n_icons = n_icons + 1
         end

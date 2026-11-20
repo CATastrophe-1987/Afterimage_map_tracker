@@ -121,7 +121,11 @@ function StaticConstructObject(class, outer)
         count("SetBrush"); self.brush = obj.frame
     end
     function w:SetText(t) count("SetText"); self.text = t end
-    function w:SetColorAndOpacity(c) count("SetColor"); self.color = c.SpecifiedColor end
+    -- A TextBlock takes an FSlateColor, an Image an FLinearColor.
+    function w:SetColorAndOpacity(c)
+        if fake.fail_tint and self.class == "Image" then error("SetColorAndOpacity: access (test)") end
+        count("SetColor"); self.color = c.SpecifiedColor or c
+    end
     function w:SetVisibility(v) count("SetVisibility"); self.vis = v end
     function w:SetRenderScale(s)
         if fake.fail_render_scale then error("SetRenderScale: no such function (test)") end
@@ -988,7 +992,8 @@ def icon_names(o: Overlay) -> dict:
 
 def icons_vanilla(o: Overlay) -> None:
     """Vanilla mode: each unchecked marker shows its vanilla item's icon, the
-    same size on screen at every zoom; checked ones the grey x; labels past
+    same size on screen at every zoom; checked ones the grey x over a dimmed
+    icon; labels past
     the icon; the legend says so."""
     o.fake.frames = True
     o.write("AfterimageAP_tracker.flag", "vanilla legend")
@@ -1025,13 +1030,30 @@ def icons_vanilla(o: Overlay) -> None:
     o.fake.centre_on(done, 736, 414)
     o.run(40)
     glyph = o.fake.shown_at(736, 414)
-    check(o.fake.icon_at(736, 414) is None and glyph is not None and glyph.text == "x" and colour(glyph) == GREY,
-          "checked: the grey x, no icon")
+    img = o.fake.icon_at(736, 414)
+    check(img is not None and img.brush == o.locations[done].icon and glyph is not None and glyph.text == "x"
+          and colour(glyph) == GREY, "checked: the grey x over its icon")
+    check(img is not None and img.color is not None and img.color.A < 0.5 and img.color.R < 1
+          and img.slot.z < glyph.slot.z < 1000, "checked icon: grey, faint, under its x and the unchecked markers")
+    o.fake.centre_on(box, 736, 414)
+    o.run(40)
+    img = o.fake.icon_at(736, 414)
+    check(img.color is not None and img.color.A == 1 and img.slot.z == 1000, "unchecked icon: full colour, on top")
     check(legend(o)[:2] == ["Vanilla items", "Icon  Vanilla item"], f"legend: icon line {legend(o)}")
     st = o.status()
     n_icons = int(st.split("icons=")[1].split()[0])
     visible = int(st.split("visible=")[1].split()[0])
-    check(0 < n_icons < visible and o.fake.images()[1] == n_icons, f"status icons={n_icons} of visible={visible} (grey x without)")
+    check(0 < n_icons <= visible and o.fake.images()[1] == n_icons, f"status icons={n_icons} of visible={visible}")
+    # plaincollected: the old look, the grey x only.
+    o.write("AfterimageAP_tracker.flag", "vanilla legend plaincollected")
+    o.run(2100)
+    o.fake.centre_on(done, 736, 414)
+    o.run(40)
+    glyph = o.fake.shown_at(736, 414)
+    check(o.fake.icon_at(736, 414) is None and glyph is not None and glyph.text == "x", "plaincollected: the grey x, no icon")
+    o.fake.centre_on(box, 736, 414)
+    o.run(40)
+    check(o.fake.icon_at(736, 414) is not None, "plaincollected: unchecked icons stay")
 
 
 def icons_randomizer(o: Overlay) -> None:
@@ -1247,10 +1269,34 @@ def icons_pool(o: Overlay) -> None:
     o.fake.set_open(o.save_id(key), 1)
     o.run(2100)
     glyph = o.fake.shown_at(736, 414)
-    check(o.fake.icon_at(736, 414) is None and glyph is not None and glyph.text == "x", "checked while open: icon gone, grey x")
+    img = o.fake.icon_at(736, 414)
+    check(img is not None and img.color.A < 0.5 and glyph is not None and glyph.text == "x",
+          "checked while open: same icon dimmed, grey x over it")
     o.fake.map_open = False
     o.run(300)
     check(o.fake.images() == (0, 0), "map closed: Images removed")
+
+
+def icons_tint_fail(o: Overlay) -> None:
+    """An Image tint call failing in the game: checked markers fall back to the
+    grey x only (logged once); unchecked icons keep working."""
+    o.fake.frames = True
+    o.fake.fail_tint = True
+    o.write("AfterimageAP_tracker.flag", "vanilla")
+    keys = o.keys(level="Lv1")
+    box = next(k for k in keys if o.locations[k].kind == "box")
+    done = next(k for k in keys if o.locations[k].kind == "box" and k != box)
+    o.fake.set_open(o.save_id(done), 1)
+    o.open_map()
+    o.fake.centre_on(done, 736, 414)
+    o.run(40)
+    glyph = o.fake.shown_at(736, 414)
+    check(o.fake.icon_at(736, 414) is None and glyph is not None and glyph.text == "x", "tint failing: checked shows the grey x only")
+    o.fake.centre_on(box, 736, 414)
+    o.run(40)
+    img = o.fake.icon_at(736, 414)
+    check(img is not None and img.brush == o.locations[box].icon, "tint failing: unchecked icons still drawn")
+    check("(icons failed)" not in o.status(), f"icons not turned off: {o.status()}")
 
 
 def icons_toggle(o: Overlay) -> None:
@@ -1329,7 +1375,7 @@ def experiment_icons(o: Overlay) -> None:
                     "icons_dense_b_glyphs", "icons_dense_b_zoom", "icons_dense_b_zoom_glyphs", "icons_zoom_pan",
                     "icons_back"], f"screenshots {shots}")
     n = lambda tag, field: int(status["icons " + tag].split(field + "=")[1].split()[0])
-    check(n("dense", "icons") > n("default", "icons") and n("dense", "checked") == 0, "dense list: every location, more icons")
+    check(n("dense", "icons") >= n("default", "icons") and n("dense", "checked") == 0, "dense list: every location, icons")
     check(n("dense_a_glyphs", "icons") == 0 and "(icons off)" in status["icons dense_a_glyphs"], "noicons step: glyphs")
     check(n("dense_b", "icons") > 0 and "(icons off)" not in status["icons dense_b"], "icons back on after the glyph shot")
     check(n("dense_b_zoom", "icons") > 0 and "zoom=2.2000" in status["icons dense_b_zoom"], status["icons dense_b_zoom"])
@@ -1404,6 +1450,7 @@ for name, test in [("parse_list", parse), ("standalone tracker", standalone), ("
                    ("item icons, a frame not loaded", icons_missing), ("item icons, none loaded", icons_none_loaded),
                    ("item icons, loading missing frames", icons_loading), ("item icons, noload", icons_noload), ("item icons, frame collected", icons_gc),
                    ("item icons, pool reuse", icons_pool), ("item icons, noicons", icons_toggle),
+                   ("item icons, tint failing", icons_tint_fail),
                    ("item icons failing in the game", icons_fail), ("experiment mapitemicons", experiment_icons)]:
     run(name, test)
 run("show_all", show_all, show_all=True)
