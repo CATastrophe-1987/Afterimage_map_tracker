@@ -1433,6 +1433,28 @@ function M.marker_state(key)
     return m and m.state or nil
 end
 
+-- Where the open map is looking, for the playthrough log's F9 / F10 marks
+-- (playlog.lua): the view centre in world units (x, z) and the key of the
+-- marker nearest it in view, within FOCUS_MARK_PX window px (nil if none),
+-- or nil when the map is closed.
+local FOCUS_MARK_PX = 150
+function M.focus()
+    if not map or not panel or last_view == nil then
+        return nil
+    end
+    local mid_x, mid_y = PANEL_W / 2, PANEL_H / 2
+    local best, best_d2 = nil, FOCUS_MARK_PX * FOCUS_MARK_PX
+    for key, m in pairs(markers) do
+        if m.inview and m.wx then
+            local d2 = (m.wx - mid_x) ^ 2 + (m.wy - mid_y) ^ 2
+            if d2 < best_d2 or (d2 == best_d2 and best and key < best) then
+                best, best_d2 = key, d2
+            end
+        end
+    end
+    return stats.cx / MAP_SCALE, -stats.cy / MAP_SCALE, best
+end
+
 -- Show the list of this session ("seed\tslot") on any save (experiments
 -- writing a test list, which must not mark the player's save).
 function M.accept_session(session)
