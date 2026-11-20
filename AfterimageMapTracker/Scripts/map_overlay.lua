@@ -49,8 +49,8 @@
 -- unchecked marker gets a square outline, green when the items in the
 -- player's bag meet the check's rule, red when not; a checked one has none.
 -- The rules (data_logic.lua, written by tools/rules_table.py) are the
--- default logic (movement_logic off, area_logic vanilla_order: the friends'
--- settings) in both modes, so a randomizer seed with other logic options
+-- default logic (the room graph: movement_logic on, area_logic observed)
+-- in both modes, so a randomizer seed with the strict vanilla-order logic
 -- can differ. A boss event in a rule is met once its drop is checked, or
 -- when the list does not carry the drop (vanilla tracker). The bag is
 -- re-read with the list (every FILE_RECHECK_MS while the map is open).

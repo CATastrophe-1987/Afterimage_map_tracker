@@ -54,11 +54,11 @@ Sea of Souls chests are on the voyage map, not on the area map.
 **Logic outlines:** each unchecked check gets a square outline, green when
 the items in your bag meet its rule (you can get it now), red when they do
 not yet; a collected check has none. The rules are the randomizer's default
-logic (`area_logic: vanilla_order`, `movement_logic` off), in
-`data_logic.lua`, written by the randomizer's `tools/rules_table.py`. They
-are conservative: an area counts as reachable only with every ability of the
-areas before it in the game's order, so a check you can physically reach
-may still be red. Flag word `nologic` turns the outlines off.
+logic, the room graph (each room with the abilities its way in takes, from
+the game's collision scans), in `data_logic.lua`, written by the
+randomizer's `tools/rules_table.py`. It is a model: if a green check cannot
+be reached or a red one can, report it to the randomizer (its
+CONTRIBUTING.md). Flag word `nologic` turns the outlines off.
 
 ## Configuration
 
