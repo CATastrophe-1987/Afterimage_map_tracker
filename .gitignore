@@ -6,3 +6,6 @@ __pycache__/
 
 # Community 100% map: the author asks that it not be redistributed
 JPG75 Map.jpg
+
+# tools/build_release.py output
+dist/

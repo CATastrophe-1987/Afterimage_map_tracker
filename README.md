@@ -7,6 +7,12 @@ icon of the item it holds, a label names the item, and a check you have
 collected keeps its icon, dimmed and grey, under a grey `x`. It tracks the loaded save: nothing to
 connect, no other program to run.
 
+Each unchecked marker also gets a **logic outline**: green if the abilities
+in your bag should let you reach it, red if not yet. This release is mainly
+there to have those rules checked in normal play. If you find a green check
+you can't reach, or a red one you can, please report it (see "Reporting a
+logic mistake").
+
 It was split out of the Afterimage Archipelago randomizer, whose mod
 (`AfterimageAP`) has the same overlay built in. This mod is the overlay alone,
 for playing the normal game. It also follows a randomizer game if the
@@ -17,8 +23,10 @@ randomizer's client is running (see "Randomizer support").
 1. Install [UE4SS](https://github.com/UE4SS-RE/RE-UE4SS) (tested with 4.0.0)
    for Afterimage: extract it into `Afterimage\Binaries\Win64\` of the game
    folder, next to `Afterimage-Win64-Shipping.exe`.
-2. Copy the `AfterimageMapTracker` folder of this repo into
-   `Afterimage\Binaries\Win64\ue4ss\Mods\`.
+2. Download `AfterimageMapTracker-<version>.zip` from this repo's
+   Releases page and extract it into `Afterimage\Binaries\Win64\ue4ss\Mods\`,
+   so you get `ue4ss\Mods\AfterimageMapTracker\Scripts\main.lua`. (Or copy
+   the `AfterimageMapTracker` folder of this repo there.)
 3. Enable it. The folder has an empty `enabled.txt`, which enables it; or add
    the line `AfterimageMapTracker : 1` to `ue4ss\Mods\mods.txt`.
 4. Start the game, load a save and open the map.
@@ -56,9 +64,24 @@ the items in your bag meet its rule (you can get it now), red when they do
 not yet; a collected check has none. The rules are the randomizer's default
 logic, the room graph (each room with the abilities its way in takes, from
 the game's collision scans), in `data_logic.lua`, written by the
-randomizer's `tools/rules_table.py`. It is a model: if a green check cannot
-be reached or a red one can, report it to the randomizer (its
-CONTRIBUTING.md). Flag word `nologic` turns the outlines off.
+randomizer's `tools/rules_table.py`. It is a model, so it can be wrong (see
+"Reporting a logic mistake"). Flag word `nologic` turns the outlines off.
+
+## Reporting a logic mistake
+
+A mistake is a check whose outline is **green but you can't reach it** with
+what you have, or **red but you can reach it**. Open an issue on this repo,
+or message me on [Discord](https://discordapp.com/users/386473203381436417).
+Please include:
+
+- the check: the label shown on the map, and the area and room;
+- its outline colour, and what actually happens (where you get stuck, or how
+  you got there);
+- your abilities at that point (double jump, wall slide, slide, down crush,
+  and so on), or a screenshot of the map with the marker.
+
+Bouncing off enemies doesn't count: the logic leaves enemy bounces out for
+now.
 
 ## Configuration
 
@@ -156,6 +179,7 @@ coexistence check. How it looks needs the game.
 
 ## Credits
 
-By CATastrophe-1987, split out of his Afterimage Archipelago randomizer. Runs
+By CATastrophe-1987 ([Discord](https://discordapp.com/users/386473203381436417)),
+split out of the same author's Afterimage Archipelago randomizer. Runs
 on [UE4SS](https://github.com/UE4SS-RE/RE-UE4SS). Afterimage is a game by
 Aurogon Shanghai; this is a fan-made mod, not affiliated with its makers.
