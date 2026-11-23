@@ -43,19 +43,18 @@ logs to the UE4SS console and `UE4SS.log` with the prefix
   gets one. Zoomed out to the area overview, the markers are hidden.
 - Icons and labels keep one size on screen at every zoom, so zooming in
   spreads them out.
-- Where an item's icon cannot be loaded, a coloured symbol is drawn instead:
 
 | Marker | Meaning |
 |---|---|
-| item icon | unchecked check (any kind) |
-| `#` magenta | treasure box (no icon) |
-| `o` cyan | item lying on the ground (no icon) |
-| `$` yellow | coin rock (no icon) |
-| `x` grey over a faint grey icon | checked (any kind) |
+| item icon | unchecked: the icon of the item it holds |
 | green square outline | unchecked, in logic: your items meet its rule |
 | red square outline | unchecked, not in logic yet |
+| grey `x` over the dimmed, greyed icon | checked |
 
-Coin rocks and dew bundles show the game's dew (currency) icon. Boss drops
+Coin rocks and dew bundles show the game's dew (currency) icon. With the flag
+word `noicons`, or in the rare case an icon can't be loaded, a coloured
+symbol stands in for it: `#` magenta for a treasure box, `o` cyan for an item
+lying on the ground, `$` yellow for a coin rock. Boss drops
 and quest rewards have no position on the map, so they are not drawn. The
 Sea of Souls chests are on the voyage map, not on the area map.
 
