@@ -13,7 +13,8 @@ there to have those rules checked in normal play. If you find a green check
 you can't reach, or a red one you can, please report it (see "Reporting a
 logic mistake").
 
-It was split out of the Afterimage Archipelago randomizer, whose mod
+It was split out of an Afterimage Archipelago randomizer, which is still very
+work in progress (not released, not playable yet). Its mod
 (`AfterimageAP`) has the same overlay built in. This mod is the overlay alone,
 for playing the normal game. It also follows a randomizer game if the
 randomizer's client is running (see "Randomizer support").
@@ -110,6 +111,9 @@ one.
 
 ## Randomizer support (optional)
 
+The randomizer is very work in progress and not released yet; this section
+is for when it is.
+
 The tracker labels each check with the item it holds in the unrandomized
 game. In a randomized game, that is wrong. If the Archipelago randomizer's
 client is running, it writes its list of open checks
@@ -143,38 +147,6 @@ to the flag file to draw anyway.
 | `tests/map_overlay_test.py` | offline tests (real Lua 5.4 through `lupa`, fake UE4SS objects) |
 | `dev/map_probe.lua` | the randomizer repo's in-game experiment modes for the map, used by the tests |
 | `docs/game-internals.md` | research notes: the map's widgets, transform, zoom, icons |
-
-## Regenerating the data
-
-The data comes from the Afterimage randomizer repo (location table, world
-positions, English item names, icon frames). With a checkout of it next to
-this one:
-
-```
-python tools/gen_tracker_data.py --source ../afterimage_rando
-```
-
-copies the inputs into `data/` and rewrites the three `data_*.lua` files.
-Without `--source`, it regenerates them from the `data/` already here. To
-rebuild the icon table from the game data dumps in the randomizer repo
-first: `python tools/item_icons.py --source ../afterimage_rando`.
-
-## Tests
-
-```
-python -m venv .venv-test
-.venv-test\Scripts\pip install lupa
-.venv-test\Scripts\python tests\map_overlay_test.py
-```
-
-They run the overlay and `main.lua` in Lua 5.4 against fake UE4SS objects:
-markers, tracking, flag words, the randomizer list, zoom, labels, icons, the
-coexistence check. How it looks needs the game.
-
-## Future work
-
-- (Done: collected checks keep their icon, dimmed under the grey `x`;
-  flag word `plaincollected` for the `x` only.)
 
 ## Credits
 
