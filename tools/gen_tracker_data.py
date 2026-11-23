@@ -7,6 +7,10 @@ Writes into AfterimageMapTracker/Scripts/:
   data_positions.lua  check key -> world { x, z } (data/positions.tsv, data/rocks.tsv)
   data_locations.lua  check key -> save id, kind, area, room, vanilla item (English) and its icon frame
   data_icons.lua      English item name -> icon frame, for items the randomizer's list names
+With --source it also copies, unchanged:
+  data_logic.lua      the logic outlines' rules (check key -> item alternatives), built in
+                      the randomizer repo by its tools/rules_table.py, which needs an
+                      Archipelago checkout; the tracker ships the built file
 
 Inputs (data/, copied from the randomizer repo with --source; this is the
 tracker part of that repo's tools/gen_lua_data.py):
@@ -37,6 +41,10 @@ SOURCES = {
     "item_names_en.tsv": "data/item_names_en.tsv",
     "item_icons.tsv": "data/item_icons.tsv",
 }
+# AfterimageMapTracker/Scripts/<name> <- <randomizer repo>/<path>, copied as is
+BUILT = {
+    "data_logic.lua": "client/AfterimageAP/Scripts/data_logic.lua",
+}
 COIN_FRAME = "/Game/Assets/UMG/TextureAtlases/HUD/Frames/ST_HUD1_Button_Gold.ST_HUD1_Button_Gold"   # the HUD's dew icon
 
 
@@ -54,7 +62,12 @@ def refresh(source: Path) -> None:
         if not src.exists():
             raise SystemExit(f"{src} not found: is {source} the randomizer repo?")
         shutil.copyfile(src, DATA / name)
-    print(f"data/ refreshed from {source}")
+    for name, rel in BUILT.items():
+        src = source / rel
+        if not src.exists():
+            raise SystemExit(f"{src} not found: is {source} the randomizer repo?")
+        shutil.copyfile(src, SCRIPTS / name)
+    print(f"data/ and {', '.join(BUILT)} refreshed from {source}")
 
 
 def main() -> int:
